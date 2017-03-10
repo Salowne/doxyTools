@@ -1,0 +1,6076 @@
+#!bin/bash
+
+# Colores
+corPadrao="\033[0m"
+vermelho="\033[0;31m"
+branco="\033[01;37m"
+verde="\033[0;32m"
+azul="\033[0;34m"
+purple="\033[01;35m"
+cyan="\033[1;36m"
+cyann="\033[0;36m"
+vermelhoClaro="\033[01;31m"
+verdeClaro="\033[01;32m"
+azulClaro="\033[01;34m"
+Tblue="\033[44;1;37m"
+purpleClaro="\033[01;35m"
+cyanClaro="\033[01;37m"
+Tvermelho="\033[0;41m"
+Tverde="\033[0;42m"
+Tpurple="\033[0;45m"
+Tcyan="\033[0;46m"
+TvermelhoClaro="\033[01;41m"
+TverdeClaro="\033[01;42m"
+TazulClaro="\033[30;44m"
+TpurpleClaro="\033[01;45m"
+TcyanClaro="\033[34;45m"
+Tbranco="\033[30;47m"
+
+      sleep 1
+
+echo -e " $branco ............................................. $corPadrao$cyan~::$corPadrao"
+echo -e
+# Banner
+
+echo -e " \033[01;35m
+    ____                 _____       \033[01;32m    _\033[1;32m             v1.3
+ \033[1;36m  |  _ \  _____  ___   |_   _|__   ___ | |___
+   | | | |/ _ \ \/ / | | || |/ _ \ / _ \|\033[01;32m / __|\033[0m
+\033[01;32m   | |_| | (_) \033[01;31m>  <\033[01;32m|\033[1;32m |_| || | (_) | (_) |\033[01;35m \__ \   
+   |____/ \___/_/\_\\__,  ||_|\___/ \___/|_|___/
+\033[1;36m ~ ~~ ~~ ~~~~~~~ ~~\033[01;36m ~|\033[01;35m___/\033[1;36m ~~~ ~~~~~ ~~~ ~~~ ~~ ~
+
+\033[1;32m+ -- -- +=[ Dev/script: donZeref\033[1;m
+\033[1;32m+ -- -- +=[ 349 Tools \033[1;m
+\033[0m"
+# Sobre
+echo -e "$verdeClaro installe quantos modulos quiser... sem precisar sair do script*$corPadrao"
+echo -e "$vermelhoClaro Aviso: Se alguns modulos nao instalar atualize sua soucelist[3]*$corPadrao"
+# copyright 2017 all rights reserved NewZereF
+echo -e
+# Home
+echo -e
+
+  main()
+{
+
+echo -e "
+$branco[1] -$cyan Ver categorias
+$branco[2] -$cyan Update Repositorio
+$branco[3] -$cyan Atualizar soucelist$corPadrao
+$branco[0] -$vermelhoClaro exit$corPadrao"
+
+echo -e
+echo -e "$cyan~::$corPadrao"
+
+  read V
+
+   while [ "$V" != "1" -o "$V" != "2" -o "$V" != "3" -o "$V" != "0" ]; do
+
+         if [ "$V" = "1" -o "$V" = "2" -o "$V" = "3" -o "$V" = "0" ]; then
+
+    if [ "$V" = "0" ]; then
+# saindo
+echo -e "$vermelhoClaro Saindo...$corPadrao"
+                    sleep 2
+
+                    exit
+
+        fi
+
+    if [ "$V" = "2" ]; then
+
+# Atualizando Repositorio
+echo -e "$verdeClaro Atualizando Repositorio...$corPadrao"
+                   sleep 1
+
+                  apt-get update
+
+                 main
+
+          fi
+
+  if [ "$V" = "3" ]; then
+
+echo -e "\033[01;32m Atualizando source list...\033[0m"
+             sleep 2
+# Atualizando source list
+echo "# For source package access, uncomment the following line" > /etc/apt/sources.list
+
+echo "deb http://http.kali.org/kali kali-rolling main contrib non-free" >> /etc/apt/sources.list
+
+echo "deb-src http://http.kali.org/kali kali-rolling main contrib non-free" >> sources.list
+
+echo "deb http://ftp.br.debian.org/debian/ jessie main non-free contrib" >> /etc/apt/sources.list
+echo "deb-src http://ftp.br.debian.org/debian/ jessie main non-free contrib" >> /etc/apt/sources.list
+
+echo "deb http://ftp.br.debian.org/debian/ jessie-updates main non-free contrib" >> /etc/apt/sources.list
+echo "deb-src http://ftp.br.debian.org/debian/ jessie-updates main non-free contrib" >> /etc/apt/sources.list
+
+echo "deb http://ftp.br.debian.org/debian/ jessie-backports main non-free contrib" >> /etc/apt/sources.list
+echo "deb-src http://ftp.br.debian.org/debian/ jessie-backports main non-free contrib" >> /etc/apt/sources.list
+
+echo "deb http://security.debian.org/ jessie/updates main contrib non-free" >> /etc/apt/sources.list
+echo "deb-src http://security.debian.org/ jessie/updates main contrib non-free" >> /etc/apt/sources.list
+
+echo "deb http://ftp.debian.org/debian jessie-proposed-updates main contrib non-free" >> /etc/apt/sources.list
+
+              apt-get update
+# Concluido
+echo -e "\033[01;32m Concluido... sua source list foi Atualizada \033[0m"
+               sleep 2
+
+               main
+
+    fi
+
+    if [ "$V" = "1" ]; then
+# categorias
+echo -e "\033[1;37m Escolha uma categoria: * $corPadrao"
+echo -e
+        sleep 1
+echo -e "
+$branco*  [00) -$cyan exit  $branco[0 ) - $cyan Home
+
+$branco*  [01) -$cyan Coleta de informações       $branco*  [09) -$cyan Ferramentas Forenses
+$branco*  [02) -$cyan Análise de Vulnerabilidade  $branco*  [10) -$cyan Teste de Estresse 
+$branco*  [03) -$cyan Ataque sem fio              $branco*  [11) -$cyan Ataques de Senha  
+$branco*  [04) -$cyan Aplicações Web              $branco*  [12) -$cyan Engenharia reversa
+$branco*  [05) -$cyan Sniffing & Spoofing         $branco*  [13) -$cyan Hacking de Hardware
+$branco*  [06) -$cyan Mantendo o Acesso           $branco*  [14) -$cyan Extra
+$branco*  [07) -$cyan Ferramentas de Relatórios   $branco*  [15) -$cyan Dependencias
+$branco*  [08) -$cyan Ferramentas de Exploração
+
+$corPadrao"
+
+echo -e "$cyan~::$corPadrao"
+
+                 read P
+
+       fi
+
+    while [ "$P" != "01" -o "$P" != "02" -o "$P" != "03" -o "$P" != "04" -o "$P" != "05" -o "$P" != "06" -o "$P" != "07" -o "$P" != "08" -o "$P" != "09" -o "$P" != "10" -o "$P" != "11" -o "$P" != "12" -o "$P" != "13" -o "$P" != "14" -o "$P" != "15" -o "$P" != "00" -o "$P" != "0" ]; do
+
+       if [ "$P" = "01" -o "$P" = "02" -o "$P" = "03" -o "$P" = "04" -o "$P" = "05" -o "$P" = "06" -o "$P" = "07" -o "$P" = "08" -o "$P" = "09" -o "$P" = "10" -o "$P" = "11" -o "$P" = "12" -o "$P" = "13" -o "$P" = "14" -o "$P" = "15" -o "$P" = "00" -o "$P" = "0" ]; then
+
+         if [ "$P" = "0" ]; then
+
+echo -e "\033[1;36m~Home~\033[0m"
+          main
+
+           fi
+
+          if [ "$P" = "00" ]; then
+
+# saindo
+echo -e "$vermelhoClaro Saindo...$corPadrao"
+                    sleep 2
+
+                    exit
+
+                fi
+
+          while [ "$P" = "15" ]; do
+
+# Dependencies
+echo -e "\033[1;36m Dependencies\033[1;m"
+   sleep 1
+
+echo -e "$branco
+
+*   [00) - exit  [0 ) - Home
+
+*   [01) python-dnspython  *   [16) shc
+*   [02) nano              *   [17) perl 
+*   [03) zip               *   [18) hydra
+*   [04) python            *   [19) python-pip
+*   [05) git               *   [20) curl
+*   [06) ruby              *   [21) wget
+*   [07) figlet            *   [22) python3
+*   [08) mitmf             *   [23) Build-essential
+*   [09) crunch   
+*   [10) sudo 
+*   [11) php
+*   [12) php5
+*   [13) unzip
+*   [14) make 
+*   [15) gcc
+
+  $corPadrao"
+
+echo -e "$cyan~::$corPadrao"
+
+            read Dp
+
+    while [ "$Dp" != "01" -o "$Dp" != "02" -o "$Dp" != "03" -o "$Dp" != "04" -o "$Dp" != "05" -o "$Dp" != "06" -o "$Dp" != "07" -o "$Dp" != "08" -o "$Dp" != "09" -o "$Dp" != "10" -o "$Dp" != "11" -o "$Dp" != "12" -o "$Dp" != "13" -o "$Dp" != "14" -o "$Dp" != "15" -o "$Dp" != "16" -o "$Dp" != "17" -o "$Dp" != "18" -o "$Dp" != "19" -o "$Dp" != "20" -o "$Dp" != "21" -o "$Dp" != "22" -o "$Dp" != "23" -o "$Dp" != "00" -o "$Dp" != "0" ]; do
+
+       if [ "$Dp" = "01" -o "$Dp" = "02" -o "$Dp" = "03" -o "$Dp" = "04" -o "$Dp" = "05" -o "$Dp" = "06" -o "$Dp" = "07" -o "$Dp" = "08" -o "$Dp" = "09" -o "$Dp" = "10" -o "$Dp" = "11" -o "$Dp" = "12" -o "$Dp" = "13" -o "$Dp" = "14" -o "$Dp" = "15" -o "$Dp" = "16" -o "$Dp" = "17" -o "$Dp" = "18" -o "$Dp" = "19" -o "$Dp" = "20" -o "$Dp" = "21" -o "$Dp" = "22" -o "$Dp" = "23" -o "$Dp" = "00" -o "$Dp" = "0" ]; then
+
+         if [ "$Dp" = "0" ]; then
+
+echo -e "\033[1;36m~Home~\033[0m"
+          main
+
+           fi
+
+         if [ "$Dp" = "01" ]; then
+
+echo -e "\033[0;36m instalando python-dnspython ...\033[0m"
+            sleep 2
+
+            apt-get install python-dnspython 
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+            read Dp
+
+           fi
+
+         if [ "$Dp" = "02" ]; then
+
+echo -e "\033[0;36m instalando nano...\033[0m"
+            sleep 2
+
+            apt-get install nano
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read Dp
+
+           fi
+
+         if [ "$Dp" = "03" ]; then
+
+echo -e "\033[0;36m instalando zip...\033[0m"
+             sleep 2
+
+             apt-get install zip
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read Dp
+
+            fi
+
+          if [ "$Dp" = "04" ]; then
+
+echo -e "\033[0;36m instalando python...\033[0m"
+             sleep 2
+
+             apt-get install python
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+            read Dp
+
+           fi
+
+         if [ "$Dp" = "05" ]; then
+
+echo -e "\033[0;36m instalando git...\033[0m"
+            sleep 2
+
+            apt-get install git
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+            read Dp
+
+           fi
+
+         if [ "$Dp" = "06" ]; then
+
+echo -e "\033[0;36m instalando ruby...\033[0m"
+            sleep 2
+
+            apt-get install ruby
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+            read Dp
+
+   	       fi
+
+         if [ "$Dp" = "07" ]; then
+
+echo -e "\033[0;36m instalando figlet...\033[0m"
+            sleep 2
+
+            apt-get install figlet
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+            read Dp
+ 
+           fi
+ 
+
+         if [ "$Dp" = "08" ]; then
+
+echo -e "\033[0;36m instalando mitmf...\033[0m"
+            sleep 2
+
+            apt-get install mitmf
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+            read Dp
+
+           fi
+
+         if [ "$Dp" = "09" ]; then
+
+echo -e "\033[0;36m instalando crunch...\033[0m"
+            sleep 2
+
+            apt-get install crunch
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+            read Dp
+
+           fi
+
+         if [ "$Dp" = "10" ]; then
+
+echo -e "\033[0;36m instalando sudo...\033[0m"
+            sleep 2
+
+            apt-get install sudo
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+            read Dp
+
+           fi
+
+         if [ "$Dp" = "11" ]; then
+
+echo -e "\033[0;36m instalando php...\033[0m"
+            sleep 2
+
+            apt-get install php
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read Dp
+
+           fi
+
+         if [ "$Dp" = "12" ]; then
+
+echo -e "\033[0;36m instalando php5...\033[0m"
+            sleep 2
+
+            apt-get install php5
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+            read Dp
+
+           fi
+
+         if [ "$Dp" = "13" ]; then
+
+echo -e "\033[0;36m instalando unzip...\033[0m"
+             sleep 2
+
+            apt-get install unzip
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+            read Dp
+
+           fi
+
+         if [ "$Dp" = "14" ]; then
+
+echo -e "\033[0;36m instalando make...\033[0m"
+             slepp 2
+
+             apt-get install make
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read Dp
+
+           fi
+
+         if [ "$Dp" = "15" ]; then
+
+echo -e "\033[0;36m instalando gcc...\033[0m"
+             sleep 2
+
+    	     apt-get install gcc
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read Dp
+
+           fi
+
+         if [ "$Dp" = "16" ]; then
+
+echo -e "\033[0;36m instalando shc...\033[0m"
+            sleep 2
+
+            apt-get install shc
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+            read Dp
+
+           fi
+
+         if [ "$Dp" = "17" ]; then
+
+echo -e "\033[0;36m instalando perl...\033[0m"
+            sleep 2
+
+            apt-get install perl libgtk02-perl libfile-finder-perl libxml-tokeparser-perl libxml-bare-perl libhtml-parser-perl perlmagick -y #Debian
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+            read Dp
+
+           fi
+
+         if [ "$Dp" = "18" ]; then
+
+echo -e "\033[0;36m instalando hydra...\033[0m"
+            sleep 3
+
+            apt-get install hydra
+ 
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+            read Dp
+
+           fi
+
+         if [ "$Dp" = "19" ]; then
+
+echo -e "\033[0;36m instalando python-pip...\033[0m"
+            sleep 2
+
+            apt-get install python-pip
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+            read Dp
+
+           fi
+
+         if [ "$Dp" = "20" ]; then
+
+echo -e "\033[0;36m instalando curl...\033[0m"
+            sleep 2
+
+            apt-get install curl
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+            read Dp
+
+           fi
+
+         if [ "$Dp" = "21" ]; then
+
+echo -e "\033[0;36m instalando wget...\033[0m"
+            sleep 2
+
+            apt-get install wget
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+            read Dp
+
+           fi
+
+         if [ "$Dp" = "22" ]; then
+
+echo -e "\033[0;36m instalando python3...\033[0m"
+            sleep 2
+
+            apt-get install python3
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+            read Dp
+
+           fi
+
+         if [ "$Dp" = "23" ]; then
+
+echo -e "\033[0;36m instalando Build-essential...\033[0m"
+            sleep 2
+
+            apt-get install Build-essential
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+            read Dp
+
+           fi
+
+         if [ "$Dp" = "00" ]; then
+
+echo -e "$vermelhoClaro saindo...$corPadrao"
+
+            sleep 2
+
+            exit
+
+           fi
+
+         else
+
+echo -e "$cyan~::$corPadrao"
+
+               read Dp
+
+
+           fi
+
+       done
+
+   done
+
+          while [ "$P" = "14" ]; do
+
+# Extra
+echo -e "\033[1;36m Extra\033[1;m"
+       sleep 1
+
+echo -e "
+$branco
+*  [00) - exit  [0 ) - Home
+
+*  [01) Wifresti
+*  [02) Squid3
+
+   $corPadrao"
+
+echo -e "$cyan~::$corPadrao"
+
+    read Ea
+
+   while [ "$Ea" != "00" -o "$Ea" != "01" -o "$Ea" != "02" -o "$Ea" != "0" ]; do
+
+         if [ "$Ea" = "00" -o "$Ea" = "01" -o "$Ea" = "02" -o "$Ea" = "0" ]; then
+
+         if [ "$Ea" = "0" ]; then
+
+echo -e "\033[1;36m~Home~\033[0m"
+          main
+
+           fi
+
+            if [ "$Ea" = "00" ]; then
+
+# saindo
+echo -e "$vermelhoClaro Saindo...$corPadrao"
+                    sleep 2
+
+                    exit
+
+              fi
+
+			if [ "$Ea" = "01" ]; then
+
+echo -e "\033[0;36m instalando wifresti...\033[0m"
+                   sleep 2
+
+			      git clone https://github.com/LionSec/wifresti.git && cp wifresti/wifresti.py /usr/bin/wifresti && chmod +x /usr/bin/wifresti && wifresti
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read Ea
+
+              fi
+
+			if [ "$Ea" = "02" ]; then
+
+echo -e "\033[0;36m instalando squid3...\033[0m"
+                   sleep 2
+
+			      apt-get install squid3
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read Ea
+
+              fi
+
+           else
+
+echo -e "$cyan~::$corPadrao"
+
+          read Ea
+
+         fi
+
+     done
+
+  done
+
+          while [ "$P" = "13" ]; do
+
+# Hardware Hacking
+echo -e "\033[1;36m Hardware Hacking\033[1;m"
+       sleep 1
+
+echo -e "
+$branco
+*  [00) - exit  [0 ) - Home
+
+*  [01) android-sdk
+*  [02) apktool
+*  [03) Arduino
+*  [04) dex2jar
+*  [05) Sakis3G	
+*  [06) smali
+
+   $corPadrao"
+
+echo -e "$cyan~::$corPadrao"
+
+    read HH
+
+   while [ "$HH" != "00" -o "$HH" != "01" -o "$HH" != "02" -o "$HH" != "03" -o "$HH" != "04" -o "$HH" != "05" -o "$HH" != "06" -o "$HH" != "0" ]; do
+
+         if [ "$HH" = "00" -o "$HH" = "01" -o "$HH" = "02" -o "$HH" = "03" -o "$HH" = "04" -o "$HH" = "05" -o "$HH" = "06" -o "$HH" = "0" ]; then
+
+         if [ "$HH" = "0" ]; then
+
+echo -e "\033[1;36m~Home~\033[0m"
+          main
+
+           fi
+
+            if [ "$HH" = "00" ]; then
+
+# saindo
+echo -e "$vermelhoClaro Saindo...$corPadrao"
+                    sleep 2
+
+                    exit
+
+              fi
+
+			if [ "$HH" = "01" ]; then
+
+echo -e "\033[0;36m instalando android-sdk...\033[0m"
+                   sleep 2
+
+			      apt-get install android-sdk
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read HH
+
+              fi
+
+			if [ "$HH" = "02" ]; then
+
+echo -e "\033[0;36m instalando apktool...\033[0m"
+                   sleep 2
+
+			      apt-get install apktool
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read HH
+
+              fi
+
+			if [ "$HH" = "03" ]; then
+
+echo -e "\033[0;36m instalando arduino...\033[0m"
+                   sleep 2
+
+			      apt-get install arduino
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read HH
+
+              fi
+
+			if [ "$HH" = "04" ]; then
+
+echo -e "\033[0;36m instalando dex2jar...\033[0m"
+                   sleep 2
+
+			      apt-get install dex2jar
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read HH
+
+              fi
+
+			if [ "$HH" = "05" ]; then
+
+echo -e "\033[0;36m instalando sakis3g...\033[0m"
+                   sleep 2
+
+			      apt-get install sakis3g
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read HH
+
+              fi
+
+			if [ "$HH" = "06" ]; then
+
+echo -e "\033[0;36m instalando smali...\033[0m"
+                   sleep 2
+
+			      apt-get install smali
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read HH
+
+              fi
+
+           else
+
+echo -e "$cyan~::$corPadrao"
+
+          read HH
+
+         fi
+
+     done
+
+   done
+
+          while [ "$P" = "12" ]; do
+
+# Reverse Engineering
+echo -e "\033[1;36m Reverse Engineering\033[1;m"
+       sleep 1
+
+echo -e "
+$branco
+*  [00) - exit  [0 ) - Home
+
+*  [01) apktool
+*  [02) dex2jar
+*  [03) diStorm3
+*  [04) edb-debugger
+*  [05) jad	
+*  [06) javasnoop
+*  [07) JD-GUI
+*  [08) OllyDbg
+*  [09) smali
+*  [10) Valgrind
+*  [11) YARA
+
+   $corPadrao"
+
+echo -e "$cyan~::$corPadrao"
+
+     read RE
+
+   while [ "$RE" != "0" -o "$RE" != "00" -o "$RE" != "01" -o "$RE" != "02" -o "$RE" != "03" -o "$RE" != "04" -o "$RE" != "05" -o "$RE" != "06" -o "$RE" != "07" -o "$RE" != "08" -o "$RE" != "09" -o "$RE" != "10" -o "$RE" != "11" ]; do
+
+         if [ "$RE" = "0" -o "$RE" = "00" -o "$RE" = "01" -o "$RE" = "02" -o "$RE" = "03" -o "$RE" = "04" -o "$RE" = "05" -o "$RE" = "06" -o "$RE" = "07" -o "$RE" = "08" -o "$RE" = "09" -o "$RE" = "10" -o "$RE" = "11" ]; then
+
+         if [ "$RE" = "0" ]; then
+
+echo -e "\033[1;36m~Home~\033[0m"
+          main
+
+           fi
+
+            if [ "$RE" = "00" ]; then
+
+# saindo
+echo -e "$vermelhoClaro Saindo...$corPadrao"
+                    sleep 2
+
+                    exit
+
+              fi
+
+			if [ "$RE" = "01" ]; then
+
+echo -e "\033[0;36m instalando apktool...\033[0m"
+                   sleep 2
+
+			      apt-get install apktool
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read RE
+
+              fi
+
+			if [ "$RE" = "02" ]; then
+
+echo -e "\033[0;36m instalando dex2jar...\033[0m"
+                   sleep 2
+
+			      apt-get install dex2jar
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read RE
+
+              fi
+
+			if [ "$RE" = "03" ]; then
+
+echo -e "\033[0;36m instalando python-diStorm3...\033[0m"
+                   sleep 2
+
+			      apt-get install python-diStorm3
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read RE
+
+              fi
+
+			if [ "$RE" = "04" ]; then
+
+echo -e "\033[0;36m instalando edb-debugger...\033[0m"
+                   sleep 2
+
+			      apt-get install edb-debugger
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read RE
+
+              fi
+
+			if [ "$RE" = "05" ]; then
+
+echo -e "\033[0;36m instalando jad...\033[0m"
+                   sleep 2
+
+			      apt-get install jad
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read RE
+
+              fi
+
+			if [ "$RE" = "06" ]; then
+
+echo -e "\033[0;36m instalando javasnoop...\033[0m"
+                   sleep 2
+
+			      apt-get install javasnoop
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read RE
+
+              fi
+
+			if [ "$RE" = "07" ]; then
+
+echo -e "\033[0;36m instalando JD...\033[0m"
+                   sleep 2
+
+			      apt-get install JD
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read RE
+
+              fi
+
+			if [ "$RE" = "08" ]; then
+
+echo -e "\033[0;36m instalando OllyDbg...\033[0m"
+                   sleep 2
+
+			      apt-get install OllyDbg
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read RE
+
+              fi
+
+			if [ "$RE" = "09" ]; then
+
+echo -e "\033[0;36m instalando smali...\033[0m"
+                   sleep 2
+
+			      apt-get install smali
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read RE
+
+              fi
+
+			if [ "$RE" = "10" ]; then
+
+echo -e "\033[0;36m instalando Valgrind...\033[0m"
+                   sleep 2
+
+			      apt-get install Valgrind
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read RE
+
+              fi
+
+			if [ "$RE" = "11" ]; then
+
+echo -e "\033[0;36m instalando YARA...\033[0m"
+                   sleep 2
+
+			      apt-get install YARA
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read RE
+
+              fi
+
+           else
+
+echo -e "$cyan~::$corPadrao"
+
+          read FT
+
+         fi
+
+     done
+
+   done
+
+          while [ "$P" = "11" ]; do
+
+# Password Attacks
+echo -e "\033[1;36m Password Attacks\033[1;m"
+       sleep 1
+
+echo -e "
+$branco
+*  [00) - exit  [0 ) - Home
+
+*  [01) acccheck             *  [19) Maskprocessor
+*  [02) Burp Suite           *  [20) multiforcer
+*  [03) CeWL                 *  [21) Ncrack
+*  [04) chntpw               *  [22) oclgausscrack
+*  [05) cisco-auditing-tool  *  [23) PACK
+*  [06) CmosPwd              *  [24) patator
+*  [07) creddump             *  [25) phrasendrescher
+*  [08) crunch               *  [26) polenum
+*  [09) DBPwAudit            *  [27) RainbowCrack
+*  [10) findmyhash           *  [28) rcracki-mt
+*  [11) gpp-decrypt          *  [29) RSMangler
+*  [12) hash-identifier      *  [30) SQLdict
+*  [13) HexorBase            *  [31) Statsprocessor
+*  [14) THC-Hydra            *  [32) THC-pptp-bruter
+*  [15) John the Ripper      *  [33) TrueCrack
+*  [16) Johnny               *  [34) WebScarab 
+*  [17) keimpx               *  [35) wordlists 
+*  [18) Maltego Teeth        *  [36) zaproxy
+
+   $corPadrao"
+
+echo -e "$cyan~::$corPadrao"
+
+     read PT
+
+    while [ "$PT" != "0" -o "$PT" != "00" -o "$PT" != "01" -o "$PT" != "02" -o "$PT" != "03" -o "$PT" != "04" -o "$PT" != "05" -o "$PT" != "06" -o "$PT" != "07" -o "$PT" != "08" -o "$PT" != "09" -o "$PT" != "10" -o "$PT" != "11" -o "$PT" != "12" -o "$PT" != "13" -o "$PT" != "14" -o "$PT" != "15" -o "$PT" != "16" -o "$PT" != "17" -o "$PT" != "18" -o "$PT" != "19" -o "$PT" != "20" -o "$PT" != "21" -o "$PT" != "22" -o "$PT" != "23" -o "$PT" != "24" -o "$PT" != "25" -o "$PT" != "26" -o "$PT" != "27" -o "$PT" != "28" -o "$PT" != "29" -o "$PT" != "30" -o "$PT" != "31" -o "$PT" != "32" -o "$PT" != "33" -o "$PT" != "34" -o "$PT" != "35" -o "$PT" != "36" ]; do
+
+         if [ "$PT" = "0" -o "$PT" = "00" -o "$PT" = "01" -o "$PT" = "02" -o "$PT" = "03" -o "$PT" = "04" -o "$PT" = "05" -o "$PT" = "06" -o "$PT" = "07" -o "$PT" = "08" -o "$PT" = "09" -o "$PT" = "10" -o "$PT" = "11" -o "$PT" = "12" -o "$PT" = "13" -o "$PT" = "14" -o "$PT" = "15" -o "$PT" = "16" -o "$PT" = "17" -o "$PT" = "18" -o "$PT" = "19" -o "$PT" = "20" -o "$PT" = "21" -o "$PT" = "22" -o "$PT" = "23" -o "$PT" = "24" -o "$PT" = "25" -o "$PT" = "26" -o "$PT" = "27" -o "$PT" = "28" -o "$PT" = "29" -o "$PT" = "30" -o "$PT" = "31" -o "$PT" = "32" -o "$PT" = "33" -o "$PT" = "34" -o "$PT" = "35" -o "$PT" = "36" ]; then
+
+         if [ "$PT" = "0" ]; then
+
+echo -e "\033[1;36m~Home~\033[0m"
+          main
+
+           fi
+
+            if [ "$PT" = "00" ]; then
+
+# saindo
+echo -e "$vermelhoClaro Saindo...$corPadrao"
+                    sleep 2
+
+                    exit
+
+              fi
+
+			if [ "$PT" = "01" ]; then
+
+echo -e "\033[0;36m instalando acccheck...\033[0m"
+                   sleep 2
+
+			      apt-get install acccheck
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read PT
+
+              fi
+
+			if [ "$PT" = "02" ]; then
+
+echo -e "\033[0;36m instalando burpsuite...\033[0m"
+                   sleep 2
+
+			      apt-get install burpsuite
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read PT
+
+              fi
+
+			if [ "$PT" = "03" ]; then
+
+echo -e "\033[0;36m instalando cewl...\033[0m"
+                   sleep 2
+
+			      apt-get install cewl
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read PT
+
+              fi
+
+			if [ "$PT" = "04" ]; then
+
+echo -e "\033[0;36m instalando chntpw...\033[0m"
+                   sleep 2
+
+			      apt-get install chntpw
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read PT
+
+              fi
+
+			if [ "$PT" = "05" ]; then
+
+echo -e "\033[0;36m instalando cisco-auditing-tool...\033[0m"
+                   sleep 2
+
+			      apt-get install cisco-auditing-tool
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read PT
+
+              fi
+
+			if [ "$PT" = "06" ]; then
+
+echo -e "\033[0;36m instalando cmospwd...\033[0m"
+                   sleep 2
+
+			      apt-get install cmospwd
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read PT
+
+              fi
+
+			if [ "$PT" = "07" ]; then
+
+echo -e "\033[0;36m instalando creddump...\033[0m"
+                   sleep 2
+
+			      apt-get install creddump
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read PT
+
+              fi
+
+			if [ "$PT" = "08" ]; then
+
+echo -e "\033[0;36m instalando crunch...\033[0m"
+                   sleep 2
+
+			      apt-get install crunch
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read PT
+
+              fi
+
+			if [ "$PT" = "09" ]; then
+
+echo -e "\033[0;36m instalando dbpwaudit...\033[0m"
+                   sleep 2
+
+			      apt-get install git && git clone git://git.kali.org/packages/dbpwaudit.git
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read PT
+
+              fi
+
+			if [ "$PT" = "10" ]; then
+
+echo -e "\033[0;36m instalando findmyhash...\033[0m"
+                   sleep 2
+
+			      apt-get install findmyhash
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read PT
+
+              fi
+
+			if [ "$PT" = "11" ]; then
+
+echo -e "\033[0;36m instalando gpp-decrypt...\033[0m"
+                   sleep 2
+
+			      apt-get install gpp-decrypt
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read PT
+
+              fi
+
+			if [ "$PT" = "12" ]; then
+
+echo -e "\033[0;36m instalando hash-identifier...\033[0m"
+                   sleep 2
+
+			      apt-get install hash-identifier
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read PT
+
+              fi
+
+			if [ "$PT" = "13" ]; then
+
+echo -e "\033[0;36m instalando hexorbase...\033[0m"
+                   sleep 2
+
+			      apt-get install hexorbase
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read PT
+
+              fi
+
+			if [ "$PT" = "14" ]; then
+
+echo -e "\033[0;36m instalando thc-hydra...\033[0m"
+                   sleep 2
+
+			      echo 'please visit : https://www.thc.org/thc-hydra/'
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read PT
+
+              fi
+
+			if [ "$PT" = "15" ]; then
+
+echo -e "\033[0;36m instalando john...\033[0m"
+                   sleep 2
+
+			      apt-get install john
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read PT
+
+              fi
+
+			if [ "$PT" = "16" ]; then
+
+echo -e "\033[0;36m instalando johnny...\033[0m"
+                   sleep 2
+
+			      apt-get install johnny
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read PT
+
+              fi
+
+			if [ "$PT" = "17" ]; then
+
+echo -e "\033[0;36m instalando keimpx...\033[0m"
+                   sleep 2
+
+			      apt-get install keimpx
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read PT
+
+              fi
+
+			if [ "$PT" = "18" ]; then
+
+echo -e "\033[0;36m instalando maltego-teeth...\033[0m"
+                   sleep 2
+
+			      apt-get install maltego-teeth
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read PT
+
+              fi
+
+			if [ "$PT" = "19" ]; then
+
+echo -e "\033[0;36m instalando maskprocessor...\033[0m"
+                   sleep 2
+
+			      apt-get install maskprocessor
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read PT
+
+              fi
+
+			if [ "$PT" = "20" ]; then
+
+echo -e "\033[0;36m instalando multiforcer...\033[0m"
+                   sleep 2
+
+			      apt-get install multiforcer
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read PT
+
+              fi
+
+			if [ "$PT" = "21" ]; then
+
+echo -e "\033[0;36m instalando ncrack...\033[0m"
+                   sleep 2
+
+			      apt-get install ncrack
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read PT
+
+              fi
+
+			if [ "$PT" = "22" ]; then
+
+echo -e "\033[0;36m instalando oclgausscrack...\033[0m"
+                   sleep 2
+
+			      apt-get install oclgausscrack
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read PT
+
+              fi
+
+			if [ "$PT" = "23" ]; then
+
+echo -e "\033[0;36m instalando pack...\033[0m"
+                   sleep 2
+
+			      apt-get install pack
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read PT
+
+              fi
+
+			if [ "$PT" = "24" ]; then
+
+echo -e "\033[0;36m instalando patator...\033[0m"
+                   sleep 2
+
+			      apt-get install patator
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read PT
+
+              fi
+
+			if [ "$PT" = "25" ]; then
+
+echo -e "\033[0;36m instalando phrasendrescher...\033[0m"
+                   sleep 2
+
+			      echo 'please visit : http://www.leidecker.info/projects/phrasendrescher/index.shtml'
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read PT
+
+              fi
+
+			if [ "$PT" = "26" ]; then
+
+echo -e "\033[0;36m instalando polenum...\033[0m"
+                   sleep 2
+
+			      apt-get install polenum
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read PT
+
+              fi
+
+			if [ "$PT" = "27" ]; then
+
+echo -e "\033[0;36m instalando rainbowcrack...\033[0m"
+                   sleep 2
+
+			      apt-get install rainbowcrack
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read PT
+
+              fi
+
+			if [ "$PT" = "28" ]; then
+
+echo -e "\033[0;36m instalando rcracki-mt...\033[0m"
+                   sleep 2
+
+			      apt-get install rcracki-mt
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read PT
+
+              fi
+
+			if [ "$PT" = "29" ]; then
+
+echo -e "\033[0;36m instalando rsmangler...\033[0m"
+                   sleep 2
+
+			      apt-get install rsmangler
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read PT
+
+              fi
+
+			if [ "$PT" = "30" ]; then
+
+echo -e "\033[0;36m instalando Sqldict...\033[0m"
+                   sleep 2
+
+			      apt-get install Sqldict
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read PT
+
+              fi
+
+			if [ "$PT" = "31" ]; then
+
+echo -e "\033[0;36m instalando statsprocessor...\033[0m"
+                   sleep 2
+
+			      apt-get install statsprocessor
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read PT
+
+              fi
+
+			if [ "$PT" = "32" ]; then
+
+echo -e "\033[0;36m instalando thc-pptp-bruter...\033[0m"
+                   sleep 2
+
+			      apt-get install thc-pptp-bruter
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read PT
+
+              fi
+
+			if [ "$PT" = "33" ]; then
+
+echo -e "\033[0;36m instalando truecrack...\033[0m"
+                   sleep 2
+
+			      apt-get install truecrack
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read PT
+
+              fi
+
+			if [ "$PT" = "34" ]; then
+
+echo -e "\033[0;36m instalando webscarab...\033[0m"
+                   sleep 2
+
+			      apt-get install webscarab
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read PT
+
+              fi
+
+			if [ "$PT" = "35" ]; then
+
+echo -e "\033[0;36m instalando wordlists...\033[0m"
+                   sleep 2
+
+			      apt-get install wordlists
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read PT
+
+              fi
+
+			if [ "$PT" = "36" ]; then
+
+echo -e "\033[0;36m instalando zaproxy...\033[0m"
+                   sleep 2
+
+			      apt-get install zaproxy
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read PT
+
+              fi
+
+           else
+
+echo -e "$cyan~::$corPadrao"
+
+          read PT
+
+         fi
+
+     done
+
+  done
+
+          while [ "$P" = "10" ]; do
+
+# Stress Testing
+echo -e "\033[1;36m Stress Testing\033[1;m"
+       sleep 1
+
+echo -e "
+$branco
+*  [00) - exit  [0 ) - Home
+
+*  [01) DHCPig
+*  [02) FunkLoad
+*  [03) iaxflood
+*  [04) Inundator
+*  [05) inviteflood	
+*  [06) ipv6-toolkit
+*  [07) mdk3
+*  [08) Reaver
+*  [09) rtpflood
+*  [10) SlowHTTPTest
+*  [11) t50
+*  [12) Termineter
+*  [13) THC-IPV6
+*  [14) THC-SSL-DOS
+
+   $corPadrao"
+
+echo -e "$cyan~::$corPadrao"
+
+     read ST
+
+     while [ "$ST" != "0" -o "$ST" != "00" -o "$ST" != "01" -o "$ST" != "02" -o "$ST" != "03" -o "$ST" != "04" -o "$ST" != "05" -o "$ST" != "06" -o "$ST" != "07" -o "$ST" != "08" -o "$ST" != "09" -o "$ST" != "10" -o "$ST" != "11" -o "$ST" != "12" -o "$ST" != "13" -o "$ST" != "14" ]; do
+
+         if [ "$ST" = "0" -o "$ST" = "00" -o "$ST" = "01" -o "$ST" = "02" -o "$ST" = "03" -o "$ST" = "04" -o "$ST" = "05" -o "$ST" = "06" -o "$ST" = "07" -o "$ST" = "08" -o "$ST" = "09" -o "$ST" = "10" -o "$ST" = "11" -o "$ST" = "12" -o "$ST" = "13" -o "$ST" = "14" ]; then
+
+         if [ "$ST" = "0" ]; then
+
+echo -e "\033[1;36m~Home~\033[0m"
+          main
+
+           fi
+
+            if [ "$ST" = "00" ]; then
+
+# saindo
+echo -e "$vermelhoClaro Saindo...$corPadrao"
+                    sleep 2
+
+                    exit
+
+              fi
+
+			if [ "$ST" = "01" ]; then
+
+echo -e "\033[0;36m instalando dhcpig...\033[0m"
+                   sleep 2
+
+			      apt-get install dhcpig
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read ST
+
+              fi
+
+			if [ "$ST" = "02" ]; then
+
+echo -e "\033[0;36m instalando funkload...\033[0m"
+                   sleep 2
+
+			      apt-get install funkload
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read ST
+
+              fi
+
+			if [ "$ST" = "03" ]; then
+
+echo -e "\033[0;36m instalando iaxflood...\033[0m"
+                   sleep 2
+
+			      apt-get install iaxflood
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read ST
+
+              fi
+
+			if [ "$ST" = "04" ]; then
+
+echo -e "\033[0;36m instalando inundator...\033[0m"
+                   sleep 2
+
+			      apt-get install git && git clone git://git.kali.org/packages/inundator.git
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read ST
+
+              fi
+
+			if [ "$ST" = "05" ]; then
+
+echo -e "\033[0;36m instalando inviteflood...\033[0m"
+                   sleep 2
+
+			      apt-get install inviteflood
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read ST
+
+              fi
+
+			if [ "$ST" = "06" ]; then
+
+echo -e "\033[0;36m instalando ipv6-toolkit...\033[0m"
+                   sleep 2
+
+			      apt-get install ipv6-toolkit
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read ST
+
+              fi
+
+			if [ "$ST" = "07" ]; then
+
+echo -e "\033[0;36m instalando mdk3...\033[0m"
+                   sleep 2
+
+			      apt-get install mdk3
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read ST
+
+              fi
+
+			if [ "$ST" = "08" ]; then
+
+echo -e "\033[0;36m instalando reaver...\033[0m"
+                   sleep 2
+
+			      apt-get install reaver
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read ST
+
+              fi
+
+			if [ "$ST" = "09" ]; then
+
+echo -e "\033[0;36m instalando rtpflood...\033[0m"
+                   sleep 2
+
+			      apt-get install rtpflood
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read ST
+
+              fi
+
+			if [ "$ST" = "10" ]; then
+
+echo -e "\033[0;36m instalando slowhttptest...\033[0m"
+                   sleep 2
+
+			      apt-get install slowhttptest
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read ST
+
+              fi
+
+			if [ "$ST" = "11" ]; then
+
+echo -e "\033[0;36m instalando t50...\033[0m"
+                   sleep 2
+
+			      apt-get install t50
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read ST
+
+              fi
+
+			if [ "$ST" = "12" ]; then
+
+echo -e "\033[0;36m instalando termineter...\033[0m"
+                   sleep 2
+
+			      apt-get install termineter
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read ST
+
+              fi
+
+			if [ "$ST" = "13" ]; then
+
+echo -e "\033[0;36m instalando thc-ipv6...\033[0m"
+                   sleep 2
+
+			      apt-get install thc-ipv6
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read ST
+
+              fi
+
+			if [ "$ST" = "14" ]; then
+
+echo -e "\033[0;36m instalando thc-ssl-dos...\033[0m"
+                   sleep 2
+
+			      apt-get install thc-ssl-dos
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read ST
+
+              fi
+
+           else
+
+echo -e "$cyan~::$corPadrao"
+
+          read FT
+
+         fi
+
+     done
+
+   done
+
+          while [ "$P" = "09" ]; do
+
+# Forensics Tools
+echo -e "\033[1;36m Forensics Tools\033[1;m"
+       sleep 1
+
+echo -e "
+$branco
+*  [00) - exit  [0 ) - Home
+
+*  [01) Binwalk	           *  [13) Guymager
+*  [02) bulk-extractor     *  [14) iPhone Backup Analyzer
+*  [03) Capstone           *  [15) p0f
+*  [04) chntpw             *  [16) pdf-parser
+*  [05) Cuckoo             *  [17) pdfid
+*  [06) dc3dd              *  [18) pdgmail
+*  [07) ddrescue           *  [19) peepdf
+*  [08) diStorm3           *  [20) Volatility
+*  [09) Dumpzilla          *  [21) Xplico
+*  [10) extundelete        
+*  [11) Foremost
+*  [12) Galleta
+
+
+   $corPadrao"
+
+echo -e "$cyan~::$corPadrao"
+
+     read FT
+
+   while [ "$FT" != "00" -o "$FT" != "01" -o "$FT" != "02" -o "$FT" != "03" -o "$FT" != "04" -o "$FT" != "05" -o "$FT" != "06" -o "$FT" != "07" -o "$FT" != "08" -o "$FT" != "09" -o "$FT" != "10" -o "$FT" != "11" -o "$FT" != "12" -o "$FT" != "13" -o "$FT" != "14" -o "$FT" != "15" -o "$FT" != "16" -o "$FT" != "17" -o "$FT" != "18" -o "$FT" != "19" -o "$FT" != "20" -o "$FT" != "21" -o "$FT" != "0" ]; do
+
+         if [ "$FT" = "0" -o "$FT" = "00" -o "$FT" = "01" -o "$FT" = "02" -o "$FT" = "03" -o "$FT" = "04" -o "$FT" = "05" -o "$FT" = "06" -o "$FT" = "07" -o "$FT" = "08" -o "$FT" = "09" -o "$FT" = "10" -o "$FT" = "11" -o "$FT" = "12" -o "$FT" = "13" -o "$FT" = "14" -o "$FT" = "15" -o "$FT" = "16" -o "$FT" = "17" -o "$FT" = "18" -o "$FT" = "19" -o "$FT" = "20" -o "$FT" = "21" ]; then
+
+         if [ "$FT" = "0" ]; then
+
+echo -e "\033[1;36m~Home~\033[0m"
+          main
+
+           fi
+
+            if [ "$FT" = "00" ]; then
+
+# saindo
+echo -e "$vermelhoClaro Saindo...$corPadrao"
+                    sleep 2
+
+                    exit
+
+              fi
+
+			if [ "$FT" = "01" ]; then
+
+echo -e "\033[0;36m instalando binwalk...\033[0m"
+                   sleep 2
+
+			      apt-get install binwalk
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read FT
+
+              fi
+
+			if [ "$FT" = "02" ]; then
+
+echo -e "\033[0;36m instalando bulk-extractor...\033[0m"
+                   sleep 2
+
+			      apt-get install bulk-extractor
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read FT
+
+              fi
+
+			if [ "$FT" = "03" ]; then
+
+echo -e "\033[0;36m instalando capstone...\033[0m"
+                   sleep 2
+
+			      apt-get install git && git clone git://git.kali.org/packages/capstone.git
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read FT
+
+              fi
+
+			if [ "$FT" = "04" ]; then
+
+echo -e "\033[0;36m instalando chntpw...\033[0m"
+                   sleep 2
+
+			      apt-get install chntpw
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read FT
+
+              fi
+
+			if [ "$FT" = "05" ]; then
+
+echo -e "\033[0;36m instalando cuckoo...\033[0m"
+                   sleep 2
+
+			      apt-get install cuckoo
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read FT
+
+              fi
+
+			if [ "$FT" = "06" ]; then
+
+echo -e "\033[0;36m instalando dc3dd...\033[0m"
+                   sleep 2
+
+			      apt-get install dc3dd
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read FT
+
+              fi
+
+			if [ "$FT" = "07" ]; then
+
+echo -e "\033[0;36m instalando ddrescue...\033[0m"
+                   sleep 2
+
+			      apt-get install ddrescue
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read FT
+
+              fi
+
+			if [ "$FT" = "08" ]; then
+
+echo -e "\033[0;36m instalando distorm3...\033[0m"
+                   sleep 2
+
+			      apt-get install git && git clone git://git.kali.org/packages/distorm3.git
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read FT
+
+              fi
+
+			if [ "$FT" = "09" ]; then
+
+echo -e "\033[0;36m instalando dumpzilla...\033[0m"
+                   sleep 2
+
+			      apt-get install dumpzilla
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read FT
+
+              fi
+
+			if [ "$FT" = "10" ]; then
+
+echo -e "\033[0;36m instalando extundelete...\033[0m"
+                   sleep 2
+
+			      apt-get install extundelete
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read FT
+
+              fi
+
+			if [ "$FT" = "11" ]; then
+
+echo -e "\033[0;36m instalando foremost...\033[0m"
+                   sleep 2
+
+			      apt-get install foremost
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read FT
+
+              fi
+
+			if [ "$FT" = "12" ]; then
+
+echo -e "\033[0;36m instalando galleta...\033[0m"
+                   sleep 2
+
+			      apt-get install galleta
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read FT
+
+              fi
+
+			if [ "$FT" = "13" ]; then
+
+echo -e "\033[0;36m instalando guymager...\033[0m"
+                   sleep 2
+
+			      apt-get install guymager
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read FT
+
+              fi
+
+			if [ "$FT" = "14" ]; then
+
+echo -e "\033[0;36m instalando iphone-backup-analyzer...\033[0m"
+                   sleep 2
+
+			      apt-get install iphone-backup-analyzer
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read FT
+
+              fi
+
+			if [ "$FT" = "15" ]; then
+
+echo -e "\033[0;36m instalando p0f...\033[0m"
+                   sleep 2
+
+			      apt-get install p0f
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read FT
+
+              fi
+
+			if [ "$FT" = "16" ]; then
+
+echo -e "\033[0;36m instalando pdf-parser...\033[0m"
+                   sleep 2
+
+			      apt-get install pdf-parser
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read FT
+
+              fi
+
+			if [ "$FT" = "17" ]; then
+
+echo -e "\033[0;36m instalando pdfid...\033[0m"
+                   sleep 2
+
+			      apt-get install pdfid
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read FT
+
+              fi
+
+			if [ "$FT" = "18" ]; then
+
+echo -e "\033[0;36m instalando pdgmail...\033[0m"
+                   sleep 2
+
+			      apt-get install pdgmail
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read FT
+
+              fi
+
+			if [ "$FT" = "19" ]; then
+
+echo -e "\033[0;36m instalando peepdf...\033[0m"
+                   sleep 2
+
+			      pt-get install peepdf
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read FT
+
+              fi
+
+			if [ "$FT" = "20" ]; then
+
+echo -e "\033[0;36m instalando volatility...\033[0m"
+                   sleep 2
+
+			      apt-get install volatility
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read FT
+
+              fi
+
+			if [ "$FT" = "21" ]; then
+
+echo -e "\033[0;36m instalando xplico...\033[0m"
+                   sleep 2
+
+			      apt-get install xplico
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read FT
+
+              fi
+
+           else
+
+echo -e "$cyan~::$corPadrao"
+
+          read FT
+
+         fi
+
+     done
+
+   done
+
+          while [ "$P" = "08" ]; do
+
+# Exploitation Tools
+echo -e "\033[1;36m Exploitation Tools\033[1;m"
+       sleep 1
+
+echo -e "
+$branco
+*  [00) - exit  [0 ) - Home
+
+*  [01) Armitage
+*  [02) Backdoor Factory
+*  [03) BeEF
+*  [04) cisco-auditing-tool
+*  [05) cisco-global-exploiter	
+*  [06) cisco-ocs
+*  [07) cisco-torch
+*  [08) commix
+*  [09) crackle
+*  [10) jboss-autopwn
+*  [11) Linux Exploit Suggester
+*  [12) Maltego Teeth
+*  [13) SET
+*  [14) ShellNoob
+*  [15) sqlmap
+*  [16) THC-IPV6
+*  [17) Yersinia
+
+   $corPadrao"
+
+echo -e "$cyan~::$corPadrao"
+
+     read Ex
+
+    while [ "$Ex" != "0" -o "$Ex" != "00" -o "$Ex" != "01" -o "$Ex" != "02" -o "$Ex" != "03" -o "$Ex" != "04" -o "$Ex" != "05" -o "$Ex" != "06" -o "$Ex" != "07" -o "$Ex" != "08" -o "$Ex" != "09" -o "$Ex" != "10" -o "$Ex" != "11" -o "$Ex" != "12" -o "$Ex" != "13" -o "$Ex" != "14" -o "$Ex" != "15" -o "$Ex" != "16" -o "$Ex" != "17" ]; do
+
+         if [ "$Ex" = "0" -o "$Ex" = "00" -o "$Ex" = "01" -o "$Ex" = "02" -o "$Ex" = "03" -o "$Ex" = "04" -o "$Ex" = "05" -o "$Ex" = "06" -o "$Ex" = "07" -o "$Ex" = "08" -o "$Ex" = "09" -o "$Ex" = "10" -o "$Ex" = "11" -o "$Ex" = "12" -o "$Ex" = "13" -o "$Ex" = "14" -o "$Ex" = "15" -o "$Ex" = "16" -o "$Ex" = "17" ]; then
+
+         if [ "$Ex" = "0" ]; then
+
+echo -e "\033[1;36m~Home~\033[0m"
+          main
+
+           fi
+				 
+          if [ "$Ex" = "00" ]; then
+
+# saindo
+echo -e "$vermelhoClaro Saindo...$corPadrao"
+                    sleep 2
+
+                    exit
+
+              fi
+
+			if [ "$Ex" = "01" ]; then
+
+echo -e "\033[0;36m instalando armitage...\033[0m"
+                   sleep 2
+
+			      apt-get install armitage
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read Ex
+
+              fi
+
+			if [ "$Ex" = "02" ]; then
+
+echo -e "\033[0;36m instalando backdoor-factory...\033[0m"
+                   sleep 2
+
+			      apt-get install backdoor-factory
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read Ex
+
+              fi
+
+		if [ "$Ex" = "03" ]; then
+
+echo -e "\033[0;36m instalando beef-xss...\033[0m"
+                   sleep 2
+
+			      apt-get install beef-xss
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read Ex
+
+              fi
+
+			if [ "$Ex" = "04" ]; then
+
+echo -e "\033[0;36m instalando cisco-auditing-tool...\033[0m"
+                   sleep 2
+
+			      apt-get install cisco-auditing-tool
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read Ex
+
+              fi
+
+			if [ "$Ex" = "05" ]; then
+
+echo -e "\033[0;36m instalando cisco-global-exploiter...\033[0m"
+                   sleep 2
+
+			      apt-get install cisco-global-exploiter
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read Ex
+
+              fi
+
+			if [ "$Ex" = "06" ]; then
+
+echo -e "\033[0;36m instalando cisco-ocs...\033[0m"
+                   sleep 2
+
+			      apt-get install cisco-ocs
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read Ex
+
+              fi
+
+			if [ "$Ex" = "07" ]; then
+
+echo -e "\033[0;36m instalando cisco-torch...\033[0m"
+                   sleep 2
+
+			      apt-get install cisco-torch
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read Ex
+
+              fi
+
+			if [ "$Ex" = "08" ]; then
+
+echo -e "\033[0;36m instalando commix...\033[0m"
+                   sleep 2
+
+			      apt-get install git && git clone https://github.com/stasinopoulos/commix.git commix && cd commix && python ./commix.py --install
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read Ex
+
+              fi
+
+			if [ "$Ex" = "09" ]; then
+
+echo -e "\033[0;36m instalando crackle...\033[0m"
+                   sleep 2
+
+			      apt-get install crackle
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read Ex
+
+              fi
+
+			if [ "$Ex" = "10" ]; then
+
+echo -e "\033[0;36m instalando jboss-autopwn...\033[0m"
+                   sleep 2
+
+			      apt-get install jboss-autopwn
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read Ex
+
+              fi
+
+			if [ "$Ex" = "11" ]; then
+
+echo -e "\033[0;36m instalando linux-exploit-suggester...\033[0m"
+                   sleep 2
+
+                   apt-get install linux-exploit-suggester
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read Ex
+
+              fi
+
+			if [ "$Ex" = "12" ]; then
+
+echo -e "\033[0;36m instalando maltego-teeth...\033[0m"
+                   sleep 2
+
+                   apt-get install maltego-teeth
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read Ex
+
+              fi
+
+			if [ "$Ex" = "13" ]; then
+
+echo -e "\033[0;36m instalando set...\033[0m"
+                   sleep 2
+
+                   apt-get install set
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read Ex
+
+              fi
+
+			if [ "$Ex" = "14" ]; then
+
+echo -e "\033[0;36m instalando shellnoob...\033[0m"
+                   sleep 2
+
+                   apt-get install shellnoob
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read Ex
+
+              fi
+
+			if [ "$Ex" = "15" ]; then
+
+echo -e "\033[0;36m instalando sqlmap...\033[0m"
+                   sleep 2
+
+                   apt-get install sqlmap
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read Ex
+
+              fi
+
+			if [ "$Ex" = "16" ]; then
+
+echo -e "\033[0;36m instalando thc-ipv6...\033[0m"
+                   sleep 2
+
+                   apt-get install thc-ipv6
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read Ex
+
+              fi
+
+			if [ "$Ex" = "17" ]; then
+
+echo -e "\033[0;36m instalando yersinia...\033[0m"
+                   sleep 2
+
+                   apt-get install yersinia
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read Ex
+
+              fi
+
+           else
+
+echo -e "$cyan~::$corPadrao"
+
+          read Az
+
+         fi
+
+     done
+
+   done
+
+          while [ "$P" = "07" ]; do
+
+# Reporting Tools
+echo -e "\033[1;36m Reporting Tools\033[1;m"
+        sleep 1
+
+echo -e "
+$branco
+*  [00) - exit  [0 ) - Home
+
+*  [01) CaseFile
+*  [02) CutyCapt
+*  [03) dos2unix
+*  [04) Dradis
+*  [05) KeepNote	
+*  [06) MagicTree
+*  [07) Metagoofil
+*  [08) Nipper-ng
+
+   $corPadrao"
+
+echo -e "$cyan~::$corPadrao"
+
+     read ls
+
+    while [ "$ls" != "0" -o "$ls" != "00" -o "$ls" != "01" -o "$ls" != "02" -o "$ls" != "03" -o "$ls" != "04" -o "$ls" != "05" -o "$ls" != "06" -o "$ls" != "07" -o "$ls" != "08" ]; do
+
+         if [ "$ls" = "0" -o "$ls" = "00" -o "$ls" = "01" -o "$ls" = "02" -o "$ls" = "03" -o "$ls" = "04" -o "$ls" = "05" -o "$ls" = "06" -o "$ls" = "07" -o "$ls" = "08" ]; then
+
+         if [ "$ls" = "0" ]; then
+
+echo -e "\033[1;36m~Home~\033[0m"
+          main
+
+           fi
+
+           if [ "$ls" = "00" ]; then
+
+# saindo
+echo -e "$vermelhoClaro Saindo...$corPadrao"
+                   sleep 2
+
+                  exit
+
+               fi
+
+			if [ "$ls" = "01" ]; then
+
+echo -e "\033[0;36m instalando casefile...\033[0m"
+                   sleep 2
+
+			      apt-get install casefile
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read ls
+
+              fi
+
+			if [ "$ls" = "02" ]; then
+
+echo -e "\033[0;36m instalando cutycapt...\033[0m"
+                   sleep 2
+
+			      apt-get install cutycapt
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read ls
+
+              fi
+
+			if [ "$ls" = "03" ]; then
+
+echo -e "\033[0;36m instalando dos2unix...\033[0m"
+                   sleep 2
+
+			      apt-get install dos2unix
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read ls
+
+              fi
+
+			if [ "$ls" = "04" ]; then
+
+echo -e "\033[0;36m instalando dradis...\033[0m"
+                   sleep 2
+
+			       apt-get install dradis
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read ls
+
+              fi
+
+			if [ "$ls" = "05" ]; then
+
+echo -e "\033[0;36m instalando keepnote...\033[0m"
+                   sleep 2
+
+			       apt-get install keepnote
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read ls
+
+              fi
+
+			if [ "$ls" = "06" ]; then
+
+echo -e "\033[0;36m instalando magictree...\033[0m"
+                   sleep 2
+
+			       apt-get install magictree
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read ls
+
+              fi
+
+			if [ "$ls" = "07" ]; then
+
+echo -e "\033[0;36m instalando metagoofil...\033[0m"
+                   sleep 2
+
+			       apt-get install metagoofil
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read ls
+
+              fi
+
+			if [ "$ls" = "08" ]; then
+
+echo -e "\033[0;36m instalando nipper-ng...\033[0m"
+                   sleep 2
+
+			       apt-get install nipper-ng
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read ls
+
+              fi
+
+			if [ "$ls" = "08" ]; then
+
+echo -e "\033[0;36m instalando pipal...\033[0m"
+                   sleep 2
+
+			       apt-get install pipal
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read ls
+
+              fi
+
+          else
+
+echo -e "$cyan~::$corPadrao"
+
+          read ls
+
+         fi
+
+     done
+
+  done
+
+          while [ "$P" = "06" ]; do
+
+# Maintaining Access
+echo -e "\033[1;36m Maintaining Access\033[1;m"
+        sleep 1
+
+echo -e "
+$branco
+*  [00) - exit  [0 ) - Home
+
+*  [01) CryptCat
+*  [02) Cymothoa
+*  [03) dbd
+*  [04) dns2tcp
+*  [05) http-tunnel	
+*  [06) HTTPTunnel
+*  [07) Intersect
+*  [08) Nishang
+*  [09) polenum
+*  [10) PowerSploit
+*  [11) pwnat
+*  [12) RidEnum
+*  [13) sbd
+*  [14) U3-Pwn
+*  [15) Webshells
+*  [16) Weevely
+
+   $corPadrao"
+
+echo -e "$cyan~::$corPadrao"
+
+      read Az
+
+   while [ "$Az" != "0" -o "$Az" != "00" -o "$Az" != "01" -o "$Az" != "02" -o "$Az" != "03" -o "$Az" != "04" -o "$Az" != "05" -o "$Az" != "06" -o "$Az" != "07" -o "$Az" != "08" -o "$Az" != "09" -o "$Az" != "10" -o "$Az" != "11" -o "$Az" != "12" -o "$Az" != "13" -o "$Az" != "14" -o "$Az" != "15" -o "$Az" != "16" ]; do
+
+         if [ "$Az" = "0" -o "$Az" = "00" -o "$Az" = "01" -o "$Az" = "02" -o "$Az" = "03" -o "$Az" = "04" -o "$Az" = "05" -o "$Az" = "06" -o "$Az" = "07" -o "$Az" = "08" -o "$Az" = "09" -o "$Az" = "10" -o "$Az" = "11" -o "$Az" = "12" -o "$Az" = "13" -o "$Az" = "14" -o "$Az" = "15" -o "$Az" = "16" ]; then
+
+         if [ "$Az" = "0" ]; then
+
+echo -e "\033[1;36m~Home~\033[0m"
+          main
+
+           fi
+
+            if [ "$Az" = "00" ]; then
+
+# saindo
+echo -e "$vermelhoClaro Saindo...$corPadrao"
+                   sleep 2
+
+                  exit
+
+               fi
+
+			if [ "$Az" = "01" ]; then
+
+echo -e "\033[0;36m instalando cryptcat...\033[0m"
+                   sleep 2
+
+			      apt-get install cryptcat
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read Az
+
+              fi
+
+			if [ "$Az" = "02" ]; then
+
+echo -e "\033[0;36m instalando cymothoa...\033[0m"
+                   sleep 2
+
+			      apt-get install cymothoa
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read Az
+
+              fi
+
+			if [ "$Az" = "03" ]; then
+
+echo -e "\033[0;36m instalando dbd...\033[0m"
+                   sleep 2
+
+			      apt-get install dbd
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read Az
+
+              fi
+
+			if [ "$Az" = "04" ]; then
+
+echo -e "\033[0;36m instalando dns2tcp...\033[0m"
+                   sleep 2
+
+			      apt-get install dns2tcp
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read Az
+
+              fi
+
+			if [ "$Az" = "05" ]; then
+
+echo -e "\033[0;36m instalando http-tunnel...\033[0m"
+                   sleep 2
+
+			      apt-get install http-tunnel
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read Az
+
+              fi
+
+			if [ "$Az" = "06" ]; then
+
+echo -e "\033[0;36m instalando httptunnel...\033[0m"
+                   sleep 2
+
+			      apt-get install httptunnel
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read Az
+
+              fi
+
+			if [ "$Az" = "07" ]; then
+
+echo -e "\033[0;36m instalando intersect...\033[0m"
+                   sleep 2
+
+			      apt-get install intersect
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read Az
+
+              fi
+
+			if [ "$Az" = "08" ]; then
+
+echo -e "\033[0;36m instalando nishang...\033[0m"
+                   sleep 2
+
+			      apt-get install nishang
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read Az
+
+              fi
+
+			if [ "$Az" = "09" ]; then
+
+echo -e "\033[0;36m instalando polenum...\033[0m"
+                   sleep 2
+
+			      apt-get install polenum
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read Az
+
+              fi
+
+			if [ "$Az" = "10" ]; then
+
+echo -e "\033[0;36m instalando powersploit...\033[0m"
+                   sleep 2
+
+			      apt-get install powersploit
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read Az
+
+              fi
+
+			if [ "$Az" = "11" ]; then
+
+echo -e "\033[0;36m instalando pwnat...\033[0m"
+                   sleep 2
+
+			      apt-get install pwnat
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read Az
+
+              fi
+
+			if [ "$Az" = "12" ]; then
+
+echo -e "\033[0;36m instalando ridenum...\033[0m"
+                   sleep 2
+
+			      apt-get install ridenum
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read Az
+
+              fi
+
+			if [ "$Az" = "13" ]; then
+
+echo -e "\033[0;36m instalando sbd...\033[0m"
+                   sleep 2
+
+			      apt-get install sbd
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read Az
+
+              fi
+
+			if [ "$Az" = "14" ]; then
+
+echo -e "\033[0;36m instalando u3-pwn...\033[0m"
+                   sleep 2
+
+			      apt-get install u3-pwn
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read Az
+
+              fi
+
+			if [ "$Az" = "15" ]; then
+
+echo -e "\033[0;36m instalando webshells...\033[0m"
+                   sleep 2
+
+			      apt-get install webshells
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read Az
+
+              fi
+
+			if [ "$Az" = "16" ]; then
+
+echo -e "\033[0;36m instalando weevely...\033[0m"
+                   sleep 2
+
+			      apt-get install weevely
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read Az
+
+              fi
+
+           else
+
+echo -e "$cyan~::$corPadrao"
+
+          read Az
+
+         fi
+
+     done
+
+   done
+
+          while [ "$P" = "05" ]; do
+
+# Sniffing & Spoofing
+
+echo -e "\033[1;36m Sniffing & Spoofing\033[1;m"
+        sleep 1
+
+echo -e "
+$branco
+*  [00) - exit  [0 ) - Home
+
+*  [01) Burp Suite           *  [17) rtpmixsound
+*  [02) DNSChef              *  [18) sctpscan
+*  [03) fiked                *  [19) SIPArmyKnife
+*  [04) hamster-sidejack     *  [20) SIPp
+*  [05) HexInject            *  [21) SIPVicious
+*  [06) iaxflood             *  [22) SniffJoke
+*  [07) inviteflood          *  [23) SSLsplit
+*  [08) iSMTP                *  [24) sslstrip
+*  [09) isr-evilgrade        *  [25) THC-IPV6
+*  [10) mitmproxy            *  [26) VoIPHopper
+*  [11) ohrwurm              *  [27) WebScarab
+*  [12) protos-sip           *  [28) Wifi Honey
+*  [13) rebind               *  [29) Wireshark
+*  [14) responder            *  [30) xspy
+*  [15) rtpbreak             *  [31) Yersinia
+*  [16) rtpinsertsound	     *  [32) zaproxy
+
+   $corPadrao"
+
+echo -e "$cyan~::$corPadrao"
+
+        read SS
+
+     while [ "$SS" != "00" -o "$SS" != "01" -o "$SS" != "02" -o "$SS" != "03" -o "$SS" != "04" -o "$SS" != "05" -o "$SS" != "06" -o "$SS" != "07" -o "$SS" != "08" -o "$SS" != "09" -o "$SS" != "10" -o "$SS" != "11" -o "$SS" != "12" -o "$SS" != "13" -o "$SS" != "14" -o "$SS" != "15" -o "$SS" != "16" -o "$SS" != "17" -o "$SS" != "18" -o "$SS" != "19" -o "$SS" != "20" -o "$SS" != "21" -o "$SS" != "22" -o "$SS" != "23" -o "$SS" != "24" -o "$SS" != "25" -o "$SS" != "26" -o "$SS" != "27" -o "$SS" != "28" -o "$SS" != "29" -o "$SS" != "30" -o "$SS" != "31" -o "$SS" != "32" -o "$SS" != "0" ]; do
+
+         if [ "$SS" = "00" -o "$SS" = "01" -o "$SS" = "02" -o "$SS" = "03" -o "$SS" = "04" -o "$SS" = "05" -o "$SS" = "06" -o "$SS" = "07" -o "$SS" = "08" -o "$SS" = "09" -o "$SS" = "10" -o "$SS" = "11" -o "$SS" = "12" -o "$SS" = "13" -o "$SS" = "14" -o "$SS" = "15" -o "$SS" = "16" -o "$SS" = "17" -o "$SS" = "18" -o "$SS" = "19" -o "$SS" = "20" -o "$SS" = "21" -o "$SS" = "22" -o "$SS" = "23" -o "$SS" = "24" -o "$SS" = "25" -o "$SS" = "26" -o "$SS" = "27" -o "$SS" = "28" -o "$SS" = "29" -o "$SS" = "30" -o "$SS" = "31" -o "$SS" = "32" -o "$SS" = "0" ]; then
+
+         if [ "$SS" = "0" ]; then
+
+echo -e "\033[1;36m~Home~\033[0m"
+          main
+
+           fi
+
+           if [ "$SS" = "00" ]; then
+
+# saindo
+echo -e "$vermelhoClaro Saindo...$corPadrao"
+                   sleep 2
+
+                  exit
+
+               fi
+
+			if [ "$SS" = "01" ]; then
+
+echo -e "\033[0;36m instalando burpsuite...\033[0m"
+                   sleep 2
+
+			      apt-get install burpsuite
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read SS
+
+              fi
+
+			if [ "$SS" = "02" ]; then
+
+echo -e "\033[0;36m instalando dnschef...\033[0m"
+                   sleep 2
+
+			      apt-get install dnschef
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read SS
+
+              fi
+
+
+			if [ "$SS" = "03" ]; then
+
+echo -e "\033[0;36m instalando fiked...\033[0m"
+                   sleep 2
+
+			      apt-get install fiked
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read SS
+
+              fi
+
+			if [ "$SS" = "04" ]; then
+
+echo -e "\033[0;36m instalando hamster-sidejack...\033[0m"
+                   sleep 2
+
+			      apt-get install hamster-sidejack
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read SS
+
+              fi
+
+			if [ "$SS" = "05" ]; then
+
+echo -e "\033[0;36m instalando hexinject...\033[0m"
+                   sleep 2
+
+			      apt-get install hexinject
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read SS
+
+              fi
+
+			if [ "$SS" = "06" ]; then
+
+echo -e "\033[0;36m instalando iaxflood...\033[0m"
+                   sleep 2
+
+			      apt-get install iaxflood
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read SS
+
+              fi
+
+			if [ "$SS" = "07" ]; then
+
+echo -e "\033[0;36m instalando inviteflood...\033[0m"
+                   sleep 2
+
+			      apt-get install inviteflood
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read SS
+
+              fi
+
+			if [ "$SS" = "08" ]; then
+
+echo -e "\033[0;36m instalando ismtp...\033[0m"
+                   sleep 2
+
+			      apt-get install ismtp
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read SS
+
+              fi
+
+			if [ "$SS" = "09" ]; then
+
+echo -e "\033[0;36m instalando isr-evilgrade...\033[0m"
+                   sleep 2
+
+			      apt-get install git && git clone git://git.kali.org/packages/isr-evilgrade.git
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read SS
+
+              fi
+
+			if [ "$SS" = "10" ]; then
+
+echo -e "\033[0;36m instalando mitmproxy...\033[0m"
+                   sleep 2
+
+			      apt-get install mitmproxy
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read SS
+
+              fi
+
+			if [ "$SS" = "11" ]; then
+
+echo -e "\033[0;36m instalando ohrwurm...\033[0m"
+                   sleep 2
+
+			      apt-get install ohrwurm
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read SS
+
+              fi
+
+			if [ "$SS" = "12" ]; then
+
+echo -e "\033[0;36m instalando protos-sip...\033[0m"
+                   sleep 2
+
+			      apt-get install protos-sip
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read SS
+
+              fi
+
+			if [ "$SS" = "13" ]; then
+
+echo -e "\033[0;36m instalando rebind...\033[0m"
+                   sleep 2
+
+			      apt-get install rebind
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read SS
+
+              fi
+
+			if [ "$SS" = "14" ]; then
+
+echo -e "\033[0;36m instalando responder...\033[0m"
+                   sleep 2
+
+			      apt-get install responder
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read SS
+
+              fi
+
+			if [ "$SS" = "15" ]; then
+
+echo -e "\033[0;36m instalando rtpbreak...\033[0m"
+                   sleep 2
+
+			      apt-get install rtpbreak
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read SS
+
+              fi
+
+			if [ "$SS" = "16" ]; then
+
+echo -e "\033[0;36m instalando rtpinsertsound...\033[0m"
+                   sleep 2
+
+			      apt-get install rtpinsertsound
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read SS
+
+              fi
+
+			if [ "$SS" = "17" ]; then
+
+echo -e "\033[0;36m instalando rtpmixsound...\033[0m"
+                   sleep 2
+
+			      apt-get install rtpmixsound
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read SS
+
+              fi
+
+			if [ "$SS" = "18" ]; then
+
+echo -e "\033[0;36m instalando sctpscan...\033[0m"
+                   sleep 2
+
+			      apt-get install sctpscan
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read SS
+
+              fi
+
+			if [ "$SS" = "19" ]; then
+
+echo -e "\033[0;36m instalando siparmyknife...\033[0m"
+                   sleep 2
+
+			      apt-get install siparmyknife
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read SS
+
+              fi
+
+			if [ "$SS" = "20" ]; then
+
+echo -e "\033[0;36m instalando sipp...\033[0m"
+                   sleep 2
+
+			       apt-get install sipp
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read SS
+
+              fi
+
+			if [ "$SS" = "21" ]; then
+
+echo -e "\033[0;36m instalando sipvicious...\033[0m"
+                   sleep 2
+
+			      apt-get install sipvicious
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read SS
+
+              fi
+
+			if [ "$SS" = "22" ]; then
+
+echo -e "\033[0;36m instalando sniffjoke...\033[0m"
+                   sleep 2
+
+			      apt-get install sniffjoke
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read SS
+
+              fi
+
+			if [ "$SS" = "23" ]; then
+
+echo -e "\033[0;36m instalando sslsplit...\033[0m"
+                   sleep 2
+
+			      apt-get install sslsplit
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read SS
+
+              fi
+
+			if [ "$SS" = "24" ]; then
+
+echo -e "\033[0;36m instalando sslstrip...\033[0m"
+                   sleep 2
+
+			      apt-get install sslstrip
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read SS
+
+              fi
+
+			if [ "$SS" = "25" ]; then
+
+echo -e "\033[0;36m instalando thc-ipv6...\033[0m"
+                   sleep 2
+
+			      apt-get install thc-ipv6
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read SS
+
+              fi
+
+			if [ "$SS" = "26" ]; then
+
+echo -e "\033[0;36m instalando voiphopper...\033[0m"
+                   sleep 2
+
+			      apt-get install voiphopper
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read SS
+
+              fi
+
+			if [ "$SS" = "27" ]; then
+
+echo -e "\033[0;36m instalando webscarab...\033[0m"
+                   sleep 2
+
+			      apt-get install webscarab
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read SS
+
+              fi
+
+			if [ "$SS" = "28" ]; then
+
+echo -e "\033[0;36m instalando wifi-honey...\033[0m"
+                   sleep 2
+
+			      apt-get install wifi-honey
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read SS
+
+              fi
+
+			if [ "$SS" = "29" ]; then
+
+echo -e "\033[0;36m instalando wireshark...\033[0m"
+                   sleep 2
+
+			      apt-get install wireshark
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read SS
+
+              fi
+
+			if [ "$SS" = "30" ]; then
+
+echo -e "\033[0;36m instalando xspy...\033[0m"
+                   sleep 2
+
+			      apt-get install xspy
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read SS
+
+              fi
+
+			if [ "$SS" = "31" ]; then
+
+echo -e "\033[0;36m instalando yersinia...\033[0m"
+                   sleep 2
+
+			      apt-get install yersinia
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read SS
+
+              fi
+
+			if [ "$SS" = "32" ]; then
+
+echo -e "\033[0;36m instalando zaproxy...\033[0m"
+                   sleep 2
+
+			      apt-get install zaproxy
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read SS
+
+              fi
+
+          else
+
+echo -e "$cyan~::$corPadrao"
+
+          read SS
+
+         fi
+
+     done
+
+   done
+
+          while [ "$P" = "04" ]; do
+
+# Web Applications
+echo -e "\033[1;36m Web Applications\033[1;m"
+         sleep 1
+
+echo -e "
+$branco
+*  [00) - exit  [0 ) - Home
+
+*  [01) apache-users    *  [22) plecost
+*  [02) Arachni         *  [23) Powerfuzzer
+*  [03) BBQSQL          *  [24) ProxyStrike
+*  [04) BlindElephant   *  [25) Recon-ng
+*  [05) Burp Suite      *  [26) Skipfish
+*  [06) commix          *  [27) sqlmap
+*  [07) CutyCapt        *  [28) Sqlninja
+*  [08) DAVTest         *  [29) sqlsus
+*  [09) deblaze         *  [30) ua-tester
+*  [10) DIRB            *  [31) Uniscan
+*  [11) DirBuster       *  [32) Vega
+*  [12) fimap           *  [33) w3af
+*  [13) FunkLoad        *  [34) WebScarab
+*  [14) Grabber         *  [35) WebSlayer
+*  [15) jboss-autopwn   *  [36) WebSploit
+*  [16) joomscan        *  [37) Wfuzz
+*  [17) jSQL            *  [38) WPScan
+*  [18) Maltego Teeth   *  [39) XSSer
+*  [19) PadBuster       *  [40) zaproxy
+*  [20) Paros           
+*  [21) Parsero           
+
+$corPadrao"
+
+echo -e "$cyan~::$corPadrao"
+
+        read WAP
+
+      while [ "$WAP" != "00" -o "$WAP" != "01" -o "$WAP" != "02" -o "$WAP" != "03" -o "$WAP" != "04" -o "$WAP" != "05" -o "$WAP" != "06" -o "$WAP" != "07" -o "$WAP" != "08" -o "$WAP" != "09" -o "$WAP" != "10" -o "$WAP" != "11" -o "$WAP" != "12" -o "$WAP" != "13" -o "$WAP" != "14" -o "$WAP" != "15" -o "$WAP" != "16" -o "$WAP" != "17" -o "$WAP" != "18" -o "$WAP" != "19" -o "$WAP" != "20" -o "$WAP" != "21" -o "$WAP" != "22" -o "$WAP" != "23" -o "$WAP" != "24" -o "$WAP" != "25" -o "$WAP" != "26" -o "$WAP" != "27" -o "$WAP" != "28" -o "$WAP" != "29" -o "$WAP" != "30" -o "$WAP" != "31" -o "$WAP" != "32" -o "$WAP" != "33" -o "$WAP" != "34" -o "$WAP" != "35" -o "$WAP" != "36" -o "$WAP" != "37" -o "$WAP" != "38" -o "$WAP" != "39" -o "$WAP" != "40" -o "$WAP" != "0" ]; do
+
+         if [ "$WAP" = "00" -o "$WAP" = "01" -o "$WAP" = "02" -o "$WAP" = "03" -o "$WAP" = "04" -o "$WAP" = "05" -o "$WAP" = "06" -o "$WAP" = "07" -o "$WAP" = "08" -o "$WAP" = "09" -o "$WAP" = "10" -o "$WAP" = "11" -o "$WAP" = "12" -o "$WAP" = "13" -o "$WAP" = "14" -o "$WAP" = "15" -o "$WAP" = "16" -o "$WAP" = "17" -o "$WAP" = "18" -o "$WAP" = "19" -o "$WAP" = "20" -o "$WAP" = "21" -o "$WAP" = "22" -o "$WAP" = "23" -o "$WAP" = "24" -o "$WAP" = "25" -o "$WAP" = "26" -o "$WAP" = "27" -o "$WAP" = "28" -o "$WAP" = "29" -o "$WAP" = "30" -o "$WAP" = "31" -o "$WAP" = "32" -o "$WAP" = "33" -o "$WAP" = "34" -o "$WAP" = "35" -o "$WAP" = "36" -o "$WAP" = "37" -o "$WAP" = "38" -o "$WAP" = "39" -o "$WAP" = "40" -o "$WAP" = "0" ]; then
+
+         if [ "$WAP" = "0" ]; then
+
+echo -e "\033[1;36m~Home~\033[0m"
+          main
+
+           fi
+
+            if [ "$WA" = "00" ]; then
+
+# saindo
+echo -e "$vermelhoClaro Saindo...$corPadrao"
+                   sleep 2
+
+                  exit
+
+               fi
+
+			if [ "$WAP" = "01" ]; then
+
+echo -e "\033[0;36m instalando apache-users...\033[0m"
+                   sleep 2
+
+			      apt-get install apache-users
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WAP
+
+              fi
+
+
+			if [ "$WAP" = "02" ]; then
+
+echo -e "\033[0;36m instalando arachni...\033[0m"
+                   sleep 2
+
+			      apt-get install arachni
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WAP
+
+              fi
+
+
+			if [ "$WAP" = "03" ]; then
+
+echo -e "\033[0;36m instalando bbqsql...\033[0m"
+                   sleep 2
+
+			      apt-get install bbqsql
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WAP
+
+              fi
+
+			if [ "$WAP" = "04" ]; then
+
+echo -e "\033[0;36m instalando blindelephant...\033[0m"
+                   sleep 2
+
+			      apt-get install blindelephant
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WAP
+
+              fi
+
+			if [ "$WAP" = "05" ]; then
+
+echo -e "\033[0;36m instalando burpsuite...\033[0m"
+                   sleep 2
+
+			      apt-get install burpsuite
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WAP
+
+              fi
+
+			if [ "$WAP" = "06" ]; then
+
+echo -e "\033[0;36m instalando cutycapt...\033[0m"
+                   sleep 2
+
+			      apt-get install cutycapt
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WAP
+
+              fi
+
+			if [ "$WAP" = "07" ]; then
+
+echo -e "\033[0;36m instalando commix...\033[0m"
+                   sleep 2
+
+			      apt-get install git && git clone https://github.com/stasinopoulos/commix.git commix && cd commix && python ./commix.py --install
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WAP
+
+              fi
+
+			if [ "$WAP" = "08" ]; then
+
+echo -e "\033[0;36m instalando davtest...\033[0m"
+                   sleep 2
+
+			      apt-get install davtest
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WAP
+
+              fi
+
+			if [ "$WAP" = "09" ]; then
+
+echo -e "\033[0;36m instalando deblaze...\033[0m"
+                   sleep 2
+
+			      apt-get install deblaze
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WAP
+
+              fi
+
+
+			if [ "$WAP" = "10" ]; then
+
+echo -e "\033[0;36m instalando dirb...\033[0m"
+                   sleep 2
+
+			      apt-get install dirb
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WAP
+
+              fi
+
+			if [ "$WAP" = "11" ]; then
+
+echo -e "\033[0;36m instalando dirbuster...\033[0m"
+                   sleep 2
+
+			      apt-get install dirbuster
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WAP
+
+              fi
+
+			if [ "$WAP" = "12" ]; then
+
+echo -e "\033[0;36m instalando fimap...\033[0m"
+                   sleep 2
+
+			      apt-get install fimap
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WAP
+
+              fi
+
+			if [ "$WAP" = "13" ]; then
+
+echo -e "\033[0;36m instalando funkload...\033[0m"
+                   sleep 2
+
+			      apt-get install funkload
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WAP
+
+              fi
+
+			if [ "$WAP" = "14" ]; then
+
+echo -e "\033[0;36m instalando grabber...\033[0m"
+                   sleep 2
+
+			      apt-get install grabber
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WAP
+
+              fi
+
+			if [ "$WAP" = "15" ]; then
+
+echo -e "\033[0;36m instalando jboss-autopwn...\033[0m"
+                   sleep 2
+
+			      apt-get install jboss-autopwn
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WAP
+
+              fi
+
+			if [ "$WAP" = "16" ]; then
+
+echo -e "\033[0;36m instalando joomscan...\033[0m"
+                   sleep 2
+
+			      apt-get install joomscan
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WAP
+
+              fi
+
+
+			if [ "$WAP" = "17" ]; then
+
+echo -e "\033[0;36m instalando jsql...\033[0m"
+                   sleep 2
+
+			      apt-get install jsql
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WAP
+
+              fi
+
+			if [ "$WAP" = "18" ]; then
+
+echo -e "\033[0;36m instalando maltego-teeth...\033[0m"
+                   sleep 2
+
+			      apt-get install maltego-teeth
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WAP
+
+              fi
+
+			if [ "$WAP" = "19" ]; then
+
+echo -e "\033[0;36m instalando padbuster...\033[0m"
+                   sleep 2
+
+			      apt-get install padbuster
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WAP
+
+              fi
+
+			if [ "$WAP" = "20" ]; then
+
+echo -e "\033[0;36m instalando paros...\033[0m"
+                   sleep 2
+
+			      apt-get install paros
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WAP
+
+              fi
+
+			if [ "$WAP" = "21" ]; then
+
+echo -e "\033[0;36m instalando parsero...\033[0m"
+                   sleep 2
+
+			      apt-get install parsero
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WAP
+
+              fi
+
+			if [ "$WAP" = "22" ]; then
+
+echo -e "\033[0;36m instalando plecost...\033[0m"
+                   sleep 2
+
+			      apt-get install plecost
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WAP
+
+              fi
+
+			if [ "$WAP" = "23" ]; then
+
+echo -e "\033[0;36m instalando powerfuzzer...\033[0m"
+                   sleep 2
+
+			      apt-get install powerfuzzer
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WAP
+
+              fi
+
+			if [ "$WAP" = "24" ]; then
+
+echo -e "\033[0;36m instalando proxystrike...\033[0m"
+                   sleep 2
+
+			      apt-get install proxystrike
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WAP
+
+              fi
+
+			if [ "$WAP" = "25" ]; then
+
+echo -e "\033[0;36m instalando recon-ng...\033[0m"
+                   sleep 2
+
+			      apt-get install recon-ng
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WAP
+
+              fi
+
+			if [ "$WAP" = "26" ]; then
+
+echo -e "\033[0;36m instalando skipfish...\033[0m"
+                   sleep 2
+
+			      apt-get install skipfish
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WAP
+
+              fi
+
+			if [ "$WAP" = "27" ]; then
+
+echo -e "\033[0;36m instalando sqlmap...\033[0m"
+                   sleep 2
+
+			      apt-get install sqlmap
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WAP
+
+              fi
+
+			if [ "$WAP" = "28" ]; then
+
+echo -e "\033[0;36m instalando sqlninja...\033[0m"
+                   sleep 2
+
+			      apt-get install sqlninja
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WAP
+
+              fi
+
+			if [ "$WAP" = "29" ]; then
+
+echo -e "\033[0;36m instalando sqlsus...\033[0m"
+                   sleep 2
+
+			      apt-get install sqlsus
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WAP
+
+              fi
+
+			if [ "$WAP" = "30" ]; then
+
+echo -e "\033[0;36m instalando ua-teste...\033[0m"
+                   sleep 2
+
+			      apt-get install ua-tester
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WAP
+
+              fi
+
+			if [ "$WAP" = "31" ]; then
+
+echo -e "\033[0;36m instalando uniscan...\033[0m"
+                   sleep 2
+
+			      apt-get install uniscan
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WAP
+
+              fi
+
+			if [ "$WAP" = "32" ]; then
+
+echo -e "\033[0;36m instalando vega...\033[0m"
+                   sleep 2
+
+			      apt-get install vega
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WAP
+
+              fi
+
+			if [ "$WAP" = "33" ]; then
+
+echo -e "\033[0;36m instalando w3af...\033[0m"
+                   sleep 2
+
+			      apt-get install w3af
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WAP
+
+              fi
+
+			if [ "$WAP" = "34" ]; then
+
+echo -e "\033[0;36m instalando webscarab...\033[0m"
+                   sleep 2
+
+			      apt-get install webscarab
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WAP
+
+              fi
+
+			if [ "$WAP" = "35" ]; then
+
+echo -e "\033[0;36m instalando webslayer...\033[0m"
+                   sleep 2
+
+			      apt-get install git && git clone git://git.kali.org/packages/webslayer.git
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WAP
+
+              fi
+
+			if [ "$WAP" = "36" ]; then
+
+echo -e "\033[0;36m instalando websploit...\033[0m"
+                   sleep 2
+
+			       apt-get install websploit
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WAP
+
+              fi
+
+			if [ "$WAP" = "37" ]; then
+
+echo -e "\033[0;36m instalando wfuzz...\033[0m"
+                   sleep 2
+
+			      apt-get install wfuzz
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WAP
+
+              fi
+
+			if [ "$WAP" = "38" ]; then
+
+echo -e "\033[0;36m instalando wpscan...\033[0m"
+                   sleep 2
+
+			      apt-get install wpscan
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WAP
+
+              fi
+
+			if [ "$WAP" = "39" ]; then
+
+echo -e "\033[0;36m instalando xsser...\033[0m"
+                   sleep 2
+
+			      apt-get install xsser
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WAP
+
+              fi
+
+			if [ "$WAP" = "40" ]; then
+
+echo -e "\033[0;36m instalando zaproxy...\033[0m"
+                   sleep 2
+
+			      apt-get install zaproxy
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WAP
+
+              fi
+
+           else
+
+echo -e "$cyan~::$corPadrao"
+
+        read WAP
+
+        fi
+
+     done
+
+   done
+
+
+          while [ "$P" = "03" ]; do
+
+# Wireless Attacks
+echo -e "\033[1;36m Wireless Attacks\033[1;m"
+        sleep 1
+
+echo -e "
+$branco
+*  [00) - exit  [0 ) - Home
+
+*  [01) Aircrack-ng       *  [17) KillerBee
+*  [02) Asleap            *  [18) Kismet
+*  [03) Bluelog           *  [19) mdk3
+*  [04) BlueMaho          *  [20) mfcuk
+*  [05) Bluepot           *  [21) mfoc
+*  [06) BlueRanger        *  [22) mfterm
+*  [07) Bluesnarfer       *  [23) Multimon-NG
+*  [08) Bully             *  [24) PixieWPS
+*  [09) coWPAtty          *  [25) Reaver
+*  [10) crackle           *  [26) redfang
+*  [11) eapmd5pass        *  [27) RTLSDR Scanner
+*  [12) Fern Wifi Cracker *  [28) Spooftooph
+*  [13) Ghost Phisher     *  [29) Wifi Honey
+*  [14) GISKismet         *  [30) Wifitap
+*  [15) gr-scan           *  [31) Wifite
+*  [16) kalibrate-rtl
+
+$corPadrao"
+
+echo -e "$cyan~::$corPadrao"
+
+        read WA
+
+   while [ "$WA" != "00" -o "$WA" != "01" -o "$WA" != "02" -o "$WA" != "03" -o "$WA" != "04" -o "$WA" != "05" -o "$WA" != "06" -o "$WA" != "07" -o "$WA" != "08" -o "$WA" != "09" -o "$WA" != "10" -o "$WA" != "11" -o "$WA" != "12" -o "$WA" != "13" -o "$WA" != "14" -o "$WA" != "15" -o "$WA" != "16" -o "$WA" != "17" -o "$WA" != "18" -o "$WA" != "19" -o "$WA" != "20" -o "$WA" != "21" -o "$WA" != "22" -o "$WA" != "23" -o "$WA" != "24" -o "$WA" != "25" -o "$WA" != "26" -o "$WA" != "27" -o "$WA" != "28" -o "$WA" != "29" -o "$WA" != "30" -o "$WA" != "31" -o "$WA" != "0" ]; do
+
+      if [ "$WA" = "00" -o "$WA" = "01" -o "$WA" = "02" -o "$WA" = "03" -o "$WA" = "04" -o "$WA" = "05" -o "$WA" = "06" -o "$WA" = "07" -o "$WA" = "08" -o "$WA" = "09" -o "$WA" = "10" -o "$WA" = "11" -o "$WA" = "12" -o "$WA" = "13" -o "$WA" = "14" -o "$WA" = "15" -o "$WA" = "16" -o "$WA" = "17" -o "$WA" = "18" -o "$WA" = "19" -o "$WA" = "20" -o "$WA" = "21" -o "$WA" = "22" -o "$WA" = "23" -o "$WA" = "24" -o "$WA" = "25" -o "$WA" = "26" -o "$WA" = "27" -o "$WA" = "28" -o "$WA" = "29" -o "$WA" = "30" -o "$WA" = "31" -o "$WA" = "0" ]; then
+
+         if [ "$WA" = "0" ]; then
+
+echo -e "\033[1;36m~Home~\033[0m"
+          main
+
+           fi
+
+          if [ "$WA" = "00" ]; then
+
+# saindo
+echo -e "$vermelhoClaro Saindo...$corPadrao"
+                   sleep 2
+
+                  exit
+
+               fi
+
+           if [ "$WA" = "01" ]; then
+
+echo -e "\033[0;36m instalando aircrack-ng...\033[0m"
+                   sleep 2
+
+			      apt-get install aircrack-ng
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WA
+
+              fi
+
+
+           if [ "$WA" = "02" ]; then
+
+echo -e "\033[0;36m instalando asleap...\033[0m"
+                   sleep 2
+
+			      apt-get install asleap
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WA
+
+              fi
+
+			if [ "$WA" = "03" ]; then
+
+echo -e "\033[0;36m instalando bluelog...\033[0m"
+                   sleep 2
+
+			      apt-get install bluelog
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WA
+
+              fi
+
+			if [ "$WA" = "04" ]; then
+
+echo -e "\033[0;36m instalando BlueMaho...\033[0m"
+                   sleep 2
+
+			      apt-get install git && git clone git://git.kali.org/packages/bluemaho.git
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WA
+
+              fi
+
+			if [ "$WA" = "05" ]; then
+
+echo -e "\033[0;36m instalando Bluepot...\033[0m"
+                   sleep 2
+
+			      apt-get install git && git clone git://git.kali.org/packages/bluepot.git
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WA
+
+              fi
+
+			if [ "$WA" = "06" ]; then
+
+echo -e "\033[0;36m instalando blueranger...\033[0m"
+                   sleep 2
+
+			      apt-get install blueranger
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WA
+
+              fi
+
+			if [ "$WA" = "07" ]; then
+
+echo -e "\033[0;36m instalando bluesnarfer...\033[0m"
+                   sleep 2
+
+			      apt-get install bluesnarfer
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WA
+
+              fi
+
+			if [ "$WA" = "08" ]; then
+
+echo -e "\033[0;36m instalando bully...\033[0m"
+                   sleep 2
+
+			      apt-get install bully
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WA
+
+              fi
+
+			if [ "$WA" = "09" ]; then
+
+echo -e "\033[0;36m instalando cowpatty...\033[0m"
+                   sleep 2
+
+			      apt-get install cowpatty
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WA
+
+              fi
+
+			if [ "$WA" = "10" ]; then
+
+echo -e "\033[0;36m instalando crackle...\033[0m"
+                   sleep 2
+
+			      apt-get install crackle
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WA
+
+              fi
+
+			if [ "$WA" = "11" ]; then
+
+echo -e "\033[0;36m instalando eapmd5pass...\033[0m"
+                   sleep 2
+
+			      apt-get install eapmd5pass
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WA
+
+              fi
+
+			if [ "$WA" = "12" ]; then
+
+echo -e "\033[0;36m instalando fern-wifi-cracker...\033[0m"
+                   sleep 2
+
+			      apt-get install fern-wifi-cracker
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WA
+
+              fi
+
+			if [ "$WA" = "13" ]; then
+
+echo -e "\033[0;36m instalando ghost-phisher...\033[0m"
+                   sleep 2
+
+			      apt-get install ghost-phisher
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WA
+
+              fi
+
+			if [ "$WA" = "14" ]; then
+
+echo -e "\033[0;36m instalando giskismet...\033[0m"
+                   sleep 2
+
+			      apt-get install giskismet
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WA
+
+              fi
+
+			if [ "$WA" = "15" ]; then
+
+echo -e "\033[0;36m instalando gr-scan...\033[0m"
+                   sleep 2
+
+			      apt-get install git && git clone git://git.kali.org/packages/gr-scan.git
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WA
+
+              fi
+
+			if [ "$WA" = "16" ]; then
+
+echo -e "\033[0;36m instalando kalibrate-rtl...\033[0m"
+                   sleep 2
+
+			      apt-get install kalibrate-rtl
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WA
+
+              fi
+
+			if [ "$WA" = "17" ]; then
+
+echo -e "\033[0;36m instalando killerbee...\033[0m"
+                   sleep 2
+
+			      apt-get install killerbee
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WA
+
+              fi
+
+			if [ "$WA" = "18" ]; then
+
+echo -e "\033[0;36m instalando kismet...\033[0m"
+                   sleep 2
+
+			      apt-get install kismet
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WA
+
+              fi
+
+			if [ "$WA" = "19" ]; then
+
+echo -e "\033[0;36m instalando mdk3...\033[0m"
+                   sleep 2
+
+			      apt-get install mdk3
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WA
+
+              fi
+
+			if [ "$WA" = "20" ]; then
+
+echo -e "\033[0;36m instalando mfcuk...\033[0m"
+                   sleep 2
+
+			      apt-get install mfcuk
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WA
+
+              fi
+
+			if [ "$WA" = "21" ]; then
+
+echo -e "\033[0;36m instalando mfoc...\033[0m"
+                   sleep 2
+
+			      apt-get install mfoc
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WA
+
+              fi
+
+			if [ "$WA" = "22" ]; then
+
+echo -e "\033[0;36m instalando mfterm...\033[0m"
+                   sleep 2
+
+			      apt-get install mfterm
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WA
+
+              fi
+
+			if [ "$WA" = "23" ]; then
+
+echo -e "\033[0;36m instalando multimon-ng...\033[0m"
+                   sleep 2
+
+			      apt-get install multimon-ng
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WA
+
+              fi
+
+			if [ "$WA" = "24" ]; then
+
+echo -e "\033[0;36m instalando pixiewps...\033[0m"
+                   sleep 2
+
+			      apt-get install pixiewps
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WA
+
+              fi
+
+			if [ "$WA" = "25" ]; then
+
+echo -e "\033[0;36m instalando reaver...\033[0m"
+                   sleep 2
+
+			      apt-get install reaver
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WA
+
+              fi
+
+			if [ "$WA" = "26" ]; then
+
+echo -e "\033[0;36m instalando redfang...\033[0m"
+                   sleep 2
+
+			      apt-get install redfang
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WA
+
+              fi
+
+			if [ "$WA" = "27" ]; then
+
+echo -e "\033[0;36m instalando rtlsdr-scanner...\033[0m"
+                   sleep 2
+
+			      apt-get install rtlsdr-scanner
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WA
+
+              fi
+
+			if [ "$WA" = "28" ]; then
+
+echo -e "\033[0;36m instalando spooftooph...\033[0m"
+                   sleep 2
+
+			      apt-get install spooftooph
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WA
+
+              fi
+
+			if [ "$WA" = "29" ]; then
+
+echo -e "\033[0;36m instalando wifi-honey...\033[0m"
+                   sleep 2
+
+			      apt-get install wifi-honey
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WA
+
+              fi
+
+			if [ "$WA" = "30" ]; then
+
+echo -e "\033[0;36m instalando wifitap...\033[0m"
+                   sleep 2
+
+			      apt-get install wifitap
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WA
+
+              fi
+
+			if [ "$WA" = "31" ]; then
+
+echo -e "\033[0;36m instalando wifite...\033[0m"
+                   sleep 2
+
+			      apt-get install wifite
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read WA
+
+              fi
+
+             else
+
+echo -e "$cyan~::$corPadrao"
+
+             read WA
+
+            fi
+
+      done
+
+    done
+
+          while [ "$P" = "02" ]; do
+
+# Vulnerability Analysis
+echo -e "\033[1;36mVulnerability Analysis\033[1;m"
+        sleep 1
+
+echo -e "
+$branco
+*  [00) - exit  [0 ) - Home
+
+*  [01) BBQSQL                  *  [19) ohrwurm
+*  [02) BED                     *  [20) openvas-administrator
+*  [03) cisco-auditing-tool     *  [21) openvas-cli
+*  [04) cisco-global-exploiter  *  [22) openvas-manager
+*  [05) cisco-ocs               *  [23) openvas-scanner
+*  [06) cisco-torch             *  [24) Oscanner
+*  [07) copy-router-config      *  [25) Powerfuzzer
+*  [08) commix                  *  [26) sfuzz
+*  [09) DBPwAudit               *  [27) SidGuesser
+*  [10) DoonaDot                *  [28) SIPArmyKnife
+*  [11) DotPwn                  *  [29) sqlmap
+*  [12) Greenbone Security .A   *  [30) Sqlninja     
+*  [13) GSD                     *  [31) sqlsus
+*  [14) HexorBase               *  [32) THC-IPV6
+*  [15) Inguma                  *  [33) tnscmd10g
+*  [16) jSQL                    *  [34) unix-privesc-check
+*  [17) Lynis                   *  [35) Yersinia
+*  [18) Nmap
+
+$corPadrao"
+
+echo -e "$cyan~::$corPadrao"
+
+        read VA
+
+   while [ "$VA" != "0" -o "$VA" != "00" -o "$VA" != "01" -o "$VA" != "02" -o "$VA" != "03" -o "$VA" != "04" -o "$VA" != "05" -o "$VA" != "06" -o "$VA" != "07" -o "$VA" != "08" -o "$VA" != "09" -o "$VA" != "10" -o "$VA" != "11" -o "$VA" != "12" -o "$VA" != "13" -o "$VA" != "14" -o "$VA" != "15" -o "$VA" != "16" -o "$VA" != "17" -o {}"$VA" != "18" -o "$VA" != "19" -o "$VA" != "20" -o "$VA" != "21" -o "$VA" != "22" -o "$VA" != "23" -o "$VA" != "24" -o "$VA" != "25" -o "$VA" != "26" -o "$VA" != "27" -o "$VA" != "28" -o "$VA" != "29" -o "$VA" != "30" -o "$VA" != "31" -o "$VA" != "32" -o "$VA" != "33" -o "$VA" != "34" -o "$VA" != "35" ]; do
+
+     if [ "$VA" = "0" -o "$VA" = "00" -o "$VA" = "01" -o "$VA" = "02" -o "$VA" = "03" -o "$VA" = "04" -o "$VA" = "05" -o "$VA" = "06" -o "$VA" = "07" -o "$VA" = "08" -o "$VA" = "09" -o "$VA" = "10" -o "$VA" = "11" -o "$VA" = "12" -o "$VA" = "13" -o "$VA" = "14" -o "$VA" = "15" -o "$VA" = "16" -o "$VA" = "17" -o "$VA" = "18" -o "$VA" = "19" -o "$VA" = "20" -o "$VA" = "21" -o "$VA" = "22" -o "$VA" = "23" -o "$VA" = "24" -o "$VA" = "25" -o "$VA" = "26" -o "$VA" = "27" -o "$VA" = "28" -o "$VA" = "29" -o "$VA" = "30" -o "$VA" = "31" -o "$VA" = "32" -o "$VA" = "33" -o "$VA" = "34" -o "$VA" = "35" ]; then
+
+         if [ "$VA" = "0" ]; then
+
+echo -e "\033[1;36m~Home~\033[0m"
+          main
+
+           fi
+
+      if [ "$VA" = "00" ]; then
+
+# saindo
+echo -e "$vermelhoClaro Saindo...$corPadrao"
+                   sleep 2
+
+                   exit
+
+                fi
+
+     if [ "$VA" = "01" ]; then
+
+echo -e "\033[0;36m instalando bbqsql...\033[0m"
+                   sleep 2
+
+			      apt-get install bbqsql
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+              read VA
+
+       fi
+
+
+	 if [ "$VA" = "02" ]; then
+
+echo -e "\033[0;36m instalando bed...\033[0m"
+           sleep 2
+
+			   apt-get install bed
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+           read VA
+
+       fi
+
+	 if [ "$VA" = "03" ]; then
+
+echo -e "\033[0;36m instalando cisco-auditing-tool...\033[0m"
+           sleep 2
+
+			   apt-get install cisco-auditing-tool
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+           read VA
+
+       fi
+
+	 if [ "$VA" = "04" ]; then
+
+echo -e "\033[0;36m instalando cisco-global-exploiter...\033[0m"
+           sleep 2
+
+			   apt-get install cisco-global-exploiter
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+           read VA
+
+       fi
+
+	 if [ "$VA" = "05" ]; then
+
+echo -e "\033[0;36m instalando cisco-ocs...\033[0m"
+           sleep 2
+
+			   apt-get install cisco-ocs
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+           read VA
+
+       fi
+
+	 if [ "$VA" = "06" ]; then
+
+echo -e "\033[0;36m instalando cisco-torch...\033[0m"
+           sleep 2
+
+			   apt-get install cisco-torch
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+           read VA
+
+       fi
+
+	 if [ "$VA" = "07" ]; then
+
+echo -e "\033[0;36m instalando copy-router-config...\033[0m"
+           sleep 2
+
+			   apt-get install copy-router-config
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+           read VA
+
+       fi
+
+	 if [ "$VA" = "08" ]; then
+
+echo -e "\033[0;36m instalando commix...\033[0m"
+           sleep 2
+
+			   apt-get install git && git clone https://github.com/stasinopoulos/commix.git commix && cd commix && python ./commix.py --install
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+           read VA
+
+       fi
+
+	 if [ "$VA" = "09" ]; then
+
+echo -e "\033[0;36m instalando DBPwAudit...\033[0m"
+           sleep 2
+
+			   echo 'download page : http://www.cqure.net/wp/tools/database/dbpwaudit/'
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+           read VA
+
+       fi
+
+	 if [ "$VA" = "10" ]; then
+
+echo -e "\033[0;36m instalando doona...\033[0m"
+           sleep 2
+
+			   apt-get install doona
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+           read VA
+
+       fi
+
+	 if [ "$VA" = "11" ]; then
+
+echo -e "\033[0;36m instalando dotdotpwn...\033[0m"
+           sleep 2
+
+			   apt-get install dotdotpwn
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+           read VA
+
+       fi
+
+	 if [ "$VA" = "12" ]; then
+
+echo -e "\033[0;36m instalando greenbone-security-assistant...\033[0m"
+           sleep 2
+
+			   apt-get install greenbone-security-assistant
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+           read VA
+
+       fi
+
+	 if [ "$VA" = "13" ]; then
+
+echo -e "\033[0;36m instalando GSD...\033[0m"
+           sleep 2
+
+			   apt-get install git && git clone git://git.kali.org/packages/gsd.git
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+           read VA
+
+       fi
+
+	 if [ "$VA" = "14" ]; then
+
+echo -e "\033[0;36m instalando hexorbase...\033[0m"
+           sleep 2
+
+			   apt-get install hexorbase
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+           read VA
+
+       fi
+
+	 if [ "$VA" = "15" ]; then
+
+echo -e "\033[0;36m instalando Inguma...\033[0m"
+           sleep 2
+
+			   Please download inguma from : http://inguma.sourceforge.net
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+           read VA
+
+       fi
+
+	 if [ "$VA" = "16" ]; then
+
+echo -e "\033[0;36m instalando jsql...\033[0m"
+           sleep 2
+
+			   apt-get install jsql
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+           read VA
+
+       fi
+
+	 if [ "$VA" = "17" ]; then
+
+echo -e "\033[0;36m instalando lynis...\033[0m"
+           sleep 2
+
+			   apt-get install lynis
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+           read VA
+
+       fi
+
+	 if [ "$VA" = "18" ]; then
+
+echo -e "\033[0;36m instalando nmap...\033[0m"
+           sleep 2
+
+			   apt-get install nmap
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+           read VA
+
+       fi
+
+	 if [ "$VA" = "19" ]; then
+
+echo -e "\033[0;36m instalando ohrwurm...\033[0m"
+           sleep 2
+
+			   apt-get install ohrwurm
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+           read VA
+
+       fi
+
+	 if [ "$VA" = "20" ]; then
+
+echo -e "\033[0;36m instalando openvas-administrator...\033[0m"
+           sleep 2
+
+			   apt-get install openvas-administrator
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+           read VA
+
+       fi
+
+	 if [ "$VA" = "21" ]; then
+
+echo -e "\033[0;36m instalando openvas-cli...\033[0m"
+           sleep 2
+
+			   apt-get install openvas-cli
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+           read VA
+
+       fi
+
+	 if [ "$VA" = "22" ]; then
+
+echo -e "\033[0;36m instalando openvas-manager...\033[0m"
+           sleep 2
+
+			   apt-get install openvas-manager
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+           read VA
+
+       fi
+
+	 if [ "$VA" = "23" ]; then
+
+echo -e "\033[0;36m instalando openvas-scanner...\033[0m"
+           sleep 2
+
+			   apt-get install openvas-scanner
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+           read VA
+
+       fi
+
+	 if [ "$VA" = "24" ]; then
+
+echo -e "\033[0;36m instalando oscanner...\033[0m"
+           sleep 2
+
+			   apt-get install oscanner
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+           read VA
+
+       fi
+
+	 if [ "$VA" = "25" ]; then
+
+echo -e "\033[0;36m instalando powerfuzzer...\033[0m"
+           sleep 2
+
+			   apt-get install powerfuzzer
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+           read VA
+
+       fi
+
+	 if [ "$VA" = "26" ]; then
+
+echo -e "\033[0;36m instalando sfuzz...\033[0m"
+           sleep 2
+
+			   apt-get install sfuzz
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+           read VA
+
+       fi
+
+	 if [ "$VA" = "27" ]; then
+
+echo -e "\033[0;36m instalando sidguesser...\033[0m"
+           sleep 2
+
+			   apt-get install sidguesser
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+           read VA
+
+       fi
+
+	 if [ "$VA" = "28" ]; then
+
+echo -e "\033[0;36m instalando siparmyknife...\033[0m"
+           sleep 2
+
+			   apt-get install siparmyknife
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+           read VA
+
+       fi
+
+	 if [ "$VA" = "29" ]; then
+
+echo -e "\033[0;36m instalando sqlmap...\033[0m"
+           sleep 2
+
+			   apt-get install sqlmap
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+           read VA
+
+       fi
+
+	 if [ "$VA" = "30" ]; then
+
+echo -e "\033[0;36m instalando sqlninja...\033[0m"
+           sleep 2
+
+			   apt-get install sqlninja
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+           read VA
+
+       fi
+
+	 if [ "$VA" = "31" ]; then
+
+echo -e "\033[0;36m instalando sqlsus...\033[0m"
+           sleep 2
+
+			   apt-get install sqlsus
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+           read VA
+
+       fi
+
+	 if [ "$VA" = "32" ]; then
+
+echo -e "\033[0;36m instalando thc-ipv6...\033[0m"
+           sleep 2
+
+			   apt-get install thc-ipv6
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+           read VA
+
+       fi
+
+	 if [ "$VA" = "33" ]; then
+
+echo -e "\033[0;36m instalando tns10g...\033[0m"
+           sleep 2
+
+			   apt-get install tns10g
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+           read VA
+
+       fi
+
+	 if [ "$VA" = "34" ]; then
+
+echo -e "\033[0;36m instalando unix-privesc-check...\033[0m"
+           sleep 2
+
+			   apt-get install unix-privesc-check
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+           read VA
+
+       fi
+
+	 if [ "$VA" = "35" ]; then
+
+echo -e "\033[0;36m instalando yersinia...\033[0m"
+           sleep 2
+
+			   apt-get install yersinia
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+           read VA
+
+        fi
+
+        else
+
+echo -e "$cyan~::$corPadrao"
+
+           read VA
+
+       fi
+
+     done
+
+
+  done
+
+           while [ "$P" = "01" ]; do
+
+# Information Gathering
+echo -e "\033[1;36m Information Gathering\033[1;m"
+         sleep 1
+
+echo -e "
+$branco
+*  [00) - exit  [0 ) - Home
+
+*  [01) acccheck             *   [30) lbd
+*  [02) ace-voip             *   [31) Maltego Teeth
+*  [03) Amap                 *   [32) masscan
+*  [04) Automater            *   [33) Metagoofil
+*  [05) bing-ip2hosts        *   [34) Miranda
+*  [06) braa                 *   [35) Nmap
+*  [07) CaseFile             *   [36) knock4 subdomain scan
+*  [08) CDPSnarf             *   [37) p0f
+*  [09) cisco-torch          *   [38) Parsero
+*  [10) Cookie Cadger        *   [39) Recon-ng
+*  [11) copy-router-config   *   [40) SET
+*  [12) DMitry	             *   [41) smtp-user-enum
+*  [13) dnmap                *   [42) snmpcheck
+*  [14) dnsenum              *   [43) sslcaudit
+*  [15) dnsmap               *   [44) SSLsplit
+*  [16) DNSRecon             *   [45) sslstrip
+*  [17) dnstracer            *   [46) SSLyze
+*  [18) dnswalk              *   [47) THC-IPV6
+*  [19) DotDotPwn            *   [48) theHarvester
+*  [20) enum4linux           *   [49) TLSSLed
+*  [21) enumIAX              *   [50) twofi
+*  [22) exploitdb            *   [51) URLCrazy
+*  [23) Fierce               *   [52) Wireshark
+*  [24) Firewalk             *   [53) WOL-E
+*  [25) fragroute            *   [54) Xplico
+*  [26) fragrouter           *   [55) iSMTP
+*  [27) Ghost Phisher	     *   [56) InTrace
+*  [28) GoLismero            *   [57) hping3
+*  [29) goofile
+$corPadrao
+"
+echo -e "$cyan~::$corPadrao"
+
+        read IG
+
+      while [ "$IG" != "0" -o "$IG" != "00" -o "$IG" != "01" -o "$IG" != "02" -o "$IG" != "03" -o "$IG" != "04" -o "$IG" != "05" -o "$IG" != "06" -o "$IG" != "07" -o "$IG" != "08" -o "$IG" != "09" -o "$IG" != "10" -o "$IG" != "11" -o "$IG" != "12" -o "$IG" != "13" -o "$IG" != "14" -o "$IG" != "15" -o "$IG" != "16" -o "$IG" != "17" -o "$IG" != "18" -o "$IG" != "19" -o "$IG" != "20" -o "$IG" != "21" -o "$IG" != "22" -o "$IG" != "23" -o "$IG" != "24" -o "$IG" != "25" -o "$IG" != "26" -o "$IG" != "27" -o "$IG" != "28" -o "$IG" != "29" -o "$IG" != "30" -o "$IG" != "31" -o "$IG" != "32" -o "$IG" != "33" -o "$IG" != "34" -o "$IG" != "35" -o "$IG" != "36" -o "$IG" != "37" -o "$IG" != "38" -o "$IG" != "39" -o "$IG" != "40" -o "$IG" != "41" -o "$IG" != "42" -o "$IG" != "43" -o "$IG" != "44" -o "$IG" != "45" -o "$IG" != "46" -o "$IG" != "47" -o "$IG" != "48" -o "$IG" != "49" -o "$IG" != "50" -o "$IG" != "51" -o "$IG" != "52" -o "$IG" != "53" -o "$IG" != "54" -o "$IG" != "55" -o "$IG" != "56" -o "$IG" != "57" ]; do
+
+         if [ "$IG" = "0" -o "$IG" = "00" -o "$IG" = "01" -o "$IG" = "02" -o "$IG" = "03" -o "$IG" = "04" -o "$IG" = "05" -o "$IG" = "06" -o "$IG" = "07" -o "$IG" = "08" -o "$IG" = "09" -o "$IG" = "10" -o "$IG" = "11" -o "$IG" = "12" -o "$IG" = "13" -o "$IG" = "14" -o "$IG" = "15" -o "$IG" = "16" -o "$IG" = "17" -o "$IG" = "18" -o "$IG" = "19" -o "$IG" = "20" -o "$IG" = "21" -o "$IG" = "22" -o "$IG" = "23" -o "$IG" = "24" -o "$IG" = "25" -o "$IG" = "26" -o "$IG" = "27" -o "$IG" = "28" -o "$IG" = "29" -o "$IG" = "30" -o "$IG" = "31" -o "$IG" = "32" -o "$IG" = "33" -o "$IG" = "34" -o "$IG" = "35" -o "$IG" = "36" -o "$IG" = "37" -o "$IG" = "38" -o "$IG" = "39" -o "$IG" = "40" -o "$IG" = "41" -o "$IG" = "42" -o "$IG" = "43" -o "$IG" = "44" -o "$IG" = "45" -o "$IG" = "46" -o "$IG" = "47" -o "$IG" = "48" -o "$IG" = "49" -o "$IG" = "50" -o "$IG" = "51" -o "$IG" = "52" -o "$IG" = "53" -o "$IG" = "54" -o "$IG" = "55" -o "$IG" = "56" -o "$IG" = "57" ]; then
+
+         if [ "$IG" = "0" ]; then
+
+echo -e "\033[1;36m~Home~\033[0m"
+          main
+
+           fi
+
+    if [ "$IG" = "00" ]; then
+
+# saindo
+echo -e "$vermelhoClaro Saindo...$corPadrao"
+                    sleep 2
+
+                    exit
+
+                fi
+
+   if [ "$IG" = "01" ]; then
+
+echo -e "\033[0;36m instalando acccheck...\033[0m"
+           sleep 2
+
+			   apt-get install acccheck
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+           read IG
+
+      fi
+
+	if [ "$IG" = "02" ]; then
+
+echo -e "\033[0;36m instalando ace-voip...\033[0m"
+          sleep 2
+
+          apt-get install ace-voip
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+           read IG
+
+      fi
+
+	if [ "$IG" = "03" ]; then
+
+echo -e "\033[0;36m instalando amap...\033[0m"
+          sleep 2
+
+          apt-get install amap
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+           read IG
+
+      fi
+
+
+	if [ "$IG" = "04" ]; then
+
+echo -e "\033[0;36m instalando automater...\033[0m"
+          sleep 2
+
+          apt-get install automater
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+           read IG
+
+       fi
+
+	if [ "$IG" = "05" ]; then
+
+echo -e "\033[0;36m instalando bing-ip2hosts...\033[0m"
+          sleep 2
+
+         apt-get install wget && wget http://www.morningstarsecurity.com/downloads/bing-ip2hosts-0.4.tar.gz && tar -xzvf bing-ip2hosts-0.4.tar.gz && cp bing-ip2hosts-0.4/bing-ip2hosts /usr/local/bin/
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+           read IG
+
+       fi
+
+	if [ "$IG" = "06" ]; then
+
+echo -e "\033[0;36m instalando ace-voip...\033[0m"
+          sleep 2
+
+          apt-get install braa
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+           read IG
+
+       fi
+
+
+   if [ "$IG" = "07" ]; then
+
+echo -e "\033[0;36m instalando casefile...\033[0m"
+            sleep 2
+
+            apt-get install casefile
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "08" ]; then
+
+echo -e "\033[0;36m instalando cdpsnarf...\033[0m"
+            sleep 2
+
+            apt-get install cdpsnarf
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "09" ]; then
+
+echo -e "\033[0;36m instalando cisco-torch...\033[0m"
+            sleep 2
+
+            apt-get install cisco-torch
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "10" ]; then
+
+echo -e "\033[0;36m instalando cookie-cadger...\033[0m"
+            sleep 2
+
+            apt-get install cookie-cadger
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "11" ]; then
+
+echo -e "\033[0;36m instalando copy-router-config...\033[0m"
+            sleep 2
+
+            apt-get install copy-router-config
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "12" ]; then
+
+echo -e "\033[0;36m instalando dmitry...\033[0m"
+            sleep 2
+
+            apt-get install dmitry
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "13" ]; then
+
+echo -e "\033[0;36m instalando dnmap...\033[0m"
+            sleep 2
+
+            apt-get install dnmap
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "14" ]; then
+
+echo -e "\033[0;36m instalando dnsenum...\033[0m"
+            sleep 2
+
+            apt-get install dnsenum
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "15" ]; then
+
+echo -e "\033[0;36m instalando dnsmap...\033[0m"
+            sleep 2
+
+            apt-get install dnsmap
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "16" ]; then
+
+echo -e "\033[0;36m instalando dnsrecon...\033[0m"
+            sleep 2
+
+            apt-get install dnsrecon
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "17" ]; then
+
+echo -e "\033[0;36m instalando dnstracer...\033[0m"
+            sleep 2
+
+            apt-get install dnstracer
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "18" ]; then
+
+echo -e "\033[0;36m instalando dnswalk...\033[0m"
+            sleep 2
+
+            apt-get install dnswalk
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "19" ]; then
+
+echo -e "\033[0;36m instalando dotdotpwn...\033[0m"
+            sleep 2
+
+            apt-get install dotdotpwn
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "20" ]; then
+
+echo -e "\033[0;36m instalando enum4linux...\033[0m"
+            sleep 2
+
+            apt-get install enum4linux
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "21" ]; then
+
+echo -e "\033[0;36m instalando enumiax...\033[0m"
+            sleep 2
+
+            apt-get install enumiax
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "22" ]; then
+
+echo -e "\033[0;36m instalando exploitdb...\033[0m"
+            sleep 2
+
+            apt-get install exploitdb
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "23" ]; then
+
+echo -e "\033[0;36m instalando fierce...\033[0m"
+            sleep 2
+
+            apt-get install fierce
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "24" ]; then
+
+echo -e "\033[0;36m instalando firewalk...\033[0m"
+            sleep 2
+
+            apt-get install firewalk
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "25" ]; then
+
+echo -e "\033[0;36m instalando fragroute...\033[0m"
+            sleep 2
+
+            apt-get install fragroute
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "26" ]; then
+
+echo -e "\033[0;36m instalando fragrouter...\033[0m"
+            sleep 2
+
+            apt-get install fragrouter
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "27" ]; then
+
+echo -e "\033[0;36m instalando ghost-phisher...\033[0m"
+            sleep 2
+
+            apt-get install ghost-phisher
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "28" ]; then
+
+echo -e "\033[0;36m instalando golismero...\033[0m"
+            sleep 2
+
+            apt-get install golismero
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "29" ]; then
+
+echo -e "\033[0;36m instalando goofile...\033[0m"
+            sleep 2
+
+            apt-get install goofile
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "30" ]; then
+
+echo -e "\033[0;36m instalando lbd...\033[0m"
+            sleep 2
+
+            apt-get install lbd
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "31" ]; then
+
+echo -e "\033[0;36m instalando maltego-teeth...\033[0m"
+            sleep 2
+
+            apt-get install maltego-teeth
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "32" ]; then
+
+echo -e "\033[0;36m instalando masscan...\033[0m"
+            sleep 2
+
+            apt-get install masscan
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "33" ]; then
+
+echo -e "\033[0;36m instalando metagoofil...\033[0m"
+            sleep 2
+
+            apt-get install metagoofil
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "34" ]; then
+
+echo -e "\033[0;36m instalando miranda...\033[0m"
+            sleep 2
+
+            apt-get install miranda
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "35" ]; then
+
+echo -e "\033[0;36m instalando nmap...\033[0m"
+            sleep 2
+
+            apt-get install nmap
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+    if [ "$IG" = "36" ]; then
+
+echo -e "\033[0;36m instalando knock4...\033[0m"
+            sleep 2
+
+            apt-get install python-pip python-dnspython && pip install https://github.com/guelfoweb/knock/archive/knock4.zip
+
+echo -e "\033[0;32m Pronto *...\033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "37" ]; then
+
+echo -e "\033[0;36m instalando p0f...\033[0m"
+            sleep 2
+
+            apt-get install p0f
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "38" ]; then
+
+echo -e "\033[0;36m instalando parsero...\033[0m"
+            sleep 2
+
+            apt-get install parsero
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "39" ]; then
+
+echo -e "\033[0;36m instalando recon-ng...\033[0m"
+            sleep 2
+
+            apt-get install recon-ng
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "40" ]; then
+
+echo -e "\033[0;36m instalando set...\033[0m"
+            sleep 2
+
+            apt-get install set
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "41" ]; then
+
+echo -e "\033[0;36m instalando smtp-user-enum...\033[0m"
+            sleep 2
+
+            apt-get install smtp-user-enum
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "42" ]; then
+
+echo -e "\033[0;36m instalando snmpcheck...\033[0m"
+            sleep 2
+
+            apt-get install snmpcheck
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "43" ]; then
+
+echo -e "\033[0;36m instalando sslcaudit...\033[0m"
+            sleep 2
+
+            apt-get install sslcaudit
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "44" ]; then
+
+echo -e "\033[0;36m instalando sslsplit...\033[0m"
+            sleep 2
+
+            apt-get install sslsplit
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "45" ]; then
+
+echo -e "\033[0;36m instalando sslstrip...\033[0m"
+            sleep 2
+
+            apt-get install sslstrip
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "46" ]; then
+
+echo -e "\033[0;36m instalando sslyze...\033[0m"
+            sleep 2
+
+            apt-get install sslyze
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "47" ]; then
+
+echo -e "\033[0;36m instalando thc-ipv6...\033[0m"
+            sleep 2
+
+            apt-get install thc-ipv6
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "48" ]; then
+
+echo -e "\033[0;36m instalando theharvester...\033[0m"
+            sleep 2
+
+            apt-get install theharvester
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "49" ]; then
+
+echo -e "\033[0;36m instalando tlssled...\033[0m"
+            sleep 2
+
+            apt-get install tlssled
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "50" ]; then
+
+echo -e "\033[0;36m instalando twofi...\033[0m"
+            sleep 2
+
+            apt-get install twofi
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "51" ]; then
+
+echo -e "\033[0;36m instalando urlcrazy...\033[0m"
+            sleep 2
+
+            apt-get install urlcrazy
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "52" ]; then
+
+echo -e "\033[0;36m instalando wireshark...\033[0m"
+            sleep 2
+
+            apt-get install wireshark
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "53" ]; then
+
+echo -e "\033[0;36m instalando wol-e...\033[0m"
+            sleep 2
+
+            apt-get install wol-e
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "54" ]; then
+
+echo -e "\033[0;36m instalando xplico...\033[0m"
+            sleep 2
+
+            apt-get install xplico
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "55" ]; then
+
+echo -e "\033[0;36m instalando ismtp...\033[0m"
+            sleep 2
+
+            apt-get install ismtp
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "56" ]; then
+
+echo -e "\033[0;36m instalando intrace...\033[0m"
+            sleep 2
+
+            apt-get install intrace
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+       fi
+
+	if [ "$IG" = "57" ]; then
+
+echo -e "\033[0;36m instalando hping3...\033[0m"
+            sleep 2
+
+            apt-get install hping3
+
+echo -e "\033[1;32m Pronto * \033[0m"
+echo -e "$cyan~::$corPadrao"
+
+             read IG
+
+         fi
+
+               else
+
+echo -e "$cyan~::$corPadrao"
+
+                       read IG
+
+                 fi
+
+                done
+
+               done
+
+              else
+
+echo -e "$cyan~::$corPadrao"
+
+                    read P
+
+              fi
+
+            done
+
+          else
+
+echo -e "$cyan~::$corPadrao"
+
+             read V
+
+          fi
+     done
+
+}
+main
