@@ -21,4 +21,4 @@
 
 -   chmod a+x /usr/bin/doxy
 
-- use  'doxy' para chamalo
+  use  'doxy' para chamalo
