@@ -24,7 +24,7 @@ TverdeClaro="\e[01;42m"
 TazulClaro="\e[30;44m"
 TpurpleClaro="\e[01;45m"
 TcyanClaro="\e[34;45m"
-Tbranco="\e[30;47m"
+Tcyan="\e[30;47m"
 green="\e[0;34m"
 okegreen="\e[92m"
 lightgreen="\e[1;32m"
@@ -35,32 +35,32 @@ BlueF="\e[1;34m"
 
  Banner()
 {
-echo -e "$branco+---------------------------------------- $corPadrao$cyan~::$corPadrao"
+echo -e "$cyan~+=[ ---------------------------------------- $corPadrao$cyan~::$corPadrao"
 echo -e
 # Banner
-echo -e '\e[01;36m
-                                                                       v1.3
-      $$\                        $$$$$$$$\               $$\          
-      $$ |                     \e[1;32m  \__$$  __|              $$ |         
- $$$$$$$ |$$$$$$\ $$\   $$\$$\   $$\$$ |$$$$$$\  $$$$$$\ $$ |$$$$$$$\ 
-$$  __$$ $$  __$$\ \$$\$$  $$ |\e[1;36m  $$ $$ $$  __$$\$$  __$$\$$ $$  _____|
-$$ /  $$ $$ /  $$ |\$$$$  /$$ |  $$ $$ $$ /  $$ $$ /  $$ $$ \$$$$$$\  
-$$ |  $$ $$ |  $$ |$$  $$/ $$ |  $$ $$ $$ |  $$ $$ |  $$ $$ |\____$$\ 
-\$$$$$$$ \$$$$$$  $$  /\$$\\$$$$$$$ $$ \$$$$$$  \$$$$$$  $$ $$$$$$$  |
- \_______|\______/\__/  \e[1;32m\__|\____$$ \__|\______/ \______/\__\_______/ 
-                           $$\   $$ |
-                           \$$$$$$  |
-                         \e[1;36m   \______/ 
+echo -e '\e[01;37m
+                                                                       v1.4
+\e[1;36m       /\e[1;37m$$                   \e[1;36m     /\e[1;37m$$$$$$$$             \e[1;36m  /\e[1;37m$$         
+\e[1;36m      | \e[1;37m$$                 \e[1;36m      |__ \e[1;37m $$\e[1;36m__/              |\e[1;37m $$         
+\e[1;36m  /\e[1;37m$$$$$$$ \e[1;36m/\e[1;37m$$$$$$ \e[1;36m/\e[1;37m$$  \e[1;36m /\e[1;37m$$\e[1;36m/\e[1;37m$$   \e[1;36m/\e[1;37m$\e[1;36m| \e[1;37m$$ \e[1;36m/\e[1;37m$$$$$$  \e[1;36m/\e[1;37m$$$$$$\e[1;36m| \e[1;37m$$\e[1;36m /\e[1;37m$$$$$$$
+\e[1;36m /\e[1;37m$$\e[1;36m__\e[1;37m  $$\e[1;36m/\e[1;37m$$\e[1;36m__  \e[1;37m$\e[1;36m|  \e[1;37m$$\e[1;36m /\e[1;37m$$\e[1;36m| \e[1;37m$$  \e[1;36m\e[1;36m| \e[1;37m$\e[1;36m| \e[1;37m$$\e[1;36m/\e[1;37m$$\e[1;36m__  \e[1;37m$$\e[1;36m/\e[1;37m$$\e[1;36m__ \e[1;37m $\e[1;36m|\e[1;37m $$\e[1;36m/\e[1;37m$$\e[1;36m_____/
+\e[1;36m| \e[1;37m$$ \e[1;36m | \e[1;37m$\e[1;36m| \e[1;37m$$ \e[1;36m \ \e[1;37m$$\e[1;36m\  \e[1;37m$$$$\e[1;36m/\e[1;36m| \e[1;37m$$  \e[1;36m| \e[1;37m$\e[1;36m| \e[1;37m$\e[1;36m| \e[1;37m$$  \e[1;36m\ \e[1;37m$\e[1;36m| \e[1;37m$$ \e[1;36m \ \e[1;37m$\e[1;36m|\e[1;37m $\e[1;36m|  \e[1;37m$$$$$$ 
+\e[1;36m| \e[1;37m$$ \e[1;36m | \e[1;37m$\e[1;36m| \e[1;37m$$  \e[1;36m| \e[1;37m$$\e[1;36m /\e[1;37m$$ \e[1;37m $$\e[1;36m| \e[1;37m$$ \e[1;36m |\e[1;37m $\e[1;36m| \e[1;37m$\e[1;36m|\e[1;37m $$  \e[1;36m| \e[1;37m$\e[1;36m|\e[1;37m $$ \e[1;36m | \e[1;37m$\e[1;36m|\e[1;37m $$\e[1;36m\____ \e[1;37m $$
+\e[1;36m|  \e[1;37m$$$$$$\e[1;36m|  \e[1;37m$$$$$$\e[1;36m//\e[1;37m$$\e[1;36m/\ \e[1;37m $\e[1;36m|  \e[1;37m$$$$$$\e[1;36m|\e[1;37m $\e[1;36m|  \e[1;37m$$$$$$\e[1;36m|  \e[1;37m$$$$$$\e[1;36m|\e[1;37m $$\e[1;36m/\e[1;37m$$$$$$$\e[1;36m/
+\e[1;36m \_______/\______/|__/  \__/\____ \e[1;37m $\e[1;36m|__/\______/ \______/|__|_______/ 
+                    \e[1;36m        /\e[1;37m$$\e[1;36m  | \e[1;37m$$                                 
+                       \e[1;36m    | \e[1;37m $$$$$$\e[1;36m/                                 
+         \e[1;36m                   \______/                         
 
 
-\e[1;32m+ -- -- +=[ Dev/script: donZeref ]~+\e[1;m
-\e[1;32m+ -- -- +=[ 352 Tools  \e[0m'
+\e[1;36m~+=[ Author: Zwdeff ]~+\e[1;m
+\e[1;36m~+=[ \e[1;37m366 Tools  \e[0m'
 # Sobre
-echo -e $okegreen"+ -- -- +=[------------------------------------------------------------ ]~+"
-echo -e "$verdeClaro~+ installe quantos modulos quiser... sem precisar sair do script*$corPadrao"
+echo -e $branco"~+=[------------------------------------------------------------ ]~+"
+echo -e "$cyan~+=[ installe quantos modulos quiser... sem precisar sair do script*$corPadrao"
 echo -e
-echo -e "$vermelhoClaro~+ Aviso: Se alguns modulos nao instalar atualize sua soucelist*$corPadrao" ~+["3"]
-# copyright 2017 all rights reserved NewZereF
+echo -e "$cyan~+$vermelhoClaro [ Aviso]: Se alguns modulos nao instalar, atualize sua soucelist*$corPadrao"$cyan ~+["3"] $corPadrao
+# copyright 2017 all rights reserved nZwdeff
 echo -e
 # Home
 echo -e
@@ -69,19 +69,20 @@ echo -e
 }
 Banner
 main(){
-echo -e $red~+["1"] "- Ver categorias"
-echo -e ~+["2"] "- Update Repositorio"
-echo -e ~+["3"] "- Atualizar soucelist"
-echo -e ~+["0"] "- exit"$corPadrao
+echo -e $cyan~+$red["1"] "$branco-$red Ver categorias"
+echo -e $cyan~+$red["2"] "$branco-$red Updateo Repositordio"
+echo -e $cyan~+$red["3"] "$branco-$red Atualizar soucelist"
+echo -e $cyan~+$red["4"] "$branco-$red sobre"
+echo -e $cyan~+$red["0"] "$branco-$red exit"$corPadrao
+echo -e $cyan
 
-echo -e
-echo -e "$cyan~::$corPadrao"
+  read -p "~:: " V
 
-  read V
+echo -e $corPadrao
 
-   while [ "$V" != "1" -o "$V" != "2" -o "$V" != "3" -o "$V" != "0" ]; do
+   while [ "$V" != "1" -o "$V" != "2" -o "$V" != "3" -o "$V" != "4" -o "$V" != "0" ]; do
 
-         if [ "$V" = "1" -o "$V" = "2" -o "$V" = "3" -o "$V" = "0" ]; then
+         if [ "$V" = "1" -o "$V" = "2" -o "$V" = "3" -o "$V" = "4" -o "$V" = "0" ]; then
 
     if [ "$V" = "0" ]; then
 # saindo
@@ -138,33 +139,47 @@ echo -e "\e[01;32m Concluido... sua source list foi Atualizada \e[0m"
 
     fi
 
+    if [ "$V" = "4" ]; then
+
+echo -e "$cyan
+~+=[ --------- Sobre ------------ ]~+
+
+- doxyTools e um script em shell, baseado no katoolin,
+- de inicio contendo todas as Tools do katoolin,
+
+- contendo muito mais agora, e continuarei adicionando muito mais Tool$corPadrao
+"
+                main
+       fi
+
     if [ "$V" = "1" ]; then
 # categorias
-echo -e "\e[1;36m +=[ --------- Escolha uma categoria ------------ ]~+"
+echo -e "\e[1;36m ~+=[ --------- Escolha uma categoria ------------ ]~+"
 echo -e
         sleep 0
 echo -e "
-$cyan *  $okegreen[00)$cyan -$okegreen exit [0 )$cyan -$okegreen Home
+$cyan *  $branco[00)$cyan -$branco exit [0 )$cyan -$branco Home
 
-$cyan *  $okegreen[01)$cyan -$okegreen Coleta de informacoes       $cyan*  $okegreen[09)$cyan -$okegreen Ferramentas Forenses
-$cyan *  $okegreen[02)$cyan -$okegreen Analise de Vulnerabilidade  $cyan*  $okegreen[10)$cyan -$okegreen Teste de Estresse 
-$cyan *  $okegreen[03)$cyan -$okegreen Ataque redes sem fio        $cyan*  $okegreen[11)$cyan -$okegreen Ataques de Senha  
-$cyan *  $okegreen[04)$cyan -$okegreen Aplicacoes Web              $cyan*  $okegreen[12)$cyan -$okegreen Engenharia reversa
-$cyan *  $okegreen[05)$cyan -$okegreen Sniffing & Spoofing         $cyan*  $okegreen[13)$cyan -$okegreen Hacking de Hardware
-$cyan *  $okegreen[06)$cyan -$okegreen Mantendo o Acesso           $cyan*  $okegreen[14)$cyan -$okegreen Extra
-$cyan *  $okegreen[07)$cyan -$okegreen Ferramentas de Relatorios   $cyan*  $okegreen[15)$cyan -$okegreen Dependencias
-$cyan *  $okegreen[08)$cyan -$okegreen Ferramentas de Exploracao
+$cyan *  $branco[01)$cyan -$branco Coleta de informacoes       $cyan*  $branco[09)$cyan -$branco Ferramentas Forenses
+$cyan *  $branco[02)$cyan -$branco Analise de Vulnerabilidade  $cyan*  $branco[10)$cyan -$branco Teste de Estresse 
+$cyan *  $branco[03)$cyan -$branco Ataque redes sem fio        $cyan*  $branco[11)$cyan -$branco Ataques de Senha  
+$cyan *  $branco[04)$cyan -$branco Aplicacoes Web              $cyan*  $branco[12)$cyan -$branco Engenharia reversa
+$cyan *  $branco[05)$cyan -$branco Sniffing & Spoofing         $cyan*  $branco[13)$cyan -$branco Hacking de Hardware
+$cyan *  $branco[06)$cyan -$branco Mantendo o Acesso           $cyan*  $branco[14)$cyan -$branco Extra
+$cyan *  $branco[07)$cyan -$branco Ferramentas de Relatorios   $cyan*  $branco[15)$cyan -$branco Dependencias
+$cyan *  $branco[08)$cyan -$branco Ferramentas de Exploracao   $cyan*  $branco[16)$cyan -$branco Teste de penetracao
 $corPadrao"
 
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-                 read P
+  read -p "~:: " P
 
+echo -e $corPadrao
        fi
 
-    while [ "$P" != "01" -o "$P" != "02" -o "$P" != "03" -o "$P" != "04" -o "$P" != "05" -o "$P" != "06" -o "$P" != "07" -o "$P" != "08" -o "$P" != "09" -o "$P" != "10" -o "$P" != "11" -o "$P" != "12" -o "$P" != "13" -o "$P" != "14" -o "$P" != "15" -o "$P" != "00" -o "$P" != "0" ]; do
+    while [ "$P" != "01" -o "$P" != "02" -o "$P" != "03" -o "$P" != "04" -o "$P" != "05" -o "$P" != "06" -o "$P" != "07" -o "$P" != "08" -o "$P" != "09" -o "$P" != "10" -o "$P" != "11" -o "$P" != "12" -o "$P" != "13" -o "$P" != "14" -o "$P" != "16" -o "$P" != "15" -o "$P" != "00" -o "$P" != "0" ]; do
 
-       if [ "$P" = "01" -o "$P" = "02" -o "$P" = "03" -o "$P" = "04" -o "$P" = "05" -o "$P" = "06" -o "$P" = "07" -o "$P" = "08" -o "$P" = "09" -o "$P" = "10" -o "$P" = "11" -o "$P" = "12" -o "$P" = "13" -o "$P" = "14" -o "$P" = "15" -o "$P" = "00" -o "$P" = "0" ]; then
+       if [ "$P" = "01" -o "$P" = "02" -o "$P" = "03" -o "$P" = "04" -o "$P" = "05" -o "$P" = "06" -o "$P" = "07" -o "$P" = "08" -o "$P" = "09" -o "$P" = "10" -o "$P" = "11" -o "$P" = "12" -o "$P" = "13" -o "$P" = "14" -o "$P" = "15" -o "$P" = "16" -o "$P" = "00" -o "$P" = "0" ]; then
 
          if [ "$P" = "0" ]; then
 
@@ -172,6 +187,81 @@ echo -e "\e[1;36m~Home~\e[0m"
           main
 
            fi
+
+         while [ "$P" = "16" ]; do
+
+echo -e "\e[1;36m Penetration Testing \e[1;m"
+   sleep 1
+
+echo -e "$cyan
+
+*   [00) - exit  [0 ) - Home
+
+*   [01) PytheM
+
+
+
+  $corPadrao"
+
+echo -e $cyan
+
+  read -p "~:: " Tg
+
+echo -e $corPadrao
+
+   while [ "$Tg" != "01" -o "$Tg" != "0" -o "$Tg" != "00" ]; do
+
+      if [ "$Tg" = "01" -o "$Tg" = "0" -o "$Tg" = "00" ]; then
+
+         if [ "$Tg" = "0" ]; then
+
+echo -e "\e[1;36m~Home~\e[0m"
+          main
+
+           fi
+
+          if [ "$Tg" = "00" ]; then
+
+# saindo
+echo -e "$vermelhoClaro Saindo...$corPadrao"
+                    sleep 2
+
+                    exit
+
+                fi
+
+         if [ "$Tg" = "01" ]; then
+
+echo -e "\e[0;36m instalando pytheM...\e[0m"
+            sleep 2
+
+            apt-get update 
+            apt-get install git python-pip build-essential python-dev tcpdump libnetfilter-queue-dev libffi-dev libssl-dev -y && git clone https://github.com/m4n3dw0lf/PytheM
+            cd PytheM
+            pip install -r requirements.txt
+            chmod a+x ./pythem.py
+            ./pythem.py
+
+echo -e "\e[1;32m Pronto * \e[0m"
+echo -e $cyan
+
+  read -p "~:: " Dp
+
+echo -e $corPadrao
+               fi
+
+           else
+
+echo -e $cyan
+
+  read -p "~:: " Tg
+
+echo -e $corPadrao
+         fi
+
+      done
+
+   done
 
           if [ "$P" = "00" ]; then
 
@@ -189,35 +279,52 @@ echo -e "$vermelhoClaro Saindo...$corPadrao"
 echo -e "\e[1;36m Dependencies\e[1;m"
    sleep 1
 
-echo -e "$branco
+echo -e "$cyan
 
 *   [00) - exit  [0 ) - Home
 
-*   [01) python-dnspython  *   [16) shc
-*   [02) nano              *   [17) perl 
-*   [03) zip               *   [18) hydra
-*   [04) python            *   [19) python-pip
-*   [05) git               *   [20) curl
-*   [06) ruby              *   [21) wget
-*   [07) figlet            *   [22) python3
-*   [08) mitmf             *   [23) Build-essential
-*   [09) crunch   
-*   [10) sudo 
+*   [01) python-dnspython
+*   [02) nano              
+*   [03) zip               
+*   [04) python            
+*   [05) git               
+*   [06) ruby              
+*   [07) figlet            
+*   [08) mitmf             
+*   [09) crunch            
+*   [10) sudo              
 *   [11) php
 *   [12) php5
 *   [13) unzip
 *   [14) make 
 *   [15) gcc
-
+*   [16) shc
+*   [17) perl 
+*   [18) hydra
+*   [19) python-pip
+*   [20) curl
+*   [21) wget
+*   [22) python3
+*   [23) Build-essential
+*   [24) python-socksipy
+*   [25) python-crypto
+*   [26) python-geoip
+*   [27) python-pycurl
+*   [28) python-nmap
+*   [29) python-whois
+*   [30) toilet
+*   [31) figlet
   $corPadrao"
 
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-            read Dp
+  read -p "~:: " Dp
 
-    while [ "$Dp" != "01" -o "$Dp" != "02" -o "$Dp" != "03" -o "$Dp" != "04" -o "$Dp" != "05" -o "$Dp" != "06" -o "$Dp" != "07" -o "$Dp" != "08" -o "$Dp" != "09" -o "$Dp" != "10" -o "$Dp" != "11" -o "$Dp" != "12" -o "$Dp" != "13" -o "$Dp" != "14" -o "$Dp" != "15" -o "$Dp" != "16" -o "$Dp" != "17" -o "$Dp" != "18" -o "$Dp" != "19" -o "$Dp" != "20" -o "$Dp" != "21" -o "$Dp" != "22" -o "$Dp" != "23" -o "$Dp" != "00" -o "$Dp" != "0" ]; do
+echo -e $corPadrao
 
-       if [ "$Dp" = "01" -o "$Dp" = "02" -o "$Dp" = "03" -o "$Dp" = "04" -o "$Dp" = "05" -o "$Dp" = "06" -o "$Dp" = "07" -o "$Dp" = "08" -o "$Dp" = "09" -o "$Dp" = "10" -o "$Dp" = "11" -o "$Dp" = "12" -o "$Dp" = "13" -o "$Dp" = "14" -o "$Dp" = "15" -o "$Dp" = "16" -o "$Dp" = "17" -o "$Dp" = "18" -o "$Dp" = "19" -o "$Dp" = "20" -o "$Dp" = "21" -o "$Dp" = "22" -o "$Dp" = "23" -o "$Dp" = "00" -o "$Dp" = "0" ]; then
+    while [ "$Dp" != "01" -o "$Dp" != "02" -o "$Dp" != "03" -o "$Dp" != "04" -o "$Dp" != "05" -o "$Dp" != "06" -o "$Dp" != "07" -o "$Dp" != "08" -o "$Dp" != "09" -o "$Dp" != "10" -o "$Dp" != "11" -o "$Dp" != "12" -o "$Dp" != "13" -o "$Dp" != "14" -o "$Dp" != "15" -o "$Dp" != "16" -o "$Dp" != "17" -o "$Dp" != "18" -o "$Dp" != "19" -o "$Dp" != "20" -o "$Dp" != "21" -o "$Dp" != "22" -o "$Dp" != "23" -o "$Dp" != "00" -o "$Dp" != "0" -o "$Dp" != "24" -o "$Dp" != "25" -o "$Dp" != "26" -o "$Dp" != "27" -o "$Dp" != "28" -o "$Dp" != "29" -o "$Dp" != "30" -o "$Dp" != "31" ]; do
+
+       if [ "$Dp" = "01" -o "$Dp" = "02" -o "$Dp" = "03" -o "$Dp" = "04" -o "$Dp" = "05" -o "$Dp" = "06" -o "$Dp" = "07" -o "$Dp" = "08" -o "$Dp" = "09" -o "$Dp" = "10" -o "$Dp" = "11" -o "$Dp" = "12" -o "$Dp" = "13" -o "$Dp" = "14" -o "$Dp" = "15" -o "$Dp" = "16" -o "$Dp" = "17" -o "$Dp" = "18" -o "$Dp" = "19" -o "$Dp" = "20" -o "$Dp" = "21" -o "$Dp" = "22" -o "$Dp" = "23" -o "$Dp" = "00" -o "$Dp" = "0" -o "$Dp" = "24" -o "$Dp" = "25" -o "$Dp" = "26" -o "$Dp" = "27" -o "$Dp" = "28" -o "$Dp" = "29" -o "$Dp" = "30" -o "$Dp" = "31" ]; then
 
          if [ "$Dp" = "0" ]; then
 
@@ -226,18 +333,131 @@ echo -e "\e[1;36m~Home~\e[0m"
 
            fi
 
+         if [ "$Dp" = "24" ]; then
+
+echo -e "\e[0;36m instalando python-socksipy...\e[0m"
+            sleep 2
+
+            apt-get install python-socksipy
+
+echo -e $cyan
+
+  read -p "~:: " Dp
+
+echo -e $corPadrao 
+              fi
+
+         if [ "$Dp" = "30" ]; then
+
+echo -e "\e[0;36m instalando toilet...\e[0m"
+            sleep 2
+
+            apt-get install toilet
+
+echo -e $cyan
+
+  read -p "~:: " Dp
+
+echo -e $corPadrao 
+              fi
+
+         if [ "$Dp" = "31" ]; then
+
+echo -e "\e[0;36m instalando figlet...\e[0m"
+            sleep 2
+
+            apt-get install figlet
+
+echo -e $cyan
+
+  read -p "~:: " Dp
+
+echo -e $corPadrao 
+              fi
+
+         if [ "$Dp" = "28" ]; then
+
+echo -e "\e[0;36m instalando python-nmap...\e[0m"
+            sleep 2
+
+            apt-get install python-nmap
+
+echo -e $cyan
+
+  read -p "~:: " Dp
+
+echo -e $corPadrao 
+              fi
+
+         if [ "$Dp" = "29" ]; then
+
+echo -e "\e[0;36m instalando python-whois...\e[0m"
+            sleep 2
+
+            apt-get install python-whois
+
+echo -e $cyan
+
+  read -p "~:: " Dp
+
+echo -e $corPadrao 
+              fi
+
+if [ "$Dp" = "25" ]; then
+
+echo -e "\e[0;36m instalando python-crypto...\e[0m"
+            sleep 2
+
+            apt-get install python-crypto
+
+echo -e $cyan
+
+  read -p "~:: " Dp
+
+echo -e $corPadrao 
+              fi
+
+if [ "$Dp" = "26" ]; then
+
+echo -e "\e[0;36m instalando python-geoip...\e[0m"
+            sleep 2
+
+            apt-get install python-geoip
+
+echo -e $cyan
+
+  read -p "~:: " Dp
+
+echo -e $corPadrao 
+              fi
+
+if [ "$Dp" = "27" ]; then
+
+echo -e "\e[0;36m instalando python-pycurl...\e[0m"
+            sleep 2
+
+            apt-get install python-pycurl
+
+echo -e $cyan
+
+  read -p "~:: " Dp
+
+echo -e $corPadrao 
+              fi
+
          if [ "$Dp" = "01" ]; then
 
-echo -e "\e[0;36m instalando python-dnspython ...\e[0m"
+echo -e "\e[0;36m instalando python-dnspython...\e[0m"
             sleep 2
 
             apt-get install python-dnspython 
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-            read Dp
+  read -p "~:: " Dp
 
+echo -e $corPadrao
            fi
 
          if [ "$Dp" = "02" ]; then
@@ -248,10 +468,11 @@ echo -e "\e[0;36m instalando nano...\e[0m"
             apt-get install nano
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read Dp
+  read -p "~:: " Dp
 
+echo -e $corPadrao
            fi
 
          if [ "$Dp" = "03" ]; then
@@ -262,10 +483,11 @@ echo -e "\e[0;36m instalando zip...\e[0m"
              apt-get install zip
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read Dp
+  read -p "~:: " Dp
 
+echo -e $corPadrao
             fi
 
           if [ "$Dp" = "04" ]; then
@@ -276,10 +498,11 @@ echo -e "\e[0;36m instalando python...\e[0m"
              apt-get install python
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-            read Dp
+  read -p "~:: " Dp
 
+echo -e $corPadrao
            fi
 
          if [ "$Dp" = "05" ]; then
@@ -290,10 +513,11 @@ echo -e "\e[0;36m instalando git...\e[0m"
             apt-get install git
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-            read Dp
+  read -p "~:: " Dp
 
+echo -e $corPadrao
            fi
 
          if [ "$Dp" = "06" ]; then
@@ -304,10 +528,11 @@ echo -e "\e[0;36m instalando ruby...\e[0m"
             apt-get install ruby
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-            read Dp
+  read -p "~:: " Dp
 
+echo -e $corPadrao
    	       fi
 
          if [ "$Dp" = "07" ]; then
@@ -318,13 +543,13 @@ echo -e "\e[0;36m instalando figlet...\e[0m"
             apt-get install figlet
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-            read Dp
- 
+  read -p "~:: " Dp
+
+echo -e $corPadrao 
            fi
  
-
          if [ "$Dp" = "08" ]; then
 
 echo -e "\e[0;36m instalando mitmf...\e[0m"
@@ -333,10 +558,11 @@ echo -e "\e[0;36m instalando mitmf...\e[0m"
             apt-get install mitmf
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-            read Dp
+  read -p "~:: " Dp
 
+echo -e $corPadrao
            fi
 
          if [ "$Dp" = "09" ]; then
@@ -347,10 +573,11 @@ echo -e "\e[0;36m instalando crunch...\e[0m"
             apt-get install crunch
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-            read Dp
+  read -p "~:: " Dp
 
+echo -e $corPadrao
            fi
 
          if [ "$Dp" = "10" ]; then
@@ -361,10 +588,11 @@ echo -e "\e[0;36m instalando sudo...\e[0m"
             apt-get install sudo
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-            read Dp
+  read -p "~:: " Dp
 
+echo -e $corPadrao
            fi
 
          if [ "$Dp" = "11" ]; then
@@ -375,10 +603,11 @@ echo -e "\e[0;36m instalando php...\e[0m"
             apt-get install php
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read Dp
+  read -p "~:: " Dp
 
+echo -e $corPadrao
            fi
 
          if [ "$Dp" = "12" ]; then
@@ -389,10 +618,11 @@ echo -e "\e[0;36m instalando php5...\e[0m"
             apt-get install php5
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-            read Dp
+  read -p "~:: " Dp
 
+echo -e $corPadrao
            fi
 
          if [ "$Dp" = "13" ]; then
@@ -403,10 +633,11 @@ echo -e "\e[0;36m instalando unzip...\e[0m"
             apt-get install unzip
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-            read Dp
+  read -p "~:: " Dp
 
+echo -e $corPadrao
            fi
 
          if [ "$Dp" = "14" ]; then
@@ -417,10 +648,11 @@ echo -e "\e[0;36m instalando make...\e[0m"
              apt-get install make
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read Dp
+  read -p "~:: " Dp
 
+echo -e $corPadrao
            fi
 
          if [ "$Dp" = "15" ]; then
@@ -431,10 +663,11 @@ echo -e "\e[0;36m instalando gcc...\e[0m"
     	     apt-get install gcc
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read Dp
+  read -p "~:: " Dp
 
+echo -e $corPadrao
            fi
 
          if [ "$Dp" = "16" ]; then
@@ -445,10 +678,11 @@ echo -e "\e[0;36m instalando shc...\e[0m"
             apt-get install shc
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-            read Dp
+  read -p "~:: " Dp
 
+echo -e $corPadrao
            fi
 
          if [ "$Dp" = "17" ]; then
@@ -459,10 +693,11 @@ echo -e "\e[0;36m instalando perl...\e[0m"
             apt-get install perl libgtk02-perl libfile-finder-perl libxml-tokeparser-perl libxml-bare-perl libhtml-parser-perl perlmagick -y #Debian
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-            read Dp
+  read -p "~:: " Dp
 
+echo -e $corPadrao
            fi
 
          if [ "$Dp" = "18" ]; then
@@ -473,10 +708,11 @@ echo -e "\e[0;36m instalando hydra...\e[0m"
             apt-get install hydra
  
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-            read Dp
+  read -p "~:: " Dp
 
+echo -e $corPadrao
            fi
 
          if [ "$Dp" = "19" ]; then
@@ -487,10 +723,11 @@ echo -e "\e[0;36m instalando python-pip...\e[0m"
             apt-get install python-pip
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-            read Dp
+  read -p "~:: " Dp
 
+echo -e $corPadrao
            fi
 
          if [ "$Dp" = "20" ]; then
@@ -501,10 +738,11 @@ echo -e "\e[0;36m instalando curl...\e[0m"
             apt-get install curl
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-            read Dp
+  read -p "~:: " Dp
 
+echo -e $corPadrao
            fi
 
          if [ "$Dp" = "21" ]; then
@@ -515,10 +753,11 @@ echo -e "\e[0;36m instalando wget...\e[0m"
             apt-get install wget
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-            read Dp
+  read -p "~:: " Dp
 
+echo -e $corPadrao
            fi
 
          if [ "$Dp" = "22" ]; then
@@ -529,10 +768,11 @@ echo -e "\e[0;36m instalando python3...\e[0m"
             apt-get install python3
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-            read Dp
+  read -p "~:: " Dp
 
+echo -e $corPadrao
            fi
 
          if [ "$Dp" = "23" ]; then
@@ -543,10 +783,11 @@ echo -e "\e[0;36m instalando Build-essential...\e[0m"
             apt-get install Build-essential
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-            read Dp
+  read -p "~:: " Dp
 
+echo -e $corPadrao
            fi
 
          if [ "$Dp" = "00" ]; then
@@ -561,14 +802,15 @@ echo -e "$vermelhoClaro saindo...$corPadrao"
 
          else
 
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-               read Dp
+       read -p "~:: " Dp
 
+echo -e $corPadrao
 
-           fi
+          fi
 
-       done
+      done
 
    done
 
@@ -579,7 +821,7 @@ echo -e "\e[1;36m Extra\e[1;m"
        sleep 1
 
 echo -e "
-$branco
+$cyan
 *  [00) - exit  [0 ) - Home
 
 *  [01) Wifresti
@@ -587,9 +829,11 @@ $branco
 
    $corPadrao"
 
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-    read Ea
+  read -p "~:: " Ea
+
+echo -e $corPadrao
 
    while [ "$Ea" != "00" -o "$Ea" != "01" -o "$Ea" != "02" -o "$Ea" != "0" ]; do
 
@@ -617,13 +861,14 @@ echo -e "$vermelhoClaro Saindo...$corPadrao"
 echo -e "\e[0;36m instalando wifresti...\e[0m"
                    sleep 2
 
-			      git clone https://github.com/LionSec/wifresti.git && cp wifresti/wifresti.py /usr/bin/wifresti && chmod +x /usr/bin/wifresti && wifresti
+			     apt-get install git && git clone https://github.com/LionSec/wifresti.git && cp wifresti/wifresti.py /usr/bin/wifresti && chmod +x /usr/bin/wifresti && wifresti
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read Ea
+  read -p "~:: " Ea
 
+echo -e $corPadrao
               fi
 
 			if [ "$Ea" = "02" ]; then
@@ -634,32 +879,34 @@ echo -e "\e[0;36m instalando squid3...\e[0m"
 			      apt-get install squid3
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read Ea
+  read -p "~:: " Ea
 
+echo -e $corPadrao
               fi
 
            else
 
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-          read Ea
+  read -p "~:: " Ea
 
+echo -e $corPadrao
          fi
 
      done
 
   done
 
-          while [ "$P" = "13" ]; do
+      while [ "$P" = "13" ]; do
 
 # Hardware Hacking
 echo -e "\e[1;36m Hardware Hacking\e[1;m"
        sleep 1
 
 echo -e "
-$branco
+$cyan
 *  [00) - exit  [0 ) - Home
 
 *  [01) android-sdk
@@ -671,11 +918,13 @@ $branco
 
    $corPadrao"
 
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-    read HH
+  read -p "~:: " HH
 
-   while [ "$HH" != "00" -o "$HH" != "01" -o "$HH" != "02" -o "$HH" != "03" -o "$HH" != "04" -o "$HH" != "05" -o "$HH" != "06" -o "$HH" != "0" ]; do
+echo -e $corPadrao
+
+    while [ "$HH" != "00" -o "$HH" != "01" -o "$HH" != "02" -o "$HH" != "03" -o "$HH" != "04" -o "$HH" != "05" -o "$HH" != "06" -o "$HH" != "0" ]; do
 
          if [ "$HH" = "00" -o "$HH" = "01" -o "$HH" = "02" -o "$HH" = "03" -o "$HH" = "04" -o "$HH" = "05" -o "$HH" = "06" -o "$HH" = "0" ]; then
 
@@ -704,10 +953,11 @@ echo -e "\e[0;36m instalando android-sdk...\e[0m"
 			      apt-get install android-sdk
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read HH
+  read -p "~:: " HH
 
+echo -e $corPadrao
               fi
 
 			if [ "$HH" = "02" ]; then
@@ -718,10 +968,11 @@ echo -e "\e[0;36m instalando apktool...\e[0m"
 			      apt-get install apktool
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read HH
+  read -p "~:: " HH
 
+echo -e $corPadrao
               fi
 
 			if [ "$HH" = "03" ]; then
@@ -732,10 +983,11 @@ echo -e "\e[0;36m instalando arduino...\e[0m"
 			      apt-get install arduino
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read HH
+  read -p "~:: " HH
 
+echo -e $corPadrao
               fi
 
 			if [ "$HH" = "04" ]; then
@@ -746,10 +998,11 @@ echo -e "\e[0;36m instalando dex2jar...\e[0m"
 			      apt-get install dex2jar
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read HH
+  read -p "~:: " HH
 
+echo -e $corPadrao
               fi
 
 			if [ "$HH" = "05" ]; then
@@ -760,10 +1013,11 @@ echo -e "\e[0;36m instalando sakis3g...\e[0m"
 			      apt-get install sakis3g
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read HH
+  read -p "~:: " HH
 
+echo -e $corPadrao
               fi
 
 			if [ "$HH" = "06" ]; then
@@ -774,18 +1028,20 @@ echo -e "\e[0;36m instalando smali...\e[0m"
 			      apt-get install smali
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read HH
+  read -p "~:: " HH
 
+echo -e $corPadrao
               fi
 
            else
 
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-          read HH
+  read -p "~:: " HH
 
+echo -e $corPadrao
          fi
 
      done
@@ -799,7 +1055,7 @@ echo -e "\e[1;36m Reverse Engineering\e[1;m"
        sleep 1
 
 echo -e "
-$branco
+$cyan
 *  [00) - exit  [0 ) - Home
 
 *  [01) apktool
@@ -816,11 +1072,13 @@ $branco
 
    $corPadrao"
 
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-     read RE
+  read -p "~:: " RE
 
-   while [ "$RE" != "0" -o "$RE" != "00" -o "$RE" != "01" -o "$RE" != "02" -o "$RE" != "03" -o "$RE" != "04" -o "$RE" != "05" -o "$RE" != "06" -o "$RE" != "07" -o "$RE" != "08" -o "$RE" != "09" -o "$RE" != "10" -o "$RE" != "11" ]; do
+echo -e $corPadrao
+
+    while [ "$RE" != "0" -o "$RE" != "00" -o "$RE" != "01" -o "$RE" != "02" -o "$RE" != "03" -o "$RE" != "04" -o "$RE" != "05" -o "$RE" != "06" -o "$RE" != "07" -o "$RE" != "08" -o "$RE" != "09" -o "$RE" != "10" -o "$RE" != "11" ]; do
 
          if [ "$RE" = "0" -o "$RE" = "00" -o "$RE" = "01" -o "$RE" = "02" -o "$RE" = "03" -o "$RE" = "04" -o "$RE" = "05" -o "$RE" = "06" -o "$RE" = "07" -o "$RE" = "08" -o "$RE" = "09" -o "$RE" = "10" -o "$RE" = "11" ]; then
 
@@ -849,10 +1107,11 @@ echo -e "\e[0;36m instalando apktool...\e[0m"
 			      apt-get install apktool
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read RE
+  read -p "~:: " RE
 
+echo -e $corPadrao
               fi
 
 			if [ "$RE" = "02" ]; then
@@ -863,10 +1122,11 @@ echo -e "\e[0;36m instalando dex2jar...\e[0m"
 			      apt-get install dex2jar
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read RE
+  read -p "~:: " RE
 
+echo -e $corPadrao
               fi
 
 			if [ "$RE" = "03" ]; then
@@ -877,10 +1137,11 @@ echo -e "\e[0;36m instalando python-diStorm3...\e[0m"
 			      apt-get install python-diStorm3
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read RE
+  read -p "~:: " RE
 
+echo -e $corPadrao
               fi
 
 			if [ "$RE" = "04" ]; then
@@ -891,10 +1152,11 @@ echo -e "\e[0;36m instalando edb-debugger...\e[0m"
 			      apt-get install edb-debugger
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read RE
+  read -p "~:: " RE
 
+echo -e $corPadrao
               fi
 
 			if [ "$RE" = "05" ]; then
@@ -905,10 +1167,11 @@ echo -e "\e[0;36m instalando jad...\e[0m"
 			      apt-get install jad
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read RE
+  read -p "~:: " RE
 
+echo -e $corPadrao
               fi
 
 			if [ "$RE" = "06" ]; then
@@ -919,10 +1182,11 @@ echo -e "\e[0;36m instalando javasnoop...\e[0m"
 			      apt-get install javasnoop
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read RE
+  read -p "~:: " RE
 
+echo -e $corPadrao
               fi
 
 			if [ "$RE" = "07" ]; then
@@ -933,10 +1197,11 @@ echo -e "\e[0;36m instalando JD...\e[0m"
 			      apt-get install JD
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read RE
+  read -p "~:: " RE
 
+echo -e $corPadrao
               fi
 
 			if [ "$RE" = "08" ]; then
@@ -947,10 +1212,11 @@ echo -e "\e[0;36m instalando OllyDbg...\e[0m"
 			      apt-get install OllyDbg
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read RE
+  read -p "~:: " RE
 
+echo -e $corPadrao
               fi
 
 			if [ "$RE" = "09" ]; then
@@ -961,10 +1227,11 @@ echo -e "\e[0;36m instalando smali...\e[0m"
 			      apt-get install smali
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read RE
+  read -p "~:: " RE
 
+echo -e $corPadrao
               fi
 
 			if [ "$RE" = "10" ]; then
@@ -975,10 +1242,11 @@ echo -e "\e[0;36m instalando Valgrind...\e[0m"
 			      apt-get install Valgrind
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read RE
+  read -p "~:: " RE
 
+echo -e $corPadrao
               fi
 
 			if [ "$RE" = "11" ]; then
@@ -989,18 +1257,20 @@ echo -e "\e[0;36m instalando YARA...\e[0m"
 			      apt-get install YARA
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read RE
+  read -p "~:: " RE
 
+echo -e $corPadrao
               fi
 
            else
 
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-          read FT
+  read -p "~:: " RE
 
+echo -e $corPadrao
          fi
 
      done
@@ -1014,7 +1284,7 @@ echo -e "\e[1;36m Password Attacks\e[1;m"
        sleep 1
 
 echo -e "
-$branco
+$cyan
 *  [00) - exit  [0 ) - Home
 
 *  [01) acccheck             *  [19) Maskprocessor
@@ -1038,9 +1308,11 @@ $branco
 
    $corPadrao"
 
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-     read PT
+  read -p "~:: " PT
+
+echo -e $corPadrao
 
     while [ "$PT" != "0" -o "$PT" != "00" -o "$PT" != "01" -o "$PT" != "02" -o "$PT" != "03" -o "$PT" != "04" -o "$PT" != "05" -o "$PT" != "06" -o "$PT" != "07" -o "$PT" != "08" -o "$PT" != "09" -o "$PT" != "10" -o "$PT" != "11" -o "$PT" != "12" -o "$PT" != "13" -o "$PT" != "14" -o "$PT" != "15" -o "$PT" != "16" -o "$PT" != "17" -o "$PT" != "18" -o "$PT" != "19" -o "$PT" != "20" -o "$PT" != "21" -o "$PT" != "22" -o "$PT" != "23" -o "$PT" != "24" -o "$PT" != "25" -o "$PT" != "26" -o "$PT" != "27" -o "$PT" != "28" -o "$PT" != "29" -o "$PT" != "30" -o "$PT" != "31" -o "$PT" != "32" -o "$PT" != "33" -o "$PT" != "34" -o "$PT" != "35" -o "$PT" != "36" ]; do
 
@@ -1071,10 +1343,11 @@ echo -e "\e[0;36m instalando acccheck...\e[0m"
 			      apt-get install acccheck
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read PT
+  read -p "~:: " PT
 
+echo -e $corPadrao
               fi
 
 			if [ "$PT" = "02" ]; then
@@ -1085,10 +1358,11 @@ echo -e "\e[0;36m instalando burpsuite...\e[0m"
 			      apt-get install burpsuite
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read PT
+  read -p "~:: " PT
 
+echo -e $corPadrao
               fi
 
 			if [ "$PT" = "03" ]; then
@@ -1099,10 +1373,11 @@ echo -e "\e[0;36m instalando cewl...\e[0m"
 			      apt-get install cewl
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read PT
+  read -p "~:: " PT
 
+echo -e $corPadrao
               fi
 
 			if [ "$PT" = "04" ]; then
@@ -1113,10 +1388,11 @@ echo -e "\e[0;36m instalando chntpw...\e[0m"
 			      apt-get install chntpw
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read PT
+  read -p "~:: " PT
 
+echo -e $corPadrao
               fi
 
 			if [ "$PT" = "05" ]; then
@@ -1127,10 +1403,11 @@ echo -e "\e[0;36m instalando cisco-auditing-tool...\e[0m"
 			      apt-get install cisco-auditing-tool
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read PT
+  read -p "~:: " PT
 
+echo -e $corPadrao
               fi
 
 			if [ "$PT" = "06" ]; then
@@ -1141,10 +1418,11 @@ echo -e "\e[0;36m instalando cmospwd...\e[0m"
 			      apt-get install cmospwd
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read PT
+  read -p "~:: " PT
 
+echo -e $corPadrao
               fi
 
 			if [ "$PT" = "07" ]; then
@@ -1155,10 +1433,11 @@ echo -e "\e[0;36m instalando creddump...\e[0m"
 			      apt-get install creddump
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read PT
+  read -p "~:: " PT
 
+echo -e $corPadrao
               fi
 
 			if [ "$PT" = "08" ]; then
@@ -1169,10 +1448,11 @@ echo -e "\e[0;36m instalando crunch...\e[0m"
 			      apt-get install crunch
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read PT
+  read -p "~:: " PT
 
+echo -e $corPadrao
               fi
 
 			if [ "$PT" = "09" ]; then
@@ -1183,10 +1463,11 @@ echo -e "\e[0;36m instalando dbpwaudit...\e[0m"
 			      apt-get install git && git clone git://git.kali.org/packages/dbpwaudit.git
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read PT
+  read -p "~:: " PT
 
+echo -e $corPadrao
               fi
 
 			if [ "$PT" = "10" ]; then
@@ -1197,10 +1478,11 @@ echo -e "\e[0;36m instalando findmyhash...\e[0m"
 			      apt-get install findmyhash
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read PT
+  read -p "~:: " PT
 
+echo -e $corPadrao
               fi
 
 			if [ "$PT" = "11" ]; then
@@ -1211,10 +1493,11 @@ echo -e "\e[0;36m instalando gpp-decrypt...\e[0m"
 			      apt-get install gpp-decrypt
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read PT
+  read -p "~:: " PT
 
+echo -e $corPadrao
               fi
 
 			if [ "$PT" = "12" ]; then
@@ -1225,10 +1508,11 @@ echo -e "\e[0;36m instalando hash-identifier...\e[0m"
 			      apt-get install hash-identifier
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read PT
+  read -p "~:: " PT
 
+echo -e $corPadrao
               fi
 
 			if [ "$PT" = "13" ]; then
@@ -1239,10 +1523,11 @@ echo -e "\e[0;36m instalando hexorbase...\e[0m"
 			      apt-get install hexorbase
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read PT
+  read -p "~:: " PT
 
+echo -e $corPadrao
               fi
 
 			if [ "$PT" = "14" ]; then
@@ -1253,10 +1538,11 @@ echo -e "\e[0;36m instalando thc-hydra...\e[0m"
 			      echo "please visit : https://www.thc.org/thc-hydra/"
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read PT
+  read -p "~:: " PT
 
+echo -e $corPadrao
               fi
 
 			if [ "$PT" = "15" ]; then
@@ -1267,10 +1553,11 @@ echo -e "\e[0;36m instalando john...\e[0m"
 			      apt-get install john
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read PT
+  read -p "~:: " PT
 
+echo -e $corPadrao
               fi
 
 			if [ "$PT" = "16" ]; then
@@ -1281,10 +1568,11 @@ echo -e "\e[0;36m instalando johnny...\e[0m"
 			      apt-get install johnny
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read PT
+  read -p "~:: " PT
 
+echo -e $corPadrao
               fi
 
 			if [ "$PT" = "17" ]; then
@@ -1295,10 +1583,11 @@ echo -e "\e[0;36m instalando keimpx...\e[0m"
 			      apt-get install keimpx
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read PT
+  read -p "~:: " PT
 
+echo -e $corPadrao
               fi
 
 			if [ "$PT" = "18" ]; then
@@ -1309,10 +1598,11 @@ echo -e "\e[0;36m instalando maltego-teeth...\e[0m"
 			      apt-get install maltego-teeth
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read PT
+  read -p "~:: " PT
 
+echo -e $corPadrao
               fi
 
 			if [ "$PT" = "19" ]; then
@@ -1323,10 +1613,11 @@ echo -e "\e[0;36m instalando maskprocessor...\e[0m"
 			      apt-get install maskprocessor
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read PT
+  read -p "~:: " PT
 
+echo -e $corPadrao
               fi
 
 			if [ "$PT" = "20" ]; then
@@ -1337,10 +1628,11 @@ echo -e "\e[0;36m instalando multiforcer...\e[0m"
 			      apt-get install multiforcer
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read PT
+  read -p "~:: " PT
 
+echo -e $corPadrao
               fi
 
 			if [ "$PT" = "21" ]; then
@@ -1351,10 +1643,11 @@ echo -e "\e[0;36m instalando ncrack...\e[0m"
 			      apt-get install ncrack
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read PT
+  read -p "~:: " PT
 
+echo -e $corPadrao
               fi
 
 			if [ "$PT" = "22" ]; then
@@ -1365,10 +1658,11 @@ echo -e "\e[0;36m instalando oclgausscrack...\e[0m"
 			      apt-get install oclgausscrack
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read PT
+  read -p "~:: " PT
 
+echo -e $corPadrao
               fi
 
 			if [ "$PT" = "23" ]; then
@@ -1379,10 +1673,11 @@ echo -e "\e[0;36m instalando pack...\e[0m"
 			      apt-get install pack
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read PT
+  read -p "~:: " PT
 
+echo -e $corPadrao
               fi
 
 			if [ "$PT" = "24" ]; then
@@ -1393,10 +1688,11 @@ echo -e "\e[0;36m instalando patator...\e[0m"
 			      apt-get install patator
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read PT
+  read -p "~:: " PT
 
+echo -e $corPadrao
               fi
 
 			if [ "$PT" = "25" ]; then
@@ -1407,10 +1703,11 @@ echo -e "\e[0;36m instalando phrasendrescher...\e[0m"
 			      echo "please visit : http://www.leidecker.info/projects/phrasendrescher/index.shtml"
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read PT
+  read -p "~:: " PT
 
+echo -e $corPadrao
               fi
 
 			if [ "$PT" = "26" ]; then
@@ -1421,10 +1718,11 @@ echo -e "\e[0;36m instalando polenum...\e[0m"
 			      apt-get install polenum
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read PT
+  read -p "~:: " PT
 
+echo -e $corPadrao
               fi
 
 			if [ "$PT" = "27" ]; then
@@ -1435,10 +1733,11 @@ echo -e "\e[0;36m instalando rainbowcrack...\e[0m"
 			      apt-get install rainbowcrack
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read PT
+  read -p "~:: " PT
 
+echo -e $corPadrao
               fi
 
 			if [ "$PT" = "28" ]; then
@@ -1449,10 +1748,11 @@ echo -e "\e[0;36m instalando rcracki-mt...\e[0m"
 			      apt-get install rcracki-mt
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read PT
+  read -p "~:: " PT
 
+echo -e $corPadrao
               fi
 
 			if [ "$PT" = "29" ]; then
@@ -1463,10 +1763,11 @@ echo -e "\e[0;36m instalando rsmangler...\e[0m"
 			      apt-get install rsmangler
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read PT
+  read -p "~:: " PT
 
+echo -e $corPadrao
               fi
 
 			if [ "$PT" = "30" ]; then
@@ -1477,10 +1778,11 @@ echo -e "\e[0;36m instalando Sqldict...\e[0m"
 			      apt-get install Sqldict
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read PT
+  read -p "~:: " PT
 
+echo -e $corPadrao
               fi
 
 			if [ "$PT" = "31" ]; then
@@ -1491,10 +1793,11 @@ echo -e "\e[0;36m instalando statsprocessor...\e[0m"
 			      apt-get install statsprocessor
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read PT
+  read -p "~:: " PT
 
+echo -e $corPadrao
               fi
 
 			if [ "$PT" = "32" ]; then
@@ -1505,10 +1808,11 @@ echo -e "\e[0;36m instalando thc-pptp-bruter...\e[0m"
 			      apt-get install thc-pptp-bruter
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read PT
+  read -p "~:: " PT
 
+echo -e $corPadrao
               fi
 
 			if [ "$PT" = "33" ]; then
@@ -1519,10 +1823,11 @@ echo -e "\e[0;36m instalando truecrack...\e[0m"
 			      apt-get install truecrack
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read PT
+  read -p "~:: " PT
 
+echo -e $corPadrao
               fi
 
 			if [ "$PT" = "34" ]; then
@@ -1533,10 +1838,11 @@ echo -e "\e[0;36m instalando webscarab...\e[0m"
 			      apt-get install webscarab
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read PT
+  read -p "~:: " PT
 
+echo -e $corPadrao
               fi
 
 			if [ "$PT" = "35" ]; then
@@ -1547,10 +1853,11 @@ echo -e "\e[0;36m instalando wordlists...\e[0m"
 			      apt-get install wordlists
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read PT
+  read -p "~:: " PT
 
+echo -e $corPadrao
               fi
 
 			if [ "$PT" = "36" ]; then
@@ -1561,18 +1868,20 @@ echo -e "\e[0;36m instalando zaproxy...\e[0m"
 			      apt-get install zaproxy
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read PT
+  read -p "~:: " PT
 
+echo -e $corPadrao
               fi
 
            else
 
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-          read PT
+  read -p "~:: " PT
 
+echo -e $corPadrao
          fi
 
      done
@@ -1586,7 +1895,7 @@ echo -e "\e[1;36m Stress Testing\e[1;m"
        sleep 1
 
 echo -e "
-$branco
+$cyan
 *  [00) - exit  [0 ) - Home
 
 *  [01) DHCPig
@@ -1606,9 +1915,11 @@ $branco
 
    $corPadrao"
 
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-     read ST
+  read -p "~:: " ST
+
+echo -e $corPadrao
 
      while [ "$ST" != "0" -o "$ST" != "00" -o "$ST" != "01" -o "$ST" != "02" -o "$ST" != "03" -o "$ST" != "04" -o "$ST" != "05" -o "$ST" != "06" -o "$ST" != "07" -o "$ST" != "08" -o "$ST" != "09" -o "$ST" != "10" -o "$ST" != "11" -o "$ST" != "12" -o "$ST" != "13" -o "$ST" != "14" ]; do
 
@@ -1639,10 +1950,11 @@ echo -e "\e[0;36m instalando dhcpig...\e[0m"
 			      apt-get install dhcpig
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read ST
+  read -p "~:: " ST
 
+echo -e $corPadrao
               fi
 
 			if [ "$ST" = "02" ]; then
@@ -1653,10 +1965,11 @@ echo -e "\e[0;36m instalando funkload...\e[0m"
 			      apt-get install funkload
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read ST
+  read -p "~:: " ST
 
+echo -e $corPadrao
               fi
 
 			if [ "$ST" = "03" ]; then
@@ -1667,10 +1980,11 @@ echo -e "\e[0;36m instalando iaxflood...\e[0m"
 			      apt-get install iaxflood
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read ST
+  read -p "~:: " ST
 
+echo -e $corPadrao
               fi
 
 			if [ "$ST" = "04" ]; then
@@ -1681,10 +1995,11 @@ echo -e "\e[0;36m instalando inundator...\e[0m"
 			      apt-get install git && git clone git://git.kali.org/packages/inundator.git
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read ST
+  read -p "~:: " ST
 
+echo -e $corPadrao
               fi
 
 			if [ "$ST" = "05" ]; then
@@ -1695,10 +2010,11 @@ echo -e "\e[0;36m instalando inviteflood...\e[0m"
 			      apt-get install inviteflood
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read ST
+  read -p "~:: " ST
 
+echo -e $corPadrao
               fi
 
 			if [ "$ST" = "06" ]; then
@@ -1709,10 +2025,11 @@ echo -e "\e[0;36m instalando ipv6-toolkit...\e[0m"
 			      apt-get install ipv6-toolkit
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read ST
+  read -p "~:: " ST
 
+echo -e $corPadrao
               fi
 
 			if [ "$ST" = "07" ]; then
@@ -1723,10 +2040,11 @@ echo -e "\e[0;36m instalando mdk3...\e[0m"
 			      apt-get install mdk3
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read ST
+  read -p "~:: " ST
 
+echo -e $corPadrao
               fi
 
 			if [ "$ST" = "08" ]; then
@@ -1737,10 +2055,11 @@ echo -e "\e[0;36m instalando reaver...\e[0m"
 			      apt-get install reaver
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read ST
+  read -p "~:: " ST
 
+echo -e $corPadrao
               fi
 
 			if [ "$ST" = "09" ]; then
@@ -1751,10 +2070,11 @@ echo -e "\e[0;36m instalando rtpflood...\e[0m"
 			      apt-get install rtpflood
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read ST
+  read -p "~:: " ST
 
+echo -e $corPadrao
               fi
 
 			if [ "$ST" = "10" ]; then
@@ -1765,10 +2085,11 @@ echo -e "\e[0;36m instalando slowhttptest...\e[0m"
 			      apt-get install slowhttptest
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read ST
+  read -p "~:: " ST
 
+echo -e $corPadrao
               fi
 
 			if [ "$ST" = "11" ]; then
@@ -1779,10 +2100,11 @@ echo -e "\e[0;36m instalando t50...\e[0m"
 			      apt-get install t50
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read ST
+  read -p "~:: " ST
 
+echo -e $corPadrao
               fi
 
 			if [ "$ST" = "12" ]; then
@@ -1793,10 +2115,11 @@ echo -e "\e[0;36m instalando termineter...\e[0m"
 			      apt-get install termineter
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read ST
+  read -p "~:: " ST
 
+echo -e $corPadrao
               fi
 
 			if [ "$ST" = "13" ]; then
@@ -1807,10 +2130,11 @@ echo -e "\e[0;36m instalando thc-ipv6...\e[0m"
 			      apt-get install thc-ipv6
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read ST
+  read -p "~:: " ST
 
+echo -e $corPadrao
               fi
 
 			if [ "$ST" = "14" ]; then
@@ -1821,18 +2145,20 @@ echo -e "\e[0;36m instalando thc-ssl-dos...\e[0m"
 			      apt-get install thc-ssl-dos
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read ST
+  read -p "~:: " ST
 
+echo -e $corPadrao
               fi
 
            else
 
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-          read FT
+  read -p "~:: " ST
 
+echo -e $corPadrao
          fi
 
      done
@@ -1846,7 +2172,7 @@ echo -e "\e[1;36m Forensics Tools\e[1;m"
        sleep 1
 
 echo -e "
-$branco
+$cyan
 *  [00) - exit  [0 ) - Home
 
 *  [01) Binwalk	           *  [13) Guymager
@@ -1865,11 +2191,13 @@ $branco
 
    $corPadrao"
 
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-     read FT
+  read -p "~:: " FT
 
-   while [ "$FT" != "00" -o "$FT" != "01" -o "$FT" != "02" -o "$FT" != "03" -o "$FT" != "04" -o "$FT" != "05" -o "$FT" != "06" -o "$FT" != "07" -o "$FT" != "08" -o "$FT" != "09" -o "$FT" != "10" -o "$FT" != "11" -o "$FT" != "12" -o "$FT" != "13" -o "$FT" != "14" -o "$FT" != "15" -o "$FT" != "16" -o "$FT" != "17" -o "$FT" != "18" -o "$FT" != "19" -o "$FT" != "20" -o "$FT" != "21" -o "$FT" != "0" ]; do
+echo -e $corPadrao
+
+    while [ "$FT" != "00" -o "$FT" != "01" -o "$FT" != "02" -o "$FT" != "03" -o "$FT" != "04" -o "$FT" != "05" -o "$FT" != "06" -o "$FT" != "07" -o "$FT" != "08" -o "$FT" != "09" -o "$FT" != "10" -o "$FT" != "11" -o "$FT" != "12" -o "$FT" != "13" -o "$FT" != "14" -o "$FT" != "15" -o "$FT" != "16" -o "$FT" != "17" -o "$FT" != "18" -o "$FT" != "19" -o "$FT" != "20" -o "$FT" != "21" -o "$FT" != "0" ]; do
 
          if [ "$FT" = "0" -o "$FT" = "00" -o "$FT" = "01" -o "$FT" = "02" -o "$FT" = "03" -o "$FT" = "04" -o "$FT" = "05" -o "$FT" = "06" -o "$FT" = "07" -o "$FT" = "08" -o "$FT" = "09" -o "$FT" = "10" -o "$FT" = "11" -o "$FT" = "12" -o "$FT" = "13" -o "$FT" = "14" -o "$FT" = "15" -o "$FT" = "16" -o "$FT" = "17" -o "$FT" = "18" -o "$FT" = "19" -o "$FT" = "20" -o "$FT" = "21" ]; then
 
@@ -1898,10 +2226,11 @@ echo -e "\e[0;36m instalando binwalk...\e[0m"
 			      apt-get install binwalk
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read FT
+  read -p "~:: " FT
 
+echo -e $corPadrao
               fi
 
 			if [ "$FT" = "02" ]; then
@@ -1912,10 +2241,11 @@ echo -e "\e[0;36m instalando bulk-extractor...\e[0m"
 			      apt-get install bulk-extractor
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read FT
+  read -p "~:: " FT
 
+echo -e $corPadrao
               fi
 
 			if [ "$FT" = "03" ]; then
@@ -1926,10 +2256,11 @@ echo -e "\e[0;36m instalando capstone...\e[0m"
 			      apt-get install git && git clone git://git.kali.org/packages/capstone.git
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read FT
+  read -p "~:: " FT
 
+echo -e $corPadrao
               fi
 
 			if [ "$FT" = "04" ]; then
@@ -1940,10 +2271,11 @@ echo -e "\e[0;36m instalando chntpw...\e[0m"
 			      apt-get install chntpw
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read FT
+  read -p "~:: " FT
 
+echo -e $corPadrao
               fi
 
 			if [ "$FT" = "05" ]; then
@@ -1954,10 +2286,11 @@ echo -e "\e[0;36m instalando cuckoo...\e[0m"
 			      apt-get install cuckoo
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read FT
+  read -p "~:: " FT
 
+echo -e $corPadrao
               fi
 
 			if [ "$FT" = "06" ]; then
@@ -1968,10 +2301,11 @@ echo -e "\e[0;36m instalando dc3dd...\e[0m"
 			      apt-get install dc3dd
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read FT
+  read -p "~:: " FT
 
+echo -e $corPadrao
               fi
 
 			if [ "$FT" = "07" ]; then
@@ -1982,10 +2316,11 @@ echo -e "\e[0;36m instalando ddrescue...\e[0m"
 			      apt-get install ddrescue
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read FT
+  read -p "~:: " FT
 
+echo -e $corPadrao
               fi
 
 			if [ "$FT" = "08" ]; then
@@ -1996,10 +2331,11 @@ echo -e "\e[0;36m instalando distorm3...\e[0m"
 			      apt-get install git && git clone git://git.kali.org/packages/distorm3.git
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read FT
+  read -p "~:: " FT
 
+echo -e $corPadrao
               fi
 
 			if [ "$FT" = "09" ]; then
@@ -2010,10 +2346,11 @@ echo -e "\e[0;36m instalando dumpzilla...\e[0m"
 			      apt-get install dumpzilla
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read FT
+  read -p "~:: " FT
 
+echo -e $corPadrao
               fi
 
 			if [ "$FT" = "10" ]; then
@@ -2024,10 +2361,11 @@ echo -e "\e[0;36m instalando extundelete...\e[0m"
 			      apt-get install extundelete
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read FT
+  read -p "~:: " FT
 
+echo -e $corPadrao
               fi
 
 			if [ "$FT" = "11" ]; then
@@ -2038,10 +2376,11 @@ echo -e "\e[0;36m instalando foremost...\e[0m"
 			      apt-get install foremost
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read FT
+  read -p "~:: " FT
 
+echo -e $corPadrao
               fi
 
 			if [ "$FT" = "12" ]; then
@@ -2052,10 +2391,11 @@ echo -e "\e[0;36m instalando galleta...\e[0m"
 			      apt-get install galleta
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read FT
+  read -p "~:: " FT
 
+echo -e $corPadrao
               fi
 
 			if [ "$FT" = "13" ]; then
@@ -2066,10 +2406,11 @@ echo -e "\e[0;36m instalando guymager...\e[0m"
 			      apt-get install guymager
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read FT
+  read -p "~:: " FT
 
+echo -e $corPadrao
               fi
 
 			if [ "$FT" = "14" ]; then
@@ -2080,10 +2421,11 @@ echo -e "\e[0;36m instalando iphone-backup-analyzer...\e[0m"
 			      apt-get install iphone-backup-analyzer
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read FT
+  read -p "~:: " FT
 
+echo -e $corPadrao
               fi
 
 			if [ "$FT" = "15" ]; then
@@ -2094,10 +2436,11 @@ echo -e "\e[0;36m instalando p0f...\e[0m"
 			      apt-get install p0f
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read FT
+  read -p "~:: " FT
 
+echo -e $corPadrao
               fi
 
 			if [ "$FT" = "16" ]; then
@@ -2108,10 +2451,11 @@ echo -e "\e[0;36m instalando pdf-parser...\e[0m"
 			      apt-get install pdf-parser
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read FT
+  read -p "~:: " FT
 
+echo -e $corPadrao
               fi
 
 			if [ "$FT" = "17" ]; then
@@ -2122,10 +2466,11 @@ echo -e "\e[0;36m instalando pdfid...\e[0m"
 			      apt-get install pdfid
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read FT
+  read -p "~:: " FT
 
+echo -e $corPadrao
               fi
 
 			if [ "$FT" = "18" ]; then
@@ -2136,10 +2481,11 @@ echo -e "\e[0;36m instalando pdgmail...\e[0m"
 			      apt-get install pdgmail
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read FT
+  read -p "~:: " FT
 
+echo -e $corPadrao
               fi
 
 			if [ "$FT" = "19" ]; then
@@ -2150,10 +2496,11 @@ echo -e "\e[0;36m instalando peepdf...\e[0m"
 			      pt-get install peepdf
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read FT
+  read -p "~:: " FT
 
+echo -e $corPadrao
               fi
 
 			if [ "$FT" = "20" ]; then
@@ -2164,10 +2511,11 @@ echo -e "\e[0;36m instalando volatility...\e[0m"
 			      apt-get install volatility
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read FT
+  read -p "~:: " FT
 
+echo -e $corPadrao
               fi
 
 			if [ "$FT" = "21" ]; then
@@ -2178,18 +2526,20 @@ echo -e "\e[0;36m instalando xplico...\e[0m"
 			      apt-get install xplico
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read FT
+  read -p "~:: " FT
 
+echo -e $corPadrao
               fi
 
            else
 
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-          read FT
+  read -p "~:: " FT
 
+echo -e $corPadrao
          fi
 
      done
@@ -2203,7 +2553,7 @@ echo -e "\e[1;36m Exploitation Tools\e[1;m"
        sleep 1
 
 echo -e "
-$branco
+$cyan
 *  [00) - exit  [0 ) - Home
 
 *  [01) Armitage
@@ -2226,9 +2576,11 @@ $branco
 
    $corPadrao"
 
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-     read Ex
+  read -p "~:: " Ex
+
+echo -e $corPadrao
 
     while [ "$Ex" != "0" -o "$Ex" != "00" -o "$Ex" != "01" -o "$Ex" != "02" -o "$Ex" != "03" -o "$Ex" != "04" -o "$Ex" != "05" -o "$Ex" != "06" -o "$Ex" != "07" -o "$Ex" != "08" -o "$Ex" != "09" -o "$Ex" != "10" -o "$Ex" != "11" -o "$Ex" != "12" -o "$Ex" != "13" -o "$Ex" != "14" -o "$Ex" != "15" -o "$Ex" != "16" -o "$Ex" != "17" ]; do
 
@@ -2259,10 +2611,11 @@ echo -e "\e[0;36m instalando armitage...\e[0m"
 			      apt-get install armitage
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read Ex
+  read -p "~:: " Ex
 
+echo -e $corPadrao
               fi
 
 			if [ "$Ex" = "02" ]; then
@@ -2273,10 +2626,11 @@ echo -e "\e[0;36m instalando backdoor-factory...\e[0m"
 			      apt-get install backdoor-factory
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read Ex
+  read -p "~:: " Ex
 
+echo -e $corPadrao
               fi
 
 		if [ "$Ex" = "03" ]; then
@@ -2287,10 +2641,11 @@ echo -e "\e[0;36m instalando beef-xss...\e[0m"
 			      apt-get install beef-xss
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read Ex
+  read -p "~:: " Ex
 
+echo -e $corPadrao
               fi
 
 			if [ "$Ex" = "04" ]; then
@@ -2301,10 +2656,11 @@ echo -e "\e[0;36m instalando cisco-auditing-tool...\e[0m"
 			      apt-get install cisco-auditing-tool
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read Ex
+  read -p "~:: " Ex
 
+echo -e $corPadrao
               fi
 
 			if [ "$Ex" = "05" ]; then
@@ -2315,10 +2671,11 @@ echo -e "\e[0;36m instalando cisco-global-exploiter...\e[0m"
 			      apt-get install cisco-global-exploiter
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read Ex
+  read -p "~:: " Ex
 
+echo -e $corPadrao
               fi
 
 			if [ "$Ex" = "06" ]; then
@@ -2329,10 +2686,11 @@ echo -e "\e[0;36m instalando cisco-ocs...\e[0m"
 			      apt-get install cisco-ocs
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read Ex
+  read -p "~:: " Ex
 
+echo -e $corPadrao
               fi
 
 			if [ "$Ex" = "07" ]; then
@@ -2343,10 +2701,11 @@ echo -e "\e[0;36m instalando cisco-torch...\e[0m"
 			      apt-get install cisco-torch
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read Ex
+  read -p "~:: " Ex
 
+echo -e $corPadrao
               fi
 
 			if [ "$Ex" = "08" ]; then
@@ -2357,10 +2716,11 @@ echo -e "\e[0;36m instalando commix...\e[0m"
 			      apt-get install git && git clone https://github.com/stasinopoulos/commix.git commix && cd commix && python ./commix.py --install
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read Ex
+  read -p "~:: " Ex
 
+echo -e $corPadrao
               fi
 
 			if [ "$Ex" = "09" ]; then
@@ -2371,10 +2731,11 @@ echo -e "\e[0;36m instalando crackle...\e[0m"
 			      apt-get install crackle
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read Ex
+  read -p "~:: " Ex
 
+echo -e $corPadrao
               fi
 
 			if [ "$Ex" = "10" ]; then
@@ -2385,10 +2746,11 @@ echo -e "\e[0;36m instalando jboss-autopwn...\e[0m"
 			      apt-get install jboss-autopwn
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read Ex
+  read -p "~:: " Ex
 
+echo -e $corPadrao
               fi
 
 			if [ "$Ex" = "11" ]; then
@@ -2399,10 +2761,11 @@ echo -e "\e[0;36m instalando linux-exploit-suggester...\e[0m"
                    apt-get install linux-exploit-suggester
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read Ex
+  read -p "~:: " Ex
 
+echo -e $corPadrao
               fi
 
 			if [ "$Ex" = "12" ]; then
@@ -2413,10 +2776,11 @@ echo -e "\e[0;36m instalando maltego-teeth...\e[0m"
                    apt-get install maltego-teeth
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read Ex
+  read -p "~:: " Ex
 
+echo -e $corPadrao
               fi
 
 			if [ "$Ex" = "13" ]; then
@@ -2427,10 +2791,11 @@ echo -e "\e[0;36m instalando set...\e[0m"
                    apt-get install set
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read Ex
+  read -p "~:: " Ex
 
+echo -e $corPadrao
               fi
 
 			if [ "$Ex" = "14" ]; then
@@ -2441,10 +2806,11 @@ echo -e "\e[0;36m instalando shellnoob...\e[0m"
                    apt-get install shellnoob
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read Ex
+  read -p "~:: " Ex
 
+echo -e $corPadrao
               fi
 
 			if [ "$Ex" = "15" ]; then
@@ -2455,10 +2821,11 @@ echo -e "\e[0;36m instalando sqlmap...\e[0m"
                    apt-get install sqlmap
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read Ex
+  read -p "~:: " Ex
 
+echo -e $corPadrao
               fi
 
 			if [ "$Ex" = "16" ]; then
@@ -2469,10 +2836,11 @@ echo -e "\e[0;36m instalando thc-ipv6...\e[0m"
                    apt-get install thc-ipv6
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read Ex
+  read -p "~:: " Ex
 
+echo -e $corPadrao
               fi
 
 			if [ "$Ex" = "17" ]; then
@@ -2483,18 +2851,20 @@ echo -e "\e[0;36m instalando yersinia...\e[0m"
                    apt-get install yersinia
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read Ex
+  read -p "~:: " Ex
 
+echo -e $corPadrao
               fi
 
            else
 
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-          read Az
+  read -p "~:: " Ex
 
+echo -e $corPadrao
          fi
 
      done
@@ -2508,7 +2878,7 @@ echo -e "\e[1;36m Reporting Tools\e[1;m"
         sleep 1
 
 echo -e "
-$branco
+$cyan
 *  [00) - exit  [0 ) - Home
 
 *  [01) CaseFile
@@ -2522,9 +2892,11 @@ $branco
 
    $corPadrao"
 
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-     read ls
+  read -p "~:: " ls
+
+echo -e $corPadrao
 
     while [ "$ls" != "0" -o "$ls" != "00" -o "$ls" != "01" -o "$ls" != "02" -o "$ls" != "03" -o "$ls" != "04" -o "$ls" != "05" -o "$ls" != "06" -o "$ls" != "07" -o "$ls" != "08" ]; do
 
@@ -2555,10 +2927,11 @@ echo -e "\e[0;36m instalando casefile...\e[0m"
 			      apt-get install casefile
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read ls
+  read -p "~:: " ls
 
+echo -e $corPadrao
               fi
 
 			if [ "$ls" = "02" ]; then
@@ -2569,10 +2942,11 @@ echo -e "\e[0;36m instalando cutycapt...\e[0m"
 			      apt-get install cutycapt
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read ls
+  read -p "~:: " ls
 
+echo -e $corPadrao
               fi
 
 			if [ "$ls" = "03" ]; then
@@ -2583,10 +2957,11 @@ echo -e "\e[0;36m instalando dos2unix...\e[0m"
 			      apt-get install dos2unix
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read ls
+  read -p "~:: " ls
 
+echo -e $corPadrao
               fi
 
 			if [ "$ls" = "04" ]; then
@@ -2597,10 +2972,11 @@ echo -e "\e[0;36m instalando dradis...\e[0m"
 			       apt-get install dradis
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read ls
+  read -p "~:: " ls
 
+echo -e $corPadrao
               fi
 
 			if [ "$ls" = "05" ]; then
@@ -2611,10 +2987,11 @@ echo -e "\e[0;36m instalando keepnote...\e[0m"
 			       apt-get install keepnote
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read ls
+  read -p "~:: " ls
 
+echo -e $corPadrao
               fi
 
 			if [ "$ls" = "06" ]; then
@@ -2625,10 +3002,11 @@ echo -e "\e[0;36m instalando magictree...\e[0m"
 			       apt-get install magictree
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read ls
+  read -p "~:: " ls
 
+echo -e $corPadrao
               fi
 
 			if [ "$ls" = "07" ]; then
@@ -2639,10 +3017,11 @@ echo -e "\e[0;36m instalando metagoofil...\e[0m"
 			       apt-get install metagoofil
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read ls
+  read -p "~:: " ls
 
+echo -e $corPadrao
               fi
 
 			if [ "$ls" = "08" ]; then
@@ -2653,10 +3032,11 @@ echo -e "\e[0;36m instalando nipper-ng...\e[0m"
 			       apt-get install nipper-ng
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read ls
+  read -p "~:: " ls
 
+echo -e $corPadrao
               fi
 
 			if [ "$ls" = "08" ]; then
@@ -2667,18 +3047,20 @@ echo -e "\e[0;36m instalando pipal...\e[0m"
 			       apt-get install pipal
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read ls
+  read -p "~:: " ls
 
+echo -e $corPadrao
               fi
 
           else
 
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-          read ls
+  read -p "~:: " ls
 
+echo -e $corPadrao
          fi
 
      done
@@ -2692,7 +3074,7 @@ echo -e "\e[1;36m Maintaining Access\e[1;m"
         sleep 1
 
 echo -e "
-$branco
+$cyan
 *  [00) - exit  [0 ) - Home
 
 *  [01) CryptCat
@@ -2714,9 +3096,11 @@ $branco
 
    $corPadrao"
 
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-      read Az
+  read -p "~:: " Az
+
+echo -e $corPadrao
 
    while [ "$Az" != "0" -o "$Az" != "00" -o "$Az" != "01" -o "$Az" != "02" -o "$Az" != "03" -o "$Az" != "04" -o "$Az" != "05" -o "$Az" != "06" -o "$Az" != "07" -o "$Az" != "08" -o "$Az" != "09" -o "$Az" != "10" -o "$Az" != "11" -o "$Az" != "12" -o "$Az" != "13" -o "$Az" != "14" -o "$Az" != "15" -o "$Az" != "16" ]; do
 
@@ -2747,10 +3131,11 @@ echo -e "\e[0;36m instalando cryptcat...\e[0m"
 			      apt-get install cryptcat
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read Az
+  read -p "~:: " Az
 
+echo -e $corPadrao
               fi
 
 			if [ "$Az" = "02" ]; then
@@ -2761,10 +3146,11 @@ echo -e "\e[0;36m instalando cymothoa...\e[0m"
 			      apt-get install cymothoa
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read Az
+  read -p "~:: " Az
 
+echo -e $corPadrao
               fi
 
 			if [ "$Az" = "03" ]; then
@@ -2775,10 +3161,11 @@ echo -e "\e[0;36m instalando dbd...\e[0m"
 			      apt-get install dbd
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read Az
+  read -p "~:: " Az
 
+echo -e $corPadrao
               fi
 
 			if [ "$Az" = "04" ]; then
@@ -2789,10 +3176,11 @@ echo -e "\e[0;36m instalando dns2tcp...\e[0m"
 			      apt-get install dns2tcp
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read Az
+  read -p "~:: " Az
 
+echo -e $corPadrao
               fi
 
 			if [ "$Az" = "05" ]; then
@@ -2803,10 +3191,11 @@ echo -e "\e[0;36m instalando http-tunnel...\e[0m"
 			      apt-get install http-tunnel
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read Az
+  read -p "~:: " Az
 
+echo -e $corPadrao
               fi
 
 			if [ "$Az" = "06" ]; then
@@ -2817,10 +3206,11 @@ echo -e "\e[0;36m instalando httptunnel...\e[0m"
 			      apt-get install httptunnel
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read Az
+  read -p "~:: " Az
 
+echo -e $corPadrao
               fi
 
 			if [ "$Az" = "07" ]; then
@@ -2831,10 +3221,11 @@ echo -e "\e[0;36m instalando intersect...\e[0m"
 			      apt-get install intersect
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read Az
+  read -p "~:: " Az
 
+echo -e $corPadrao
               fi
 
 			if [ "$Az" = "08" ]; then
@@ -2845,10 +3236,11 @@ echo -e "\e[0;36m instalando nishang...\e[0m"
 			      apt-get install nishang
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read Az
+  read -p "~:: " Az
 
+echo -e $corPadrao
               fi
 
 			if [ "$Az" = "09" ]; then
@@ -2859,10 +3251,11 @@ echo -e "\e[0;36m instalando polenum...\e[0m"
 			      apt-get install polenum
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read Az
+  read -p "~:: " Az
 
+echo -e $corPadrao
               fi
 
 			if [ "$Az" = "10" ]; then
@@ -2873,10 +3266,11 @@ echo -e "\e[0;36m instalando powersploit...\e[0m"
 			      apt-get install powersploit
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read Az
+  read -p "~:: " Az
 
+echo -e $corPadrao
               fi
 
 			if [ "$Az" = "11" ]; then
@@ -2887,10 +3281,11 @@ echo -e "\e[0;36m instalando pwnat...\e[0m"
 			      apt-get install pwnat
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read Az
+  read -p "~:: " Az
 
+echo -e $corPadrao
               fi
 
 			if [ "$Az" = "12" ]; then
@@ -2901,10 +3296,11 @@ echo -e "\e[0;36m instalando ridenum...\e[0m"
 			      apt-get install ridenum
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read Az
+  read -p "~:: " Az
 
+echo -e $corPadrao
               fi
 
 			if [ "$Az" = "13" ]; then
@@ -2915,10 +3311,11 @@ echo -e "\e[0;36m instalando sbd...\e[0m"
 			      apt-get install sbd
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read Az
+  read -p "~:: " Az
 
+echo -e $corPadrao
               fi
 
 			if [ "$Az" = "14" ]; then
@@ -2929,10 +3326,11 @@ echo -e "\e[0;36m instalando u3-pwn...\e[0m"
 			      apt-get install u3-pwn
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read Az
+  read -p "~:: " Az
 
+echo -e $corPadrao
               fi
 
 			if [ "$Az" = "15" ]; then
@@ -2943,10 +3341,11 @@ echo -e "\e[0;36m instalando webshells...\e[0m"
 			      apt-get install webshells
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read Az
+  read -p "~:: " Az
 
+echo -e $corPadrao
               fi
 
 			if [ "$Az" = "16" ]; then
@@ -2957,18 +3356,20 @@ echo -e "\e[0;36m instalando weevely...\e[0m"
 			      apt-get install weevely
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read Az
+  read -p "~:: " Az
 
+echo -e $corPadrao
               fi
 
            else
 
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-          read Az
+  read -p "~:: " Az
 
+echo -e $corPadrao
          fi
 
      done
@@ -2978,12 +3379,11 @@ echo -e "$cyan~::$corPadrao"
           while [ "$P" = "05" ]; do
 
 # Sniffing & Spoofing
-
 echo -e "\e[1;36m Sniffing & Spoofing\e[1;m"
         sleep 1
 
 echo -e "
-$branco
+$cyan
 *  [00) - exit  [0 ) - Home
 
 *  [01) Burp Suite           *  [17) rtpmixsound
@@ -3005,11 +3405,13 @@ $branco
 
    $corPadrao"
 
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-        read SS
+  read -p "~:: " SS
 
-     while [ "$SS" != "00" -o "$SS" != "01" -o "$SS" != "02" -o "$SS" != "03" -o "$SS" != "04" -o "$SS" != "05" -o "$SS" != "06" -o "$SS" != "07" -o "$SS" != "08" -o "$SS" != "09" -o "$SS" != "10" -o "$SS" != "11" -o "$SS" != "12" -o "$SS" != "13" -o "$SS" != "14" -o "$SS" != "15" -o "$SS" != "16" -o "$SS" != "17" -o "$SS" != "18" -o "$SS" != "19" -o "$SS" != "20" -o "$SS" != "21" -o "$SS" != "22" -o "$SS" != "23" -o "$SS" != "24" -o "$SS" != "25" -o "$SS" != "26" -o "$SS" != "27" -o "$SS" != "28" -o "$SS" != "29" -o "$SS" != "30" -o "$SS" != "31" -o "$SS" != "32" -o "$SS" != "0" ]; do
+echo -e $corPadrao
+
+    while [ "$SS" != "00" -o "$SS" != "01" -o "$SS" != "02" -o "$SS" != "03" -o "$SS" != "04" -o "$SS" != "05" -o "$SS" != "06" -o "$SS" != "07" -o "$SS" != "08" -o "$SS" != "09" -o "$SS" != "10" -o "$SS" != "11" -o "$SS" != "12" -o "$SS" != "13" -o "$SS" != "14" -o "$SS" != "15" -o "$SS" != "16" -o "$SS" != "17" -o "$SS" != "18" -o "$SS" != "19" -o "$SS" != "20" -o "$SS" != "21" -o "$SS" != "22" -o "$SS" != "23" -o "$SS" != "24" -o "$SS" != "25" -o "$SS" != "26" -o "$SS" != "27" -o "$SS" != "28" -o "$SS" != "29" -o "$SS" != "30" -o "$SS" != "31" -o "$SS" != "32" -o "$SS" != "0" ]; do
 
          if [ "$SS" = "00" -o "$SS" = "01" -o "$SS" = "02" -o "$SS" = "03" -o "$SS" = "04" -o "$SS" = "05" -o "$SS" = "06" -o "$SS" = "07" -o "$SS" = "08" -o "$SS" = "09" -o "$SS" = "10" -o "$SS" = "11" -o "$SS" = "12" -o "$SS" = "13" -o "$SS" = "14" -o "$SS" = "15" -o "$SS" = "16" -o "$SS" = "17" -o "$SS" = "18" -o "$SS" = "19" -o "$SS" = "20" -o "$SS" = "21" -o "$SS" = "22" -o "$SS" = "23" -o "$SS" = "24" -o "$SS" = "25" -o "$SS" = "26" -o "$SS" = "27" -o "$SS" = "28" -o "$SS" = "29" -o "$SS" = "30" -o "$SS" = "31" -o "$SS" = "32" -o "$SS" = "0" ]; then
 
@@ -3038,10 +3440,11 @@ echo -e "\e[0;36m instalando burpsuite...\e[0m"
 			      apt-get install burpsuite
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read SS
+  read -p "~:: " SS
 
+echo -e $corPadrao
               fi
 
 			if [ "$SS" = "02" ]; then
@@ -3052,10 +3455,11 @@ echo -e "\e[0;36m instalando dnschef...\e[0m"
 			      apt-get install dnschef
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read SS
+  read -p "~:: " SS
 
+echo -e $corPadrao
               fi
 
 
@@ -3067,10 +3471,11 @@ echo -e "\e[0;36m instalando fiked...\e[0m"
 			      apt-get install fiked
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read SS
+  read -p "~:: " SS
 
+echo -e $corPadrao
               fi
 
 			if [ "$SS" = "04" ]; then
@@ -3081,10 +3486,11 @@ echo -e "\e[0;36m instalando hamster-sidejack...\e[0m"
 			      apt-get install hamster-sidejack
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read SS
+  read -p "~:: " SS
 
+echo -e $corPadrao
               fi
 
 			if [ "$SS" = "05" ]; then
@@ -3095,10 +3501,11 @@ echo -e "\e[0;36m instalando hexinject...\e[0m"
 			      apt-get install hexinject
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read SS
+  read -p "~:: " SS
 
+echo -e $corPadrao
               fi
 
 			if [ "$SS" = "06" ]; then
@@ -3109,10 +3516,11 @@ echo -e "\e[0;36m instalando iaxflood...\e[0m"
 			      apt-get install iaxflood
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read SS
+  read -p "~:: " SS
 
+echo -e $corPadrao
               fi
 
 			if [ "$SS" = "07" ]; then
@@ -3123,10 +3531,11 @@ echo -e "\e[0;36m instalando inviteflood...\e[0m"
 			      apt-get install inviteflood
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read SS
+  read -p "~:: " SS
 
+echo -e $corPadrao
               fi
 
 			if [ "$SS" = "08" ]; then
@@ -3137,10 +3546,11 @@ echo -e "\e[0;36m instalando ismtp...\e[0m"
 			      apt-get install ismtp
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read SS
+  read -p "~:: " SS
 
+echo -e $corPadrao
               fi
 
 			if [ "$SS" = "09" ]; then
@@ -3151,10 +3561,11 @@ echo -e "\e[0;36m instalando isr-evilgrade...\e[0m"
 			      apt-get install git && git clone git://git.kali.org/packages/isr-evilgrade.git
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read SS
+  read -p "~:: " SS
 
+echo -e $corPadrao
               fi
 
 			if [ "$SS" = "10" ]; then
@@ -3165,10 +3576,11 @@ echo -e "\e[0;36m instalando mitmproxy...\e[0m"
 			      apt-get install mitmproxy
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read SS
+  read -p "~:: " SS
 
+echo -e $corPadrao
               fi
 
 			if [ "$SS" = "11" ]; then
@@ -3179,10 +3591,11 @@ echo -e "\e[0;36m instalando ohrwurm...\e[0m"
 			      apt-get install ohrwurm
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read SS
+  read -p "~:: " SS
 
+echo -e $corPadrao
               fi
 
 			if [ "$SS" = "12" ]; then
@@ -3193,10 +3606,11 @@ echo -e "\e[0;36m instalando protos-sip...\e[0m"
 			      apt-get install protos-sip
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read SS
+  read -p "~:: " SS
 
+echo -e $corPadrao
               fi
 
 			if [ "$SS" = "13" ]; then
@@ -3207,10 +3621,11 @@ echo -e "\e[0;36m instalando rebind...\e[0m"
 			      apt-get install rebind
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read SS
+  read -p "~:: " SS
 
+echo -e $corPadrao
               fi
 
 			if [ "$SS" = "14" ]; then
@@ -3221,10 +3636,11 @@ echo -e "\e[0;36m instalando responder...\e[0m"
 			      apt-get install responder
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read SS
+  read -p "~:: " SS
 
+echo -e $corPadrao
               fi
 
 			if [ "$SS" = "15" ]; then
@@ -3235,10 +3651,11 @@ echo -e "\e[0;36m instalando rtpbreak...\e[0m"
 			      apt-get install rtpbreak
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read SS
+  read -p "~:: " SS
 
+echo -e $corPadrao
               fi
 
 			if [ "$SS" = "16" ]; then
@@ -3249,10 +3666,11 @@ echo -e "\e[0;36m instalando rtpinsertsound...\e[0m"
 			      apt-get install rtpinsertsound
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read SS
+  read -p "~:: " SS
 
+echo -e $corPadrao
               fi
 
 			if [ "$SS" = "17" ]; then
@@ -3263,10 +3681,11 @@ echo -e "\e[0;36m instalando rtpmixsound...\e[0m"
 			      apt-get install rtpmixsound
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read SS
+  read -p "~:: " SS
 
+echo -e $corPadrao
               fi
 
 			if [ "$SS" = "18" ]; then
@@ -3277,10 +3696,11 @@ echo -e "\e[0;36m instalando sctpscan...\e[0m"
 			      apt-get install sctpscan
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read SS
+  read -p "~:: " SS
 
+echo -e $corPadrao
               fi
 
 			if [ "$SS" = "19" ]; then
@@ -3291,10 +3711,11 @@ echo -e "\e[0;36m instalando siparmyknife...\e[0m"
 			      apt-get install siparmyknife
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read SS
+  read -p "~:: " SS
 
+echo -e $corPadrao
               fi
 
 			if [ "$SS" = "20" ]; then
@@ -3305,10 +3726,11 @@ echo -e "\e[0;36m instalando sipp...\e[0m"
 			       apt-get install sipp
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read SS
+  read -p "~:: " SS
 
+echo -e $corPadrao
               fi
 
 			if [ "$SS" = "21" ]; then
@@ -3319,10 +3741,11 @@ echo -e "\e[0;36m instalando sipvicious...\e[0m"
 			      apt-get install sipvicious
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read SS
+  read -p "~:: " SS
 
+echo -e $corPadrao
               fi
 
 			if [ "$SS" = "22" ]; then
@@ -3333,10 +3756,11 @@ echo -e "\e[0;36m instalando sniffjoke...\e[0m"
 			      apt-get install sniffjoke
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read SS
+  read -p "~:: " SS
 
+echo -e $corPadrao
               fi
 
 			if [ "$SS" = "23" ]; then
@@ -3347,10 +3771,11 @@ echo -e "\e[0;36m instalando sslsplit...\e[0m"
 			      apt-get install sslsplit
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read SS
+  read -p "~:: " SS
 
+echo -e $corPadrao
               fi
 
 			if [ "$SS" = "24" ]; then
@@ -3361,10 +3786,11 @@ echo -e "\e[0;36m instalando sslstrip...\e[0m"
 			      apt-get install sslstrip
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read SS
+  read -p "~:: " SS
 
+echo -e $corPadrao
               fi
 
 			if [ "$SS" = "25" ]; then
@@ -3375,10 +3801,11 @@ echo -e "\e[0;36m instalando thc-ipv6...\e[0m"
 			      apt-get install thc-ipv6
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read SS
+  read -p "~:: " SS
 
+echo -e $corPadrao
               fi
 
 			if [ "$SS" = "26" ]; then
@@ -3389,10 +3816,11 @@ echo -e "\e[0;36m instalando voiphopper...\e[0m"
 			      apt-get install voiphopper
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read SS
+  read -p "~:: " SS
 
+echo -e $corPadrao
               fi
 
 			if [ "$SS" = "27" ]; then
@@ -3403,10 +3831,11 @@ echo -e "\e[0;36m instalando webscarab...\e[0m"
 			      apt-get install webscarab
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read SS
+  read -p "~:: " SS
 
+echo -e $corPadrao
               fi
 
 			if [ "$SS" = "28" ]; then
@@ -3417,10 +3846,11 @@ echo -e "\e[0;36m instalando wifi-honey...\e[0m"
 			      apt-get install wifi-honey
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read SS
+  read -p "~:: " SS
 
+echo -e $corPadrao
               fi
 
 			if [ "$SS" = "29" ]; then
@@ -3431,10 +3861,11 @@ echo -e "\e[0;36m instalando wireshark...\e[0m"
 			      apt-get install wireshark
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read SS
+  read -p "~:: " SS
 
+echo -e $corPadrao
               fi
 
 			if [ "$SS" = "30" ]; then
@@ -3445,10 +3876,11 @@ echo -e "\e[0;36m instalando xspy...\e[0m"
 			      apt-get install xspy
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read SS
+  read -p "~:: " SS
 
+echo -e $corPadrao
               fi
 
 			if [ "$SS" = "31" ]; then
@@ -3459,10 +3891,11 @@ echo -e "\e[0;36m instalando yersinia...\e[0m"
 			      apt-get install yersinia
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read SS
+  read -p "~:: " SS
 
+echo -e $corPadrao
               fi
 
 			if [ "$SS" = "32" ]; then
@@ -3473,32 +3906,34 @@ echo -e "\e[0;36m instalando zaproxy...\e[0m"
 			      apt-get install zaproxy
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read SS
+  read -p "~:: " SS
 
+echo -e $corPadrao
               fi
 
           else
 
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-          read SS
+  read -p "~:: " SS
 
+echo -e $corPadrao
          fi
 
      done
 
    done
 
-          while [ "$P" = "04" ]; do
+         while [ "$P" = "04" ]; do
 
 # Web Applications
 echo -e "\e[1;36m Web Applications\e[1;m"
          sleep 1
 
 echo -e "
-$branco
+$cyan
 *  [00) - exit  [0 ) - Home
 
 *  [01) apache-users    *  [22) plecost
@@ -3520,18 +3955,20 @@ $branco
 *  [17) jSQL            *  [38) WPScan
 *  [18) Maltego Teeth   *  [39) XSSer
 *  [19) PadBuster       *  [40) zaproxy
-*  [20) Paros           
+*  [20) Paros           *  [41) lynx
 *  [21) Parsero           
 
 $corPadrao"
 
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-        read WAP
+  read -p "~:: " WAP
 
-      while [ "$WAP" != "00" -o "$WAP" != "01" -o "$WAP" != "02" -o "$WAP" != "03" -o "$WAP" != "04" -o "$WAP" != "05" -o "$WAP" != "06" -o "$WAP" != "07" -o "$WAP" != "08" -o "$WAP" != "09" -o "$WAP" != "10" -o "$WAP" != "11" -o "$WAP" != "12" -o "$WAP" != "13" -o "$WAP" != "14" -o "$WAP" != "15" -o "$WAP" != "16" -o "$WAP" != "17" -o "$WAP" != "18" -o "$WAP" != "19" -o "$WAP" != "20" -o "$WAP" != "21" -o "$WAP" != "22" -o "$WAP" != "23" -o "$WAP" != "24" -o "$WAP" != "25" -o "$WAP" != "26" -o "$WAP" != "27" -o "$WAP" != "28" -o "$WAP" != "29" -o "$WAP" != "30" -o "$WAP" != "31" -o "$WAP" != "32" -o "$WAP" != "33" -o "$WAP" != "34" -o "$WAP" != "35" -o "$WAP" != "36" -o "$WAP" != "37" -o "$WAP" != "38" -o "$WAP" != "39" -o "$WAP" != "40" -o "$WAP" != "0" ]; do
+echo -e $corPadrao
 
-         if [ "$WAP" = "00" -o "$WAP" = "01" -o "$WAP" = "02" -o "$WAP" = "03" -o "$WAP" = "04" -o "$WAP" = "05" -o "$WAP" = "06" -o "$WAP" = "07" -o "$WAP" = "08" -o "$WAP" = "09" -o "$WAP" = "10" -o "$WAP" = "11" -o "$WAP" = "12" -o "$WAP" = "13" -o "$WAP" = "14" -o "$WAP" = "15" -o "$WAP" = "16" -o "$WAP" = "17" -o "$WAP" = "18" -o "$WAP" = "19" -o "$WAP" = "20" -o "$WAP" = "21" -o "$WAP" = "22" -o "$WAP" = "23" -o "$WAP" = "24" -o "$WAP" = "25" -o "$WAP" = "26" -o "$WAP" = "27" -o "$WAP" = "28" -o "$WAP" = "29" -o "$WAP" = "30" -o "$WAP" = "31" -o "$WAP" = "32" -o "$WAP" = "33" -o "$WAP" = "34" -o "$WAP" = "35" -o "$WAP" = "36" -o "$WAP" = "37" -o "$WAP" = "38" -o "$WAP" = "39" -o "$WAP" = "40" -o "$WAP" = "0" ]; then
+    while [ "$WAP" != "00" -o "$WAP" != "01" -o "$WAP" != "02" -o "$WAP" != "03" -o "$WAP" != "04" -o "$WAP" != "05" -o "$WAP" != "06" -o "$WAP" != "07" -o "$WAP" != "08" -o "$WAP" != "09" -o "$WAP" != "10" -o "$WAP" != "11" -o "$WAP" != "12" -o "$WAP" != "13" -o "$WAP" != "14" -o "$WAP" != "15" -o "$WAP" != "16" -o "$WAP" != "17" -o "$WAP" != "18" -o "$WAP" != "19" -o "$WAP" != "20" -o "$WAP" != "21" -o "$WAP" != "22" -o "$WAP" != "23" -o "$WAP" != "24" -o "$WAP" != "25" -o "$WAP" != "26" -o "$WAP" != "27" -o "$WAP" != "28" -o "$WAP" != "29" -o "$WAP" != "30" -o "$WAP" != "31" -o "$WAP" != "32" -o "$WAP" != "33" -o "$WAP" != "34" -o "$WAP" != "35" -o "$WAP" != "36" -o "$WAP" != "37" -o "$WAP" != "38" -o "$WAP" != "39" -o "$WAP" != "40" -o "$WAP" != "0" -o "$WAP" != "41" ]; do
+
+         if [ "$WAP" = "00" -o "$WAP" = "01" -o "$WAP" = "02" -o "$WAP" = "03" -o "$WAP" = "04" -o "$WAP" = "05" -o "$WAP" = "06" -o "$WAP" = "07" -o "$WAP" = "08" -o "$WAP" = "09" -o "$WAP" = "10" -o "$WAP" = "11" -o "$WAP" = "12" -o "$WAP" = "13" -o "$WAP" = "14" -o "$WAP" = "15" -o "$WAP" = "16" -o "$WAP" = "17" -o "$WAP" = "18" -o "$WAP" = "19" -o "$WAP" = "20" -o "$WAP" = "21" -o "$WAP" = "22" -o "$WAP" = "23" -o "$WAP" = "24" -o "$WAP" = "25" -o "$WAP" = "26" -o "$WAP" = "27" -o "$WAP" = "28" -o "$WAP" = "29" -o "$WAP" = "30" -o "$WAP" = "31" -o "$WAP" = "32" -o "$WAP" = "33" -o "$WAP" = "34" -o "$WAP" = "35" -o "$WAP" = "36" -o "$WAP" = "37" -o "$WAP" = "38" -o "$WAP" = "39" -o "$WAP" = "40" -o "$WAP" = "0" -o "$WAP" = "41" ]; then
 
          if [ "$WAP" = "0" ]; then
 
@@ -3558,10 +3995,26 @@ echo -e "\e[0;36m instalando apache-users...\e[0m"
 			      apt-get install apache-users
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WAP
+  read -p "~:: " WAP
 
+echo -e $corPadrao
+              fi
+
+			if [ "$WAP" = "41" ]; then
+
+echo -e "\e[0;36m instalando lynx...\e[0m"
+                   sleep 2
+
+			      apt-get install lynx
+
+echo -e "\e[1;32m Pronto * \e[0m"
+echo -e $cyan
+
+  read -p "~:: " WAP
+
+echo -e $corPadrao
               fi
 
 
@@ -3573,10 +4026,11 @@ echo -e "\e[0;36m instalando arachni...\e[0m"
 			      apt-get install arachni
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WAP
+  read -p "~:: " WAP
 
+echo -e $corPadrao
               fi
 
 
@@ -3588,10 +4042,11 @@ echo -e "\e[0;36m instalando bbqsql...\e[0m"
 			      apt-get install bbqsql
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WAP
+  read -p "~:: " WAP
 
+echo -e $corPadrao
               fi
 
 			if [ "$WAP" = "04" ]; then
@@ -3602,10 +4057,11 @@ echo -e "\e[0;36m instalando blindelephant...\e[0m"
 			      apt-get install blindelephant
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WAP
+  read -p "~:: " WAP
 
+echo -e $corPadrao
               fi
 
 			if [ "$WAP" = "05" ]; then
@@ -3616,10 +4072,11 @@ echo -e "\e[0;36m instalando burpsuite...\e[0m"
 			      apt-get install burpsuite
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WAP
+  read -p "~:: " WAP
 
+echo -e $corPadrao
               fi
 
 			if [ "$WAP" = "06" ]; then
@@ -3630,10 +4087,11 @@ echo -e "\e[0;36m instalando cutycapt...\e[0m"
 			      apt-get install cutycapt
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WAP
+  read -p "~:: " WAP
 
+echo -e $corPadrao
               fi
 
 			if [ "$WAP" = "07" ]; then
@@ -3644,10 +4102,11 @@ echo -e "\e[0;36m instalando commix...\e[0m"
 			      apt-get install git && git clone https://github.com/stasinopoulos/commix.git commix && cd commix && python ./commix.py --install
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WAP
+  read -p "~:: " WAP
 
+echo -e $corPadrao
               fi
 
 			if [ "$WAP" = "08" ]; then
@@ -3658,10 +4117,11 @@ echo -e "\e[0;36m instalando davtest...\e[0m"
 			      apt-get install davtest
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WAP
+  read -p "~:: " WAP
 
+echo -e $corPadrao
               fi
 
 			if [ "$WAP" = "09" ]; then
@@ -3672,10 +4132,11 @@ echo -e "\e[0;36m instalando deblaze...\e[0m"
 			      apt-get install deblaze
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WAP
+  read -p "~:: " WAP
 
+echo -e $corPadrao
               fi
 
 
@@ -3687,10 +4148,11 @@ echo -e "\e[0;36m instalando dirb...\e[0m"
 			      apt-get install dirb
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WAP
+  read -p "~:: " WAP
 
+echo -e $corPadrao
               fi
 
 			if [ "$WAP" = "11" ]; then
@@ -3701,10 +4163,11 @@ echo -e "\e[0;36m instalando dirbuster...\e[0m"
 			      apt-get install dirbuster
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WAP
+  read -p "~:: " WAP
 
+echo -e $corPadrao
               fi
 
 			if [ "$WAP" = "12" ]; then
@@ -3715,10 +4178,11 @@ echo -e "\e[0;36m instalando fimap...\e[0m"
 			      apt-get install fimap
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WAP
+  read -p "~:: " WAP
 
+echo -e $corPadrao
               fi
 
 			if [ "$WAP" = "13" ]; then
@@ -3729,10 +4193,11 @@ echo -e "\e[0;36m instalando funkload...\e[0m"
 			      apt-get install funkload
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WAP
+  read -p "~:: " WAP
 
+echo -e $corPadrao
               fi
 
 			if [ "$WAP" = "14" ]; then
@@ -3743,10 +4208,11 @@ echo -e "\e[0;36m instalando grabber...\e[0m"
 			      apt-get install grabber
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WAP
+  read -p "~:: " WAP
 
+echo -e $corPadrao
               fi
 
 			if [ "$WAP" = "15" ]; then
@@ -3757,10 +4223,11 @@ echo -e "\e[0;36m instalando jboss-autopwn...\e[0m"
 			      apt-get install jboss-autopwn
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WAP
+  read -p "~:: " WAP
 
+echo -e $corPadrao
               fi
 
 			if [ "$WAP" = "16" ]; then
@@ -3771,10 +4238,11 @@ echo -e "\e[0;36m instalando joomscan...\e[0m"
 			      apt-get install joomscan
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WAP
+  read -p "~:: " WAP
 
+echo -e $corPadrao
               fi
 
 
@@ -3786,10 +4254,11 @@ echo -e "\e[0;36m instalando jsql...\e[0m"
 			      apt-get install jsql
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WAP
+  read -p "~:: " WAP
 
+echo -e $corPadrao
               fi
 
 			if [ "$WAP" = "18" ]; then
@@ -3800,10 +4269,11 @@ echo -e "\e[0;36m instalando maltego-teeth...\e[0m"
 			      apt-get install maltego-teeth
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WAP
+  read -p "~:: " WAP
 
+echo -e $corPadrao
               fi
 
 			if [ "$WAP" = "19" ]; then
@@ -3814,10 +4284,11 @@ echo -e "\e[0;36m instalando padbuster...\e[0m"
 			      apt-get install padbuster
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WAP
+  read -p "~:: " WAP
 
+echo -e $corPadrao
               fi
 
 			if [ "$WAP" = "20" ]; then
@@ -3828,10 +4299,11 @@ echo -e "\e[0;36m instalando paros...\e[0m"
 			      apt-get install paros
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WAP
+  read -p "~:: " WAP
 
+echo -e $corPadrao
               fi
 
 			if [ "$WAP" = "21" ]; then
@@ -3842,10 +4314,11 @@ echo -e "\e[0;36m instalando parsero...\e[0m"
 			      apt-get install parsero
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WAP
+  read -p "~:: " WAP
 
+echo -e $corPadrao
               fi
 
 			if [ "$WAP" = "22" ]; then
@@ -3856,10 +4329,11 @@ echo -e "\e[0;36m instalando plecost...\e[0m"
 			      apt-get install plecost
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WAP
+  read -p "~:: " WAP
 
+echo -e $corPadrao
               fi
 
 			if [ "$WAP" = "23" ]; then
@@ -3870,10 +4344,11 @@ echo -e "\e[0;36m instalando powerfuzzer...\e[0m"
 			      apt-get install powerfuzzer
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WAP
+  read -p "~:: " WAP
 
+echo -e $corPadrao
               fi
 
 			if [ "$WAP" = "24" ]; then
@@ -3884,10 +4359,11 @@ echo -e "\e[0;36m instalando proxystrike...\e[0m"
 			      apt-get install proxystrike
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WAP
+  read -p "~:: " WAP
 
+echo -e $corPadrao
               fi
 
 			if [ "$WAP" = "25" ]; then
@@ -3898,10 +4374,11 @@ echo -e "\e[0;36m instalando recon-ng...\e[0m"
 			      apt-get install recon-ng
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WAP
+  read -p "~:: " WAP
 
+echo -e $corPadrao
               fi
 
 			if [ "$WAP" = "26" ]; then
@@ -3912,10 +4389,11 @@ echo -e "\e[0;36m instalando skipfish...\e[0m"
 			      apt-get install skipfish
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WAP
+  read -p "~:: " WAP
 
+echo -e $corPadrao
               fi
 
 			if [ "$WAP" = "27" ]; then
@@ -3926,10 +4404,11 @@ echo -e "\e[0;36m instalando sqlmap...\e[0m"
 			      apt-get install sqlmap
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WAP
+  read -p "~:: " WAP
 
+echo -e $corPadrao
               fi
 
 			if [ "$WAP" = "28" ]; then
@@ -3940,10 +4419,11 @@ echo -e "\e[0;36m instalando sqlninja...\e[0m"
 			      apt-get install sqlninja
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WAP
+  read -p "~:: " WAP
 
+echo -e $corPadrao
               fi
 
 			if [ "$WAP" = "29" ]; then
@@ -3954,10 +4434,11 @@ echo -e "\e[0;36m instalando sqlsus...\e[0m"
 			      apt-get install sqlsus
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WAP
+  read -p "~:: " WAP
 
+echo -e $corPadrao
               fi
 
 			if [ "$WAP" = "30" ]; then
@@ -3968,10 +4449,11 @@ echo -e "\e[0;36m instalando ua-teste...\e[0m"
 			      apt-get install ua-tester
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WAP
+  read -p "~:: " WAP
 
+echo -e $corPadrao
               fi
 
 			if [ "$WAP" = "31" ]; then
@@ -3982,10 +4464,11 @@ echo -e "\e[0;36m instalando uniscan...\e[0m"
 			      apt-get install uniscan
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WAP
+  read -p "~:: " WAP
 
+echo -e $corPadrao
               fi
 
 			if [ "$WAP" = "32" ]; then
@@ -3996,10 +4479,11 @@ echo -e "\e[0;36m instalando vega...\e[0m"
 			      apt-get install vega
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WAP
+  read -p "~:: " WAP
 
+echo -e $corPadrao
               fi
 
 			if [ "$WAP" = "33" ]; then
@@ -4010,10 +4494,11 @@ echo -e "\e[0;36m instalando w3af...\e[0m"
 			      apt-get install w3af
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WAP
+  read -p "~:: " WAP
 
+echo -e $corPadrao
               fi
 
 			if [ "$WAP" = "34" ]; then
@@ -4024,10 +4509,11 @@ echo -e "\e[0;36m instalando webscarab...\e[0m"
 			      apt-get install webscarab
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WAP
+  read -p "~:: " WAP
 
+echo -e $corPadrao
               fi
 
 			if [ "$WAP" = "35" ]; then
@@ -4038,10 +4524,11 @@ echo -e "\e[0;36m instalando webslayer...\e[0m"
 			      apt-get install git && git clone git://git.kali.org/packages/webslayer.git
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WAP
+  read -p "~:: " WAP
 
+echo -e $corPadrao
               fi
 
 			if [ "$WAP" = "36" ]; then
@@ -4052,10 +4539,11 @@ echo -e "\e[0;36m instalando websploit...\e[0m"
 			       apt-get install websploit
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WAP
+  read -p "~:: " WAP
 
+echo -e $corPadrao
               fi
 
 			if [ "$WAP" = "37" ]; then
@@ -4066,10 +4554,11 @@ echo -e "\e[0;36m instalando wfuzz...\e[0m"
 			      apt-get install wfuzz
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WAP
+  read -p "~:: " WAP
 
+echo -e $corPadrao
               fi
 
 			if [ "$WAP" = "38" ]; then
@@ -4080,10 +4569,11 @@ echo -e "\e[0;36m instalando wpscan...\e[0m"
 			      apt-get install wpscan
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WAP
+  read -p "~:: " WAP
 
+echo -e $corPadrao
               fi
 
 			if [ "$WAP" = "39" ]; then
@@ -4094,10 +4584,11 @@ echo -e "\e[0;36m instalando xsser...\e[0m"
 			      apt-get install xsser
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WAP
+  read -p "~:: " WAP
 
+echo -e $corPadrao
               fi
 
 			if [ "$WAP" = "40" ]; then
@@ -4108,24 +4599,25 @@ echo -e "\e[0;36m instalando zaproxy...\e[0m"
 			      apt-get install zaproxy
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WAP
+  read -p "~:: " WAP
 
+echo -e $corPadrao
               fi
 
            else
 
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-        read WAP
+  read -p "~:: " WAP
 
+echo -e $corPadrao
         fi
 
      done
 
    done
-
 
           while [ "$P" = "03" ]; do
 
@@ -4134,7 +4626,7 @@ echo -e "\e[1;36m Wireless Attacks\e[1;m"
         sleep 1
 
 echo -e "
-$branco
+$cyan
 *  [00) - exit  [0 ) - Home
 
 *  [01) Aircrack-ng       *  [17) KillerBee
@@ -4156,11 +4648,13 @@ $branco
 
 $corPadrao"
 
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-        read WA
+  read -p "~:: " WA
 
-   while [ "$WA" != "00" -o "$WA" != "01" -o "$WA" != "02" -o "$WA" != "03" -o "$WA" != "04" -o "$WA" != "05" -o "$WA" != "06" -o "$WA" != "07" -o "$WA" != "08" -o "$WA" != "09" -o "$WA" != "10" -o "$WA" != "11" -o "$WA" != "12" -o "$WA" != "13" -o "$WA" != "14" -o "$WA" != "15" -o "$WA" != "16" -o "$WA" != "17" -o "$WA" != "18" -o "$WA" != "19" -o "$WA" != "20" -o "$WA" != "21" -o "$WA" != "22" -o "$WA" != "23" -o "$WA" != "24" -o "$WA" != "25" -o "$WA" != "26" -o "$WA" != "27" -o "$WA" != "28" -o "$WA" != "29" -o "$WA" != "30" -o "$WA" != "31" -o "$WA" != "0" -o "$WA" != "32" ]; do
+echo -e $corPadrao
+
+    while [ "$WA" != "00" -o "$WA" != "01" -o "$WA" != "02" -o "$WA" != "03" -o "$WA" != "04" -o "$WA" != "05" -o "$WA" != "06" -o "$WA" != "07" -o "$WA" != "08" -o "$WA" != "09" -o "$WA" != "10" -o "$WA" != "11" -o "$WA" != "12" -o "$WA" != "13" -o "$WA" != "14" -o "$WA" != "15" -o "$WA" != "16" -o "$WA" != "17" -o "$WA" != "18" -o "$WA" != "19" -o "$WA" != "20" -o "$WA" != "21" -o "$WA" != "22" -o "$WA" != "23" -o "$WA" != "24" -o "$WA" != "25" -o "$WA" != "26" -o "$WA" != "27" -o "$WA" != "28" -o "$WA" != "29" -o "$WA" != "30" -o "$WA" != "31" -o "$WA" != "0" -o "$WA" != "32" ]; do
 
       if [ "$WA" = "00" -o "$WA" = "01" -o "$WA" = "02" -o "$WA" = "03" -o "$WA" = "04" -o "$WA" = "05" -o "$WA" = "06" -o "$WA" = "07" -o "$WA" = "08" -o "$WA" = "09" -o "$WA" = "10" -o "$WA" = "11" -o "$WA" = "12" -o "$WA" = "13" -o "$WA" = "14" -o "$WA" = "15" -o "$WA" = "16" -o "$WA" = "17" -o "$WA" = "18" -o "$WA" = "19" -o "$WA" = "20" -o "$WA" = "21" -o "$WA" = "22" -o "$WA" = "23" -o "$WA" = "24" -o "$WA" = "25" -o "$WA" = "26" -o "$WA" = "27" -o "$WA" = "28" -o "$WA" = "29" -o "$WA" = "30" -o "$WA" = "31" -o "$WA" = "0" -o "$WA" = "32" ]; then
 
@@ -4189,10 +4683,11 @@ echo -e "\e[0;36m instalando aircrack-ng...\e[0m"
 			      apt-get install aircrack-ng
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WA
+  read -p "~:: " WA
 
+echo -e $corPadrao
               fi
 apt-get install tshark
 
@@ -4204,10 +4699,11 @@ echo -e "\e[0;36m instalando tshark...\e[0m"
 			      apt-get install tshark
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WA
+  read -p "~:: " WA
 
+echo -e $corPadrao
               fi
 
            if [ "$WA" = "02" ]; then
@@ -4218,10 +4714,11 @@ echo -e "\e[0;36m instalando asleap...\e[0m"
 			      apt-get install asleap
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WA
+  read -p "~:: " WA
 
+echo -e $corPadrao
               fi
 
 			if [ "$WA" = "03" ]; then
@@ -4232,10 +4729,11 @@ echo -e "\e[0;36m instalando bluelog...\e[0m"
 			      apt-get install bluelog
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WA
+  read -p "~:: " WA
 
+echo -e $corPadrao
               fi
 
 			if [ "$WA" = "04" ]; then
@@ -4246,10 +4744,11 @@ echo -e "\e[0;36m instalando BlueMaho...\e[0m"
 			      apt-get install git && git clone git://git.kali.org/packages/bluemaho.git
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WA
+  read -p "~:: " WA
 
+echo -e $corPadrao
               fi
 
 			if [ "$WA" = "05" ]; then
@@ -4260,10 +4759,11 @@ echo -e "\e[0;36m instalando Bluepot...\e[0m"
 			      apt-get install git && git clone git://git.kali.org/packages/bluepot.git
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WA
+  read -p "~:: " WA
 
+echo -e $corPadrao
               fi
 
 			if [ "$WA" = "06" ]; then
@@ -4274,10 +4774,11 @@ echo -e "\e[0;36m instalando blueranger...\e[0m"
 			      apt-get install blueranger
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WA
+  read -p "~:: " WA
 
+echo -e $corPadrao
               fi
 
 			if [ "$WA" = "07" ]; then
@@ -4288,10 +4789,11 @@ echo -e "\e[0;36m instalando bluesnarfer...\e[0m"
 			      apt-get install bluesnarfer
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WA
+  read -p "~:: " WA
 
+echo -e $corPadrao
               fi
 
 			if [ "$WA" = "08" ]; then
@@ -4302,10 +4804,11 @@ echo -e "\e[0;36m instalando bully...\e[0m"
 			      apt-get install bully
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WA
+  read -p "~:: " WA
 
+echo -e $corPadrao
               fi
 
 			if [ "$WA" = "09" ]; then
@@ -4316,10 +4819,11 @@ echo -e "\e[0;36m instalando cowpatty...\e[0m"
 			      apt-get install cowpatty
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WA
+  read -p "~:: " WA
 
+echo -e $corPadrao
               fi
 
 			if [ "$WA" = "10" ]; then
@@ -4330,10 +4834,11 @@ echo -e "\e[0;36m instalando crackle...\e[0m"
 			      apt-get install crackle
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WA
+  read -p "~:: " WA
 
+echo -e $corPadrao
               fi
 
 			if [ "$WA" = "11" ]; then
@@ -4344,10 +4849,11 @@ echo -e "\e[0;36m instalando eapmd5pass...\e[0m"
 			      apt-get install eapmd5pass
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WA
+  read -p "~:: " WA
 
+echo -e $corPadrao
               fi
 
 			if [ "$WA" = "12" ]; then
@@ -4358,10 +4864,11 @@ echo -e "\e[0;36m instalando fern-wifi-cracker...\e[0m"
 			      apt-get install fern-wifi-cracker
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WA
+  read -p "~:: " WA
 
+echo -e $corPadrao
               fi
 
 			if [ "$WA" = "13" ]; then
@@ -4372,10 +4879,11 @@ echo -e "\e[0;36m instalando ghost-phisher...\e[0m"
 			      apt-get install ghost-phisher
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WA
+  read -p "~:: " WA
 
+echo -e $corPadrao
               fi
 
 			if [ "$WA" = "14" ]; then
@@ -4386,10 +4894,11 @@ echo -e "\e[0;36m instalando giskismet...\e[0m"
 			      apt-get install giskismet
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WA
+  read -p "~:: " WA
 
+echo -e $corPadrao
               fi
 
 			if [ "$WA" = "15" ]; then
@@ -4400,10 +4909,11 @@ echo -e "\e[0;36m instalando gr-scan...\e[0m"
 			      apt-get install git && git clone git://git.kali.org/packages/gr-scan.git
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WA
+  read -p "~:: " WA
 
+echo -e $corPadrao
               fi
 
 			if [ "$WA" = "16" ]; then
@@ -4414,10 +4924,11 @@ echo -e "\e[0;36m instalando kalibrate-rtl...\e[0m"
 			      apt-get install kalibrate-rtl
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WA
+  read -p "~:: " WA
 
+echo -e $corPadrao
               fi
 
 			if [ "$WA" = "17" ]; then
@@ -4428,10 +4939,11 @@ echo -e "\e[0;36m instalando killerbee...\e[0m"
 			      apt-get install killerbee
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WA
+  read -p "~:: " WA
 
+echo -e $corPadrao
               fi
 
 			if [ "$WA" = "18" ]; then
@@ -4442,10 +4954,11 @@ echo -e "\e[0;36m instalando kismet...\e[0m"
 			      apt-get install kismet
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WA
+  read -p "~:: " WA
 
+echo -e $corPadrao
               fi
 
 			if [ "$WA" = "19" ]; then
@@ -4456,10 +4969,11 @@ echo -e "\e[0;36m instalando mdk3...\e[0m"
 			      apt-get install mdk3
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WA
+  read -p "~:: " WA
 
+echo -e $corPadrao
               fi
 
 			if [ "$WA" = "20" ]; then
@@ -4470,10 +4984,11 @@ echo -e "\e[0;36m instalando mfcuk...\e[0m"
 			      apt-get install mfcuk
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WA
+  read -p "~:: " WA
 
+echo -e $corPadrao
               fi
 
 			if [ "$WA" = "21" ]; then
@@ -4484,10 +4999,11 @@ echo -e "\e[0;36m instalando mfoc...\e[0m"
 			      apt-get install mfoc
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WA
+  read -p "~:: " WA
 
+echo -e $corPadrao
               fi
 
 			if [ "$WA" = "22" ]; then
@@ -4498,10 +5014,11 @@ echo -e "\e[0;36m instalando mfterm...\e[0m"
 			      apt-get install mfterm
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WA
+  read -p "~:: " WA
 
+echo -e $corPadrao
               fi
 
 			if [ "$WA" = "23" ]; then
@@ -4512,10 +5029,11 @@ echo -e "\e[0;36m instalando multimon-ng...\e[0m"
 			      apt-get install multimon-ng
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WA
+  read -p "~:: " WA
 
+echo -e $corPadrao
               fi
 
 			if [ "$WA" = "24" ]; then
@@ -4526,10 +5044,11 @@ echo -e "\e[0;36m instalando pixiewps...\e[0m"
 			      apt-get install pixiewps
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WA
+  read -p "~:: " WA
 
+echo -e $corPadrao
               fi
 
 			if [ "$WA" = "25" ]; then
@@ -4540,10 +5059,11 @@ echo -e "\e[0;36m instalando reaver...\e[0m"
 			      apt-get install reaver
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WA
+  read -p "~:: " WA
 
+echo -e $corPadrao
               fi
 
 			if [ "$WA" = "26" ]; then
@@ -4554,10 +5074,11 @@ echo -e "\e[0;36m instalando redfang...\e[0m"
 			      apt-get install redfang
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WA
+  read -p "~:: " WA
 
+echo -e $corPadrao
               fi
 
 			if [ "$WA" = "27" ]; then
@@ -4568,10 +5089,11 @@ echo -e "\e[0;36m instalando rtlsdr-scanner...\e[0m"
 			      apt-get install rtlsdr-scanner
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WA
+  read -p "~:: " WA
 
+echo -e $corPadrao
               fi
 
 			if [ "$WA" = "28" ]; then
@@ -4582,10 +5104,11 @@ echo -e "\e[0;36m instalando spooftooph...\e[0m"
 			      apt-get install spooftooph
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WA
+  read -p "~:: " WA
 
+echo -e $corPadrao
               fi
 
 			if [ "$WA" = "29" ]; then
@@ -4596,10 +5119,11 @@ echo -e "\e[0;36m instalando wifi-honey...\e[0m"
 			      apt-get install wifi-honey
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WA
+  read -p "~:: " WA
 
+echo -e $corPadrao
               fi
 
 			if [ "$WA" = "30" ]; then
@@ -4610,10 +5134,11 @@ echo -e "\e[0;36m instalando wifitap...\e[0m"
 			      apt-get install wifitap
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WA
+  read -p "~:: " WA
 
+echo -e $corPadrao
               fi
 
 			if [ "$WA" = "31" ]; then
@@ -4624,18 +5149,20 @@ echo -e "\e[0;36m instalando wifite...\e[0m"
 			      apt-get install wifite
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read WA
+  read -p "~:: " WA
 
+echo -e $corPadrao
               fi
 
              else
 
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read WA
+  read -p "~:: " WA
 
+echo -e $corPadrao
             fi
 
       done
@@ -4649,37 +5176,45 @@ echo -e "\e[1;36mVulnerability Analysis\e[1;m"
         sleep 1
 
 echo -e "
-$branco
+$cyan
 *  [00) - exit  [0 ) - Home
 
-*  [01) BBQSQL                  *  [19) ohrwurm
-*  [02) BED                     *  [20) openvas-administrator
-*  [03) cisco-auditing-tool     *  [21) openvas-cli
-*  [04) cisco-global-exploiter  *  [22) openvas-manager
-*  [05) cisco-ocs               *  [23) openvas-scanner
-*  [06) cisco-torch             *  [24) Oscanner
-*  [07) copy-router-config      *  [25) Powerfuzzer
-*  [08) commix                  *  [26) sfuzz
-*  [09) DBPwAudit               *  [27) SidGuesser
-*  [10) DoonaDot                *  [28) SIPArmyKnife
-*  [11) DotPwn                  *  [29) sqlmap
-*  [12) Greenbone Security .A   *  [30) Sqlninja     
-*  [13) GSD                     *  [31) sqlsus
-*  [14) HexorBase               *  [32) THC-IPV6
-*  [15) Inguma                  *  [33) tnscmd10g
-*  [16) jSQL                    *  [34) unix-privesc-check
-*  [17) Lynis                   *  [35) Yersinia
-*  [18) Nmap                    *  [36) Dracnmap
+*  [01) BBQSQL                  *  [25) Powerfuzzer
+*  [02) BED                     *  [26) sfuzz
+*  [03) cisco-auditing-tool     *  [27) SidGuesser
+*  [04) cisco-global-exploiter  *  [28) SIPArmyKnife
+*  [05) cisco-ocs               *  [29) sqlmap
+*  [06) cisco-torch             *  [30) Sqlninja
+*  [07) copy-router-config      *  [31) sqlsus
+*  [08) commix                  *  [32) THC-IPV6
+*  [09) DBPwAudit               *  [33) tnscmd10g
+*  [10) DoonaDot                *  [34) unix-privesc-check
+*  [11) DotPwn                  *  [35) Yersinia
+*  [12) Greenbone Security .A   *  [36) Dracnmap
+*  [13) GSD                     *  [37) xerosploit
+*  [14) HexorBase               
+*  [15) Inguma                  
+*  [16) jSQL                    
+*  [17) Lynis                   
+*  [18) Nmap                    
+*  [19) ohrwurm
+*  [20) openvas-administrator
+*  [21) openvas-cli
+*  [22) openvas-manager
+*  [23) openvas-scanner
+*  [24) Oscanner
 
 $corPadrao"
 
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-        read VA
+  read -p "~:: " VA
 
-   while [ "$VA" != "0" -o "$VA" != "00" -o "$VA" != "01" -o "$VA" != "02" -o "$VA" != "03" -o "$VA" != "04" -o "$VA" != "05" -o "$VA" != "06" -o "$VA" != "07" -o "$VA" != "08" -o "$VA" != "09" -o "$VA" != "10" -o "$VA" != "11" -o "$VA" != "12" -o "$VA" != "13" -o "$VA" != "14" -o "$VA" != "15" -o "$VA" != "16" -o "$VA" != "17" -o {}"$VA" != "18" -o "$VA" != "19" -o "$VA" != "20" -o "$VA" != "21" -o "$VA" != "22" -o "$VA" != "23" -o "$VA" != "24" -o "$VA" != "25" -o "$VA" != "26" -o "$VA" != "27" -o "$VA" != "28" -o "$VA" != "29" -o "$VA" != "30" -o "$VA" != "31" -o "$VA" != "32" -o "$VA" != "33" -o "$VA" != "34" -o "$VA" != "35" -o "$VA" != "36" ]; do
+echo -e $corPadrao
 
-     if [ "$VA" = "0" -o "$VA" = "00" -o "$VA" = "01" -o "$VA" = "02" -o "$VA" = "03" -o "$VA" = "04" -o "$VA" = "05" -o "$VA" = "06" -o "$VA" = "07" -o "$VA" = "08" -o "$VA" = "09" -o "$VA" = "10" -o "$VA" = "11" -o "$VA" = "12" -o "$VA" = "13" -o "$VA" = "14" -o "$VA" = "15" -o "$VA" = "16" -o "$VA" = "17" -o "$VA" = "18" -o "$VA" = "19" -o "$VA" = "20" -o "$VA" = "21" -o "$VA" = "22" -o "$VA" = "23" -o "$VA" = "24" -o "$VA" = "25" -o "$VA" = "26" -o "$VA" = "27" -o "$VA" = "28" -o "$VA" = "29" -o "$VA" = "30" -o "$VA" = "31" -o "$VA" = "32" -o "$VA" = "33" -o "$VA" = "34" -o "$VA" = "35" -o "$VA" = "36" ]; then
+    while [ "$VA" != "0" -o "$VA" != "00" -o "$VA" != "01" -o "$VA" != "02" -o "$VA" != "03" -o "$VA" != "04" -o "$VA" != "05" -o "$VA" != "06" -o "$VA" != "07" -o "$VA" != "08" -o "$VA" != "09" -o "$VA" != "10" -o "$VA" != "11" -o "$VA" != "12" -o "$VA" != "13" -o "$VA" != "14" -o "$VA" != "15" -o "$VA" != "16" -o "$VA" != "17" -o {}"$VA" != "18" -o "$VA" != "19" -o "$VA" != "20" -o "$VA" != "21" -o "$VA" != "22" -o "$VA" != "23" -o "$VA" != "24" -o "$VA" != "25" -o "$VA" != "26" -o "$VA" != "27" -o "$VA" != "28" -o "$VA" != "29" -o "$VA" != "30" -o "$VA" != "31" -o "$VA" != "32" -o "$VA" != "33" -o "$VA" != "34" -o "$VA" != "35" -o "$VA" != "36" -o "$VA" != "37" ]; do
+
+     if [ "$VA" = "0" -o "$VA" = "00" -o "$VA" = "01" -o "$VA" = "02" -o "$VA" = "03" -o "$VA" = "04" -o "$VA" = "05" -o "$VA" = "06" -o "$VA" = "07" -o "$VA" = "08" -o "$VA" = "09" -o "$VA" = "10" -o "$VA" = "11" -o "$VA" = "12" -o "$VA" = "13" -o "$VA" = "14" -o "$VA" = "15" -o "$VA" = "16" -o "$VA" = "17" -o "$VA" = "18" -o "$VA" = "19" -o "$VA" = "20" -o "$VA" = "21" -o "$VA" = "22" -o "$VA" = "23" -o "$VA" = "24" -o "$VA" = "25" -o "$VA" = "26" -o "$VA" = "27" -o "$VA" = "28" -o "$VA" = "29" -o "$VA" = "30" -o "$VA" = "31" -o "$VA" = "32" -o "$VA" = "33" -o "$VA" = "34" -o "$VA" = "35" -o "$VA" = "36" -o "$VA" = "37" ]; then
 
          if [ "$VA" = "36" ]; then
 
@@ -4691,10 +5226,27 @@ echo -e "\e[0;36m instalando Dracnmap...\e[0m"
                 chmod +x Dracnmap.sh
 				sudo ./Dracnmap.sh or sudo su ./Dracnmap.sh
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read VA
+  read -p "~:: " VA
 
+echo -e $corPadrao
+             fi
+
+         if [ "$VA" = "37" ]; then
+
+echo -e "\e[0;36m instalando xerosploit...\e[0m"
+                   sleep 2
+            apt-get install git sudo && git clone https://github.com/LionSec/xerosploit.git
+
+            cd xerosploit && sudo python install.py
+             sudo xerosploit
+echo -e "\e[1;32m Pronto * \e[0m"
+echo -e $cyan
+
+  read -p "~:: " VA
+
+echo -e $corPadrao
              fi
 
          if [ "$VA" = "0" ]; then
@@ -4722,10 +5274,11 @@ echo -e "\e[0;36m instalando bbqsql...\e[0m"
 			      apt-get install bbqsql
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-              read VA
+  read -p "~:: " VA
 
+echo -e $corPadrao
        fi
 
 
@@ -4737,10 +5290,11 @@ echo -e "\e[0;36m instalando bed...\e[0m"
 			   apt-get install bed
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-           read VA
+  read -p "~:: " VA
 
+echo -e $corPadrao
        fi
 
 	 if [ "$VA" = "03" ]; then
@@ -4751,10 +5305,11 @@ echo -e "\e[0;36m instalando cisco-auditing-tool...\e[0m"
 			   apt-get install cisco-auditing-tool
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-           read VA
+  read -p "~:: " VA
 
+echo -e $corPadrao
        fi
 
 	 if [ "$VA" = "04" ]; then
@@ -4765,10 +5320,11 @@ echo -e "\e[0;36m instalando cisco-global-exploiter...\e[0m"
 			   apt-get install cisco-global-exploiter
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-           read VA
+  read -p "~:: " VA
 
+echo -e $corPadrao
        fi
 
 	 if [ "$VA" = "05" ]; then
@@ -4779,10 +5335,11 @@ echo -e "\e[0;36m instalando cisco-ocs...\e[0m"
 			   apt-get install cisco-ocs
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-           read VA
+  read -p "~:: " VA
 
+echo -e $corPadrao
        fi
 
 	 if [ "$VA" = "06" ]; then
@@ -4793,10 +5350,11 @@ echo -e "\e[0;36m instalando cisco-torch...\e[0m"
 			   apt-get install cisco-torch
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-           read VA
+  read -p "~:: " VA
 
+echo -e $corPadrao
        fi
 
 	 if [ "$VA" = "07" ]; then
@@ -4807,10 +5365,11 @@ echo -e "\e[0;36m instalando copy-router-config...\e[0m"
 			   apt-get install copy-router-config
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-           read VA
+  read -p "~:: " VA
 
+echo -e $corPadrao
        fi
 
 	 if [ "$VA" = "08" ]; then
@@ -4821,10 +5380,11 @@ echo -e "\e[0;36m instalando commix...\e[0m"
 			   apt-get install git && git clone https://github.com/stasinopoulos/commix.git commix && cd commix && python ./commix.py --install
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-           read VA
+  read -p "~:: " VA
 
+echo -e $corPadrao
        fi
 
 	 if [ "$VA" = "09" ]; then
@@ -4835,10 +5395,11 @@ echo -e "\e[0;36m instalando DBPwAudit...\e[0m"
 			   echo "download page : http://www.cqure.net/wp/tools/database/dbpwaudit/"
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-           read VA
+  read -p "~:: " VA
 
+echo -e $corPadrao
        fi
 
 	 if [ "$VA" = "10" ]; then
@@ -4849,10 +5410,11 @@ echo -e "\e[0;36m instalando doona...\e[0m"
 			   apt-get install doona
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-           read VA
+  read -p "~:: " VA
 
+echo -e $corPadrao
        fi
 
 	 if [ "$VA" = "11" ]; then
@@ -4863,10 +5425,11 @@ echo -e "\e[0;36m instalando dotdotpwn...\e[0m"
 			   apt-get install dotdotpwn
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-           read VA
+  read -p "~:: " VA
 
+echo -e $corPadrao
        fi
 
 	 if [ "$VA" = "12" ]; then
@@ -4877,10 +5440,11 @@ echo -e "\e[0;36m instalando greenbone-security-assistant...\e[0m"
 			   apt-get install greenbone-security-assistant
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-           read VA
+  read -p "~:: " VA
 
+echo -e $corPadrao
        fi
 
 	 if [ "$VA" = "13" ]; then
@@ -4891,10 +5455,11 @@ echo -e "\e[0;36m instalando GSD...\e[0m"
 			   apt-get install git && git clone git://git.kali.org/packages/gsd.git
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-           read VA
+  read -p "~:: " VA
 
+echo -e $corPadrao
        fi
 
 	 if [ "$VA" = "14" ]; then
@@ -4905,10 +5470,11 @@ echo -e "\e[0;36m instalando hexorbase...\e[0m"
 			   apt-get install hexorbase
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-           read VA
+  read -p "~:: " VA
 
+echo -e $corPadrao
        fi
 
 	 if [ "$VA" = "15" ]; then
@@ -4916,13 +5482,14 @@ echo -e "$cyan~::$corPadrao"
 echo -e "\e[0;36m instalando Inguma...\e[0m"
            sleep 2
 
-			   Please download inguma from : http://inguma.sourceforge.net
+echo -e 'Please download inguma from : http://inguma.sourceforge.net'
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-           read VA
+  read -p "~:: " VA
 
+echo -e $corPadrao
        fi
 
 	 if [ "$VA" = "16" ]; then
@@ -4933,10 +5500,11 @@ echo -e "\e[0;36m instalando jsql...\e[0m"
 			   apt-get install jsql
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-           read VA
+  read -p "~:: " VA
 
+echo -e $corPadrao
        fi
 
 	 if [ "$VA" = "17" ]; then
@@ -4947,10 +5515,11 @@ echo -e "\e[0;36m instalando lynis...\e[0m"
 			   apt-get install lynis
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-           read VA
+  read -p "~:: " VA
 
+echo -e $corPadrao
        fi
 
 	 if [ "$VA" = "18" ]; then
@@ -4961,10 +5530,11 @@ echo -e "\e[0;36m instalando nmap...\e[0m"
 			   apt-get install nmap
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-           read VA
+  read -p "~:: " VA
 
+echo -e $corPadrao
        fi
 
 	 if [ "$VA" = "19" ]; then
@@ -4975,10 +5545,11 @@ echo -e "\e[0;36m instalando ohrwurm...\e[0m"
 			   apt-get install ohrwurm
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-           read VA
+  read -p "~:: " VA
 
+echo -e $corPadrao
        fi
 
 	 if [ "$VA" = "20" ]; then
@@ -4989,10 +5560,11 @@ echo -e "\e[0;36m instalando openvas-administrator...\e[0m"
 			   apt-get install openvas-administrator
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-           read VA
+  read -p "~:: " VA
 
+echo -e $corPadrao
        fi
 
 	 if [ "$VA" = "21" ]; then
@@ -5003,10 +5575,11 @@ echo -e "\e[0;36m instalando openvas-cli...\e[0m"
 			   apt-get install openvas-cli
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-           read VA
+  read -p "~:: " VA
 
+echo -e $corPadrao
        fi
 
 	 if [ "$VA" = "22" ]; then
@@ -5017,10 +5590,11 @@ echo -e "\e[0;36m instalando openvas-manager...\e[0m"
 			   apt-get install openvas-manager
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-           read VA
+  read -p "~:: " VA
 
+echo -e $corPadrao
        fi
 
 	 if [ "$VA" = "23" ]; then
@@ -5031,10 +5605,11 @@ echo -e "\e[0;36m instalando openvas-scanner...\e[0m"
 			   apt-get install openvas-scanner
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-           read VA
+  read -p "~:: " VA
 
+echo -e $corPadrao
        fi
 
 	 if [ "$VA" = "24" ]; then
@@ -5045,10 +5620,11 @@ echo -e "\e[0;36m instalando oscanner...\e[0m"
 			   apt-get install oscanner
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-           read VA
+  read -p "~:: " VA
 
+echo -e $corPadrao
        fi
 
 	 if [ "$VA" = "25" ]; then
@@ -5059,10 +5635,11 @@ echo -e "\e[0;36m instalando powerfuzzer...\e[0m"
 			   apt-get install powerfuzzer
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-           read VA
+  read -p "~:: " VA
 
+echo -e $corPadrao
        fi
 
 	 if [ "$VA" = "26" ]; then
@@ -5073,10 +5650,11 @@ echo -e "\e[0;36m instalando sfuzz...\e[0m"
 			   apt-get install sfuzz
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-           read VA
+  read -p "~:: " VA
 
+echo -e $corPadrao
        fi
 
 	 if [ "$VA" = "27" ]; then
@@ -5087,10 +5665,11 @@ echo -e "\e[0;36m instalando sidguesser...\e[0m"
 			   apt-get install sidguesser
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-           read VA
+  read -p "~:: " VA
 
+echo -e $corPadrao
        fi
 
 	 if [ "$VA" = "28" ]; then
@@ -5101,10 +5680,11 @@ echo -e "\e[0;36m instalando siparmyknife...\e[0m"
 			   apt-get install siparmyknife
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-           read VA
+  read -p "~:: " VA
 
+echo -e $corPadrao
        fi
 
 	 if [ "$VA" = "29" ]; then
@@ -5115,10 +5695,11 @@ echo -e "\e[0;36m instalando sqlmap...\e[0m"
 			   apt-get install sqlmap
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-           read VA
+  read -p "~:: " VA
 
+echo -e $corPadrao
        fi
 
 	 if [ "$VA" = "30" ]; then
@@ -5129,10 +5710,11 @@ echo -e "\e[0;36m instalando sqlninja...\e[0m"
 			   apt-get install sqlninja
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-           read VA
+  read -p "~:: " VA
 
+echo -e $corPadrao
        fi
 
 	 if [ "$VA" = "31" ]; then
@@ -5143,10 +5725,11 @@ echo -e "\e[0;36m instalando sqlsus...\e[0m"
 			   apt-get install sqlsus
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-           read VA
+  read -p "~:: " VA
 
+echo -e $corPadrao
        fi
 
 	 if [ "$VA" = "32" ]; then
@@ -5157,10 +5740,11 @@ echo -e "\e[0;36m instalando thc-ipv6...\e[0m"
 			   apt-get install thc-ipv6
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-           read VA
+  read -p "~:: " VA
 
+echo -e $corPadrao
        fi
 
 	 if [ "$VA" = "33" ]; then
@@ -5171,10 +5755,11 @@ echo -e "\e[0;36m instalando tns10g...\e[0m"
 			   apt-get install tns10g
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-           read VA
+  read -p "~:: " VA
 
+echo -e $corPadrao
        fi
 
 	 if [ "$VA" = "34" ]; then
@@ -5185,10 +5770,11 @@ echo -e "\e[0;36m instalando unix-privesc-check...\e[0m"
 			   apt-get install unix-privesc-check
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-           read VA
+  read -p "~:: " VA
 
+echo -e $corPadrao
        fi
 
 	 if [ "$VA" = "35" ]; then
@@ -5199,18 +5785,20 @@ echo -e "\e[0;36m instalando yersinia...\e[0m"
 			   apt-get install yersinia
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-           read VA
+  read -p "~:: " VA
 
+echo -e $corPadrao
         fi
 
         else
 
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-           read VA
+  read -p "~:: " VA
 
+echo -e $corPadrao
        fi
 
      done
@@ -5225,47 +5813,51 @@ echo -e "\e[1;36m Information Gathering\e[1;m"
          sleep 1
 
 echo -e "
-$branco
+$cyan
 *  [00) - exit  [0 ) - Home
 
-*  [01) acccheck             *   [30) lbd
-*  [02) ace-voip             *   [31) Maltego Teeth
-*  [03) Amap                 *   [32) masscan
-*  [04) Automater            *   [33) Metagoofil
-*  [05) bing-ip2hosts        *   [34) Miranda
-*  [06) braa                 *   [35) Nmap
-*  [07) CaseFile             *   [36) knock4 subdomain scan
-*  [08) CDPSnarf             *   [37) p0f
-*  [09) cisco-torch          *   [38) Parsero
-*  [10) Cookie Cadger        *   [39) Recon-ng
-*  [11) copy-router-config   *   [40) SET
-*  [12) DMitry	             *   [41) smtp-user-enum
-*  [13) dnmap                *   [42) snmpcheck
-*  [14) dnsenum              *   [43) sslcaudit
-*  [15) dnsmap               *   [44) SSLsplit
-*  [16) DNSRecon             *   [45) sslstrip
-*  [17) dnstracer            *   [46) SSLyze
-*  [18) dnswalk              *   [47) THC-IPV6
-*  [19) DotDotPwn            *   [48) theHarvester
-*  [20) enum4linux           *   [49) TLSSLed
-*  [21) enumIAX              *   [50) twofi
-*  [22) exploitdb            *   [51) URLCrazy
-*  [23) Fierce               *   [52) Wireshark
-*  [24) Firewalk             *   [53) WOL-E
-*  [25) fragroute            *   [54) Xplico
-*  [26) fragrouter           *   [55) iSMTP
-*  [27) Ghost Phisher	     *   [56) InTrace
-*  [28) GoLismero            *   [57) hping3
-*  [29) goofile              *   [58) KatanaFramework
-$corPadrao
-"
-echo -e "$cyan~::$corPadrao"
+*  [01) acccheck             *   [33) Metagoofil
+*  [02) ace-voip             *   [34) Miranda
+*  [03) Amap                 *   [35) Nmap
+*  [04) Automater            *   [36) knock4 subdomain scan
+*  [05) bing-ip2hosts        *   [37) p0f
+*  [06) braa                 *   [38) Parsero
+*  [07) CaseFile             *   [39) Recon-ng
+*  [08) CDPSnarf             *   [40) SET
+*  [09) cisco-torch          *   [41) smtp-user-enum
+*  [10) Cookie Cadger        *   [42) snmpcheck
+*  [11) copy-router-config   *   [43) sslcaudit
+*  [12) DMitry	             *   [44) SSLsplit
+*  [13) dnmap                *   [45) sslstrip
+*  [14) dnsenum              *   [46) SSLyze
+*  [15) dnsmap               *   [47) THC-IPV6
+*  [16) DNSRecon             *   [48) theHarvester
+*  [17) dnstracer            *   [49) TLSSLed
+*  [18) dnswalk              *   [50) twofi
+*  [19) DotDotPwn            *   [51) URLCrazy
+*  [20) enum4linux           *   [52) Wireshark
+*  [21) enumIAX              *   [53) WOL-E
+*  [22) exploitdb            *   [54) Xplico
+*  [23) Fierce               *   [55) iSMTP
+*  [24) Firewalk             *   [56) InTrace
+*  [25) fragroute            *   [57) hping3
+*  [26) fragrouter           *   [58) KatanaFramework
+*  [27) Ghost Phisher	     *   [59) social-engineer-toolkit
+*  [28) GoLismero            *   [60) BinGoo [Dork scanner]
+*  [29) goofile              *   [61) osrframework
+*  [30) lbd
+*  [31) Maltego Teeth
+*  [32) masscan
+$corPadrao"
+echo -e $cyan
 
-        read IG
+  read -p "~:: " IG
 
-      while [ "$IG" != "0" -o "$IG" != "00" -o "$IG" != "01" -o "$IG" != "02" -o "$IG" != "03" -o "$IG" != "04" -o "$IG" != "05" -o "$IG" != "06" -o "$IG" != "07" -o "$IG" != "08" -o "$IG" != "09" -o "$IG" != "10" -o "$IG" != "11" -o "$IG" != "12" -o "$IG" != "13" -o "$IG" != "14" -o "$IG" != "15" -o "$IG" != "16" -o "$IG" != "17" -o "$IG" != "18" -o "$IG" != "19" -o "$IG" != "20" -o "$IG" != "21" -o "$IG" != "22" -o "$IG" != "23" -o "$IG" != "24" -o "$IG" != "25" -o "$IG" != "26" -o "$IG" != "27" -o "$IG" != "28" -o "$IG" != "29" -o "$IG" != "30" -o "$IG" != "31" -o "$IG" != "32" -o "$IG" != "33" -o "$IG" != "34" -o "$IG" != "35" -o "$IG" != "36" -o "$IG" != "37" -o "$IG" != "38" -o "$IG" != "39" -o "$IG" != "40" -o "$IG" != "41" -o "$IG" != "42" -o "$IG" != "43" -o "$IG" != "44" -o "$IG" != "45" -o "$IG" != "46" -o "$IG" != "47" -o "$IG" != "48" -o "$IG" != "49" -o "$IG" != "50" -o "$IG" != "51" -o "$IG" != "52" -o "$IG" != "53" -o "$IG" != "54" -o "$IG" != "55" -o "$IG" != "56" -o "$IG" != "57" -o "$IG" != "58" ]; do
+echo -e $corPadrao
 
-         if [ "$IG" = "0" -o "$IG" = "00" -o "$IG" = "01" -o "$IG" = "02" -o "$IG" = "03" -o "$IG" = "04" -o "$IG" = "05" -o "$IG" = "06" -o "$IG" = "07" -o "$IG" = "08" -o "$IG" = "09" -o "$IG" = "10" -o "$IG" = "11" -o "$IG" = "12" -o "$IG" = "13" -o "$IG" = "14" -o "$IG" = "15" -o "$IG" = "16" -o "$IG" = "17" -o "$IG" = "18" -o "$IG" = "19" -o "$IG" = "20" -o "$IG" = "21" -o "$IG" = "22" -o "$IG" = "23" -o "$IG" = "24" -o "$IG" = "25" -o "$IG" = "26" -o "$IG" = "27" -o "$IG" = "28" -o "$IG" = "29" -o "$IG" = "30" -o "$IG" = "31" -o "$IG" = "32" -o "$IG" = "33" -o "$IG" = "34" -o "$IG" = "35" -o "$IG" = "36" -o "$IG" = "37" -o "$IG" = "38" -o "$IG" = "39" -o "$IG" = "40" -o "$IG" = "41" -o "$IG" = "42" -o "$IG" = "43" -o "$IG" = "44" -o "$IG" = "45" -o "$IG" = "46" -o "$IG" = "47" -o "$IG" = "48" -o "$IG" = "49" -o "$IG" = "50" -o "$IG" = "51" -o "$IG" = "52" -o "$IG" = "53" -o "$IG" = "54" -o "$IG" = "55" -o "$IG" = "56" -o "$IG" = "57" -o "$IG" = "58" ]; then
+    while [ "$IG" != "0" -o "$IG" != "00" -o "$IG" != "01" -o "$IG" != "02" -o "$IG" != "03" -o "$IG" != "04" -o "$IG" != "05" -o "$IG" != "06" -o "$IG" != "07" -o "$IG" != "08" -o "$IG" != "09" -o "$IG" != "10" -o "$IG" != "11" -o "$IG" != "12" -o "$IG" != "13" -o "$IG" != "14" -o "$IG" != "15" -o "$IG" != "16" -o "$IG" != "17" -o "$IG" != "18" -o "$IG" != "19" -o "$IG" != "20" -o "$IG" != "21" -o "$IG" != "22" -o "$IG" != "23" -o "$IG" != "24" -o "$IG" != "25" -o "$IG" != "26" -o "$IG" != "27" -o "$IG" != "28" -o "$IG" != "29" -o "$IG" != "30" -o "$IG" != "31" -o "$IG" != "32" -o "$IG" != "33" -o "$IG" != "34" -o "$IG" != "35" -o "$IG" != "36" -o "$IG" != "37" -o "$IG" != "38" -o "$IG" != "39" -o "$IG" != "40" -o "$IG" != "41" -o "$IG" != "42" -o "$IG" != "43" -o "$IG" != "44" -o "$IG" != "45" -o "$IG" != "46" -o "$IG" != "47" -o "$IG" != "48" -o "$IG" != "49" -o "$IG" != "50" -o "$IG" != "51" -o "$IG" != "52" -o "$IG" != "53" -o "$IG" != "54" -o "$IG" != "55" -o "$IG" != "56" -o "$IG" != "57" -o "$IG" != "58" -o "$IG" != "59" -o "$IG" != "60" -o "$IG" != "61" ]; do
+
+         if [ "$IG" = "0" -o "$IG" = "00" -o "$IG" = "01" -o "$IG" = "02" -o "$IG" = "03" -o "$IG" = "04" -o "$IG" = "05" -o "$IG" = "06" -o "$IG" = "07" -o "$IG" = "08" -o "$IG" = "09" -o "$IG" = "10" -o "$IG" = "11" -o "$IG" = "12" -o "$IG" = "13" -o "$IG" = "14" -o "$IG" = "15" -o "$IG" = "16" -o "$IG" = "17" -o "$IG" = "18" -o "$IG" = "19" -o "$IG" = "20" -o "$IG" = "21" -o "$IG" = "22" -o "$IG" = "23" -o "$IG" = "24" -o "$IG" = "25" -o "$IG" = "26" -o "$IG" = "27" -o "$IG" = "28" -o "$IG" = "29" -o "$IG" = "30" -o "$IG" = "31" -o "$IG" = "32" -o "$IG" = "33" -o "$IG" = "34" -o "$IG" = "35" -o "$IG" = "36" -o "$IG" = "37" -o "$IG" = "38" -o "$IG" = "39" -o "$IG" = "40" -o "$IG" = "41" -o "$IG" = "42" -o "$IG" = "43" -o "$IG" = "44" -o "$IG" = "45" -o "$IG" = "46" -o "$IG" = "47" -o "$IG" = "48" -o "$IG" = "49" -o "$IG" = "50" -o "$IG" = "51" -o "$IG" = "52" -o "$IG" = "53" -o "$IG" = "54" -o "$IG" = "55" -o "$IG" = "56" -o "$IG" = "57" -o "$IG" = "58" -o "$IG" = "59" -o "$IG" -o "60" -o "$IG" = "61" ]; then
 
          if [ "$IG" = "0" ]; then
 
@@ -5284,6 +5876,41 @@ echo -e "$vermelhoClaro Saindo...$corPadrao"
 
                 fi
 
+   if [ "$IG" = "61" ]; then
+
+echo -e "\e[0;36m instalando osrframework...\e[0m"
+           sleep 2
+
+			   apt-get install python-pip && pip install osrframework && pip install osrframework --upgrade
+
+echo -e "\e[1;32m Pronto * \e[0m"
+echo -e "\e[1;36m ao sair use osrfconsole.py para chamalo"
+echo -e $cyan
+
+  read -p "~:: " IG
+
+echo -e $corPadrao
+      fi
+
+   if [ "$IG" = "60" ]; then
+
+echo -e "\e[0;36m instalando BinGoo...\e[0m"
+           sleep 2
+
+			   apt-get install lynx git -y && git clone https://github.com/Hood3dRob1n/BinGoo.git
+
+               cd  BinGoo
+               chmod +x bingoo
+               ./bingoo
+
+echo -e "\e[1;32m Pronto * \e[0m"
+echo -e $cyan
+
+  read -p "~:: " IG
+
+echo -e $corPadrao
+      fi
+
    if [ "$IG" = "01" ]; then
 
 echo -e "\e[0;36m instalando acccheck...\e[0m"
@@ -5292,10 +5919,30 @@ echo -e "\e[0;36m instalando acccheck...\e[0m"
 			   apt-get install acccheck
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-           read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
+      fi
+
+   if [ "$IG" = "59" ]; then
+
+echo -e "\e[0;36m instalando social-engineer-toolkit...\e[0m"
+           sleep 2
+
+			   apt-get install git sudo && git clone https://github.com/trustedsec/social-engineer-toolkit.git
+
+               cd /social-engineer-toolkit && python setup.py install
+
+               sudo setoolkit
+
+echo -e "\e[1;32m Pronto * \e[0m"
+echo -e $cyan
+
+  read -p "~:: " IG
+
+echo -e $corPadrao
       fi
 
    if [ "$IG" = "58" ]; then
@@ -5317,10 +5964,11 @@ echo -e "\e[0;36m instalando KatanaFramework...\e[0m"
 
 echo -e "\e[1;32m Pronto * \e[0m"
 echo -e "\e[1;32m Ao sair, use ktf.console para chamalo \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-           read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
       fi
 
 	if [ "$IG" = "02" ]; then
@@ -5331,10 +5979,11 @@ echo -e "\e[0;36m instalando ace-voip...\e[0m"
           apt-get install ace-voip
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-           read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
       fi
 
 	if [ "$IG" = "03" ]; then
@@ -5345,10 +5994,11 @@ echo -e "\e[0;36m instalando amap...\e[0m"
           apt-get install amap
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-           read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
       fi
 
 
@@ -5360,10 +6010,11 @@ echo -e "\e[0;36m instalando automater...\e[0m"
           apt-get install automater
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-           read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "05" ]; then
@@ -5374,10 +6025,11 @@ echo -e "\e[0;36m instalando bing-ip2hosts...\e[0m"
          apt-get install wget && wget http://www.morningstarsecurity.com/downloads/bing-ip2hosts-0.4.tar.gz && tar -xzvf bing-ip2hosts-0.4.tar.gz && cp bing-ip2hosts-0.4/bing-ip2hosts /usr/local/bin/
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-           read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "06" ]; then
@@ -5388,10 +6040,11 @@ echo -e "\e[0;36m instalando ace-voip...\e[0m"
           apt-get install braa
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-           read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 
@@ -5403,10 +6056,11 @@ echo -e "\e[0;36m instalando casefile...\e[0m"
             apt-get install casefile
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "08" ]; then
@@ -5417,10 +6071,11 @@ echo -e "\e[0;36m instalando cdpsnarf...\e[0m"
             apt-get install cdpsnarf
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "09" ]; then
@@ -5431,10 +6086,11 @@ echo -e "\e[0;36m instalando cisco-torch...\e[0m"
             apt-get install cisco-torch
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "10" ]; then
@@ -5445,10 +6101,11 @@ echo -e "\e[0;36m instalando cookie-cadger...\e[0m"
             apt-get install cookie-cadger
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "11" ]; then
@@ -5459,10 +6116,11 @@ echo -e "\e[0;36m instalando copy-router-config...\e[0m"
             apt-get install copy-router-config
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "12" ]; then
@@ -5473,10 +6131,11 @@ echo -e "\e[0;36m instalando dmitry...\e[0m"
             apt-get install dmitry
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "13" ]; then
@@ -5487,10 +6146,11 @@ echo -e "\e[0;36m instalando dnmap...\e[0m"
             apt-get install dnmap
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "14" ]; then
@@ -5501,10 +6161,11 @@ echo -e "\e[0;36m instalando dnsenum...\e[0m"
             apt-get install dnsenum
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "15" ]; then
@@ -5515,10 +6176,11 @@ echo -e "\e[0;36m instalando dnsmap...\e[0m"
             apt-get install dnsmap
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "16" ]; then
@@ -5529,10 +6191,11 @@ echo -e "\e[0;36m instalando dnsrecon...\e[0m"
             apt-get install dnsrecon
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "17" ]; then
@@ -5543,10 +6206,11 @@ echo -e "\e[0;36m instalando dnstracer...\e[0m"
             apt-get install dnstracer
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "18" ]; then
@@ -5557,10 +6221,11 @@ echo -e "\e[0;36m instalando dnswalk...\e[0m"
             apt-get install dnswalk
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "19" ]; then
@@ -5571,10 +6236,11 @@ echo -e "\e[0;36m instalando dotdotpwn...\e[0m"
             apt-get install dotdotpwn
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "20" ]; then
@@ -5585,10 +6251,11 @@ echo -e "\e[0;36m instalando enum4linux...\e[0m"
             apt-get install enum4linux
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "21" ]; then
@@ -5599,10 +6266,11 @@ echo -e "\e[0;36m instalando enumiax...\e[0m"
             apt-get install enumiax
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "22" ]; then
@@ -5613,10 +6281,11 @@ echo -e "\e[0;36m instalando exploitdb...\e[0m"
             apt-get install exploitdb
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "23" ]; then
@@ -5627,10 +6296,11 @@ echo -e "\e[0;36m instalando fierce...\e[0m"
             apt-get install fierce
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "24" ]; then
@@ -5641,10 +6311,11 @@ echo -e "\e[0;36m instalando firewalk...\e[0m"
             apt-get install firewalk
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "25" ]; then
@@ -5655,10 +6326,11 @@ echo -e "\e[0;36m instalando fragroute...\e[0m"
             apt-get install fragroute
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "26" ]; then
@@ -5669,10 +6341,11 @@ echo -e "\e[0;36m instalando fragrouter...\e[0m"
             apt-get install fragrouter
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "27" ]; then
@@ -5683,10 +6356,11 @@ echo -e "\e[0;36m instalando ghost-phisher...\e[0m"
             apt-get install ghost-phisher
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "28" ]; then
@@ -5697,10 +6371,11 @@ echo -e "\e[0;36m instalando golismero...\e[0m"
             apt-get install golismero
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "29" ]; then
@@ -5711,10 +6386,11 @@ echo -e "\e[0;36m instalando goofile...\e[0m"
             apt-get install goofile
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "30" ]; then
@@ -5725,10 +6401,11 @@ echo -e "\e[0;36m instalando lbd...\e[0m"
             apt-get install lbd
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "31" ]; then
@@ -5739,10 +6416,11 @@ echo -e "\e[0;36m instalando maltego-teeth...\e[0m"
             apt-get install maltego-teeth
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "32" ]; then
@@ -5753,10 +6431,11 @@ echo -e "\e[0;36m instalando masscan...\e[0m"
             apt-get install masscan
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "33" ]; then
@@ -5767,10 +6446,11 @@ echo -e "\e[0;36m instalando metagoofil...\e[0m"
             apt-get install metagoofil
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "34" ]; then
@@ -5781,10 +6461,11 @@ echo -e "\e[0;36m instalando miranda...\e[0m"
             apt-get install miranda
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "35" ]; then
@@ -5795,10 +6476,11 @@ echo -e "\e[0;36m instalando nmap...\e[0m"
             apt-get install nmap
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
     if [ "$IG" = "36" ]; then
@@ -5809,10 +6491,12 @@ echo -e "\e[0;36m instalando knock4...\e[0m"
             apt-get install python-pip python-dnspython && pip install https://github.com/guelfoweb/knock/archive/knock4.zip
 
 echo -e "\e[0;32m Pronto *...\e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e "\e[1;32m knock4 instalado, ao sair use knockpy para chamalo \e[0m"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "37" ]; then
@@ -5823,10 +6507,11 @@ echo -e "\e[0;36m instalando p0f...\e[0m"
             apt-get install p0f
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "38" ]; then
@@ -5837,10 +6522,11 @@ echo -e "\e[0;36m instalando parsero...\e[0m"
             apt-get install parsero
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "39" ]; then
@@ -5851,10 +6537,11 @@ echo -e "\e[0;36m instalando recon-ng...\e[0m"
             apt-get install recon-ng
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "40" ]; then
@@ -5865,10 +6552,11 @@ echo -e "\e[0;36m instalando set...\e[0m"
             apt-get install set
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "41" ]; then
@@ -5879,10 +6567,11 @@ echo -e "\e[0;36m instalando smtp-user-enum...\e[0m"
             apt-get install smtp-user-enum
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "42" ]; then
@@ -5893,10 +6582,11 @@ echo -e "\e[0;36m instalando snmpcheck...\e[0m"
             apt-get install snmpcheck
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "43" ]; then
@@ -5907,10 +6597,11 @@ echo -e "\e[0;36m instalando sslcaudit...\e[0m"
             apt-get install sslcaudit
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "44" ]; then
@@ -5921,10 +6612,11 @@ echo -e "\e[0;36m instalando sslsplit...\e[0m"
             apt-get install sslsplit
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "45" ]; then
@@ -5935,10 +6627,11 @@ echo -e "\e[0;36m instalando sslstrip...\e[0m"
             apt-get install sslstrip
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "46" ]; then
@@ -5949,10 +6642,11 @@ echo -e "\e[0;36m instalando sslyze...\e[0m"
             apt-get install sslyze
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "47" ]; then
@@ -5963,10 +6657,11 @@ echo -e "\e[0;36m instalando thc-ipv6...\e[0m"
             apt-get install thc-ipv6
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "48" ]; then
@@ -5977,10 +6672,11 @@ echo -e "\e[0;36m instalando theharvester...\e[0m"
             apt-get install theharvester
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "49" ]; then
@@ -5991,10 +6687,11 @@ echo -e "\e[0;36m instalando tlssled...\e[0m"
             apt-get install tlssled
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "50" ]; then
@@ -6005,10 +6702,11 @@ echo -e "\e[0;36m instalando twofi...\e[0m"
             apt-get install twofi
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "51" ]; then
@@ -6019,10 +6717,11 @@ echo -e "\e[0;36m instalando urlcrazy...\e[0m"
             apt-get install urlcrazy
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "52" ]; then
@@ -6033,10 +6732,11 @@ echo -e "\e[0;36m instalando wireshark...\e[0m"
             apt-get install wireshark
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "53" ]; then
@@ -6047,10 +6747,11 @@ echo -e "\e[0;36m instalando wol-e...\e[0m"
             apt-get install wol-e
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "54" ]; then
@@ -6061,10 +6762,11 @@ echo -e "\e[0;36m instalando xplico...\e[0m"
             apt-get install xplico
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "55" ]; then
@@ -6075,10 +6777,11 @@ echo -e "\e[0;36m instalando ismtp...\e[0m"
             apt-get install ismtp
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "56" ]; then
@@ -6089,10 +6792,11 @@ echo -e "\e[0;36m instalando intrace...\e[0m"
             apt-get install intrace
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
        fi
 
 	if [ "$IG" = "57" ]; then
@@ -6103,18 +6807,20 @@ echo -e "\e[0;36m instalando hping3...\e[0m"
             apt-get install hping3
 
 echo -e "\e[1;32m Pronto * \e[0m"
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
          fi
 
                else
 
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-                       read IG
+  read -p "~:: " IG
 
+echo -e $corPadrao
                  fi
 
                 done
@@ -6123,22 +6829,23 @@ echo -e "$cyan~::$corPadrao"
 
               else
 
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-                    read P
+  read -p "~:: " P
 
-              fi
+echo -e $corPadrao
+               fi
 
             done
 
           else
 
-echo -e "$cyan~::$corPadrao"
+echo -e $cyan
 
-             read V
+  read -p "~:: " V
 
+echo -e $corPadrao
           fi
      done
-
 }
 main
