@@ -54,7 +54,7 @@ echo -e '\e[01;37m
 
 
 \e[1;36m~+=[ Author: Zwdeff ]~+\e[1;m
-\e[1;36m~+=[ \e[1;37m366 Tools  \e[0m'
+\e[1;36m~+=[ \e[1;37m367 Tools  \e[0m'
 # Sobre
 echo -e $branco"~+=[------------------------------------------------------------ ]~+"
 echo -e "$cyan~+=[ installe quantos modulos quiser... sem precisar sair do script*$corPadrao"
@@ -96,18 +96,18 @@ echo -e "$vermelhoClaro Saindo...$corPadrao"
     if [ "$V" = "2" ]; then
 
 # Atualizando Repositorio
-echo -e "$verdeClaro Atualizando Repositorio...$corPadrao"
+echo -e "$verdeClaro Atualizando Repositorio..."
                    sleep 1
 
                   apt-get update
-
+echo -e "$corPadrao"
                  main
 
           fi
 
   if [ "$V" = "3" ]; then
 
-echo -e "\e[01;32m Atualizando source list...\e[0m"
+echo -e "\e[01;32m Atualizando source list..."
              sleep 2
 # Atualizando source list
 echo "# For source package access, uncomment the following line" > /etc/apt/sources.list
@@ -4629,22 +4629,28 @@ echo -e "
 $cyan
 *  [00) - exit  [0 ) - Home
 
-*  [01) Aircrack-ng       *  [17) KillerBee
-*  [02) Asleap            *  [18) Kismet
-*  [03) Bluelog           *  [19) mdk3
-*  [04) BlueMaho          *  [20) mfcuk
-*  [05) Bluepot           *  [21) mfoc
-*  [06) BlueRanger        *  [22) mfterm
-*  [07) Bluesnarfer       *  [23) Multimon-NG
-*  [08) Bully             *  [24) PixieWPS
-*  [09) coWPAtty          *  [25) Reaver
-*  [10) crackle           *  [26) redfang
-*  [11) eapmd5pass        *  [27) RTLSDR Scanner
-*  [12) Fern Wifi Cracker *  [28) Spooftooph
-*  [13) Ghost Phisher     *  [29) Wifi Honey
-*  [14) GISKismet         *  [30) Wifitap
-*  [15) gr-scan           *  [31) Wifite
-*  [16) kalibrate-rtl     *  [32) tshark
+*  [01) Aircrack-ng       *  [23) Multimon-NG
+*  [02) Asleap            *  [24) PixieWPS
+*  [03) Bluelog           *  [25) Reaver
+*  [04) BlueMaho          *  [26) redfang
+*  [05) Bluepot           *  [27) RTLSDR Scanner
+*  [06) BlueRanger        *  [28) Spooftooph
+*  [07) Bluesnarfer       *  [29) Wifi Honey
+*  [08) Bully             *  [30) Wifitap
+*  [09) coWPAtty          *  [31) Wifite
+*  [10) crackle           *  [32) tshark
+*  [11) eapmd5pass        *  [33) Wifiphisher
+*  [12) Fern Wifi Cracker
+*  [13) Ghost Phisher
+*  [14) GISKismet
+*  [15) gr-scan
+*  [16) kalibrate-rtl
+*  [17) KillerBee
+*  [18) Kismet
+*  [19) mdk3
+*  [20) mfcuk
+*  [21) mfoc
+*  [22) mfterm
 
 $corPadrao"
 
@@ -4654,9 +4660,9 @@ echo -e $cyan
 
 echo -e $corPadrao
 
-    while [ "$WA" != "00" -o "$WA" != "01" -o "$WA" != "02" -o "$WA" != "03" -o "$WA" != "04" -o "$WA" != "05" -o "$WA" != "06" -o "$WA" != "07" -o "$WA" != "08" -o "$WA" != "09" -o "$WA" != "10" -o "$WA" != "11" -o "$WA" != "12" -o "$WA" != "13" -o "$WA" != "14" -o "$WA" != "15" -o "$WA" != "16" -o "$WA" != "17" -o "$WA" != "18" -o "$WA" != "19" -o "$WA" != "20" -o "$WA" != "21" -o "$WA" != "22" -o "$WA" != "23" -o "$WA" != "24" -o "$WA" != "25" -o "$WA" != "26" -o "$WA" != "27" -o "$WA" != "28" -o "$WA" != "29" -o "$WA" != "30" -o "$WA" != "31" -o "$WA" != "0" -o "$WA" != "32" ]; do
+    while [ "$WA" != "00" -o "$WA" != "01" -o "$WA" != "02" -o "$WA" != "03" -o "$WA" != "04" -o "$WA" != "05" -o "$WA" != "06" -o "$WA" != "07" -o "$WA" != "08" -o "$WA" != "09" -o "$WA" != "10" -o "$WA" != "11" -o "$WA" != "12" -o "$WA" != "13" -o "$WA" != "14" -o "$WA" != "15" -o "$WA" != "16" -o "$WA" != "17" -o "$WA" != "18" -o "$WA" != "19" -o "$WA" != "20" -o "$WA" != "21" -o "$WA" != "22" -o "$WA" != "23" -o "$WA" != "24" -o "$WA" != "25" -o "$WA" != "26" -o "$WA" != "27" -o "$WA" != "28" -o "$WA" != "29" -o "$WA" != "30" -o "$WA" != "31" -o "$WA" != "0" -o "$WA" != "32" -o "$WA" != "33"]; do
 
-      if [ "$WA" = "00" -o "$WA" = "01" -o "$WA" = "02" -o "$WA" = "03" -o "$WA" = "04" -o "$WA" = "05" -o "$WA" = "06" -o "$WA" = "07" -o "$WA" = "08" -o "$WA" = "09" -o "$WA" = "10" -o "$WA" = "11" -o "$WA" = "12" -o "$WA" = "13" -o "$WA" = "14" -o "$WA" = "15" -o "$WA" = "16" -o "$WA" = "17" -o "$WA" = "18" -o "$WA" = "19" -o "$WA" = "20" -o "$WA" = "21" -o "$WA" = "22" -o "$WA" = "23" -o "$WA" = "24" -o "$WA" = "25" -o "$WA" = "26" -o "$WA" = "27" -o "$WA" = "28" -o "$WA" = "29" -o "$WA" = "30" -o "$WA" = "31" -o "$WA" = "0" -o "$WA" = "32" ]; then
+      if [ "$WA" = "00" -o "$WA" = "01" -o "$WA" = "02" -o "$WA" = "03" -o "$WA" = "04" -o "$WA" = "05" -o "$WA" = "06" -o "$WA" = "07" -o "$WA" = "08" -o "$WA" = "09" -o "$WA" = "10" -o "$WA" = "11" -o "$WA" = "12" -o "$WA" = "13" -o "$WA" = "14" -o "$WA" = "15" -o "$WA" = "16" -o "$WA" = "17" -o "$WA" = "18" -o "$WA" = "19" -o "$WA" = "20" -o "$WA" = "21" -o "$WA" = "22" -o "$WA" = "23" -o "$WA" = "24" -o "$WA" = "25" -o "$WA" = "26" -o "$WA" = "27" -o "$WA" = "28" -o "$WA" = "29" -o "$WA" = "30" -o "$WA" = "31" -o "$WA" = "0" -o "$WA" = "32" -o "$WA" = "33" ]; then
 
          if [ "$WA" = "0" ]; then
 
@@ -4675,6 +4681,23 @@ echo -e "$vermelhoClaro Saindo...$corPadrao"
 
                fi
 
+           if [ "$WA" = "33" ]; then
+
+echo -e "\e[0;36m instalando wifiphisher...\e[0m"
+                   sleep 2
+
+			      apt-get install sudo git -y && git clone https://github.com/wifiphisher/wifiphisher.git
+
+             cd wifiphisher
+             sudo python setup.py install
+echo -e "\e[1;32m Pronto * \e[0m"
+echo -e $cyan
+
+  read -p "~:: " WA
+
+echo -e $corPadrao
+              fi
+
            if [ "$WA" = "01" ]; then
 
 echo -e "\e[0;36m instalando aircrack-ng...\e[0m"
@@ -4689,7 +4712,6 @@ echo -e $cyan
 
 echo -e $corPadrao
               fi
-apt-get install tshark
 
            if [ "$WA" = "32" ]; then
 
