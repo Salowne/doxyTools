@@ -12,7 +12,7 @@
 
 -   git clone https://github.com/Xdwnff-04x/doxyTools.git
 
--   cp /doxyTools/doxy /usr/bin
+-   cp doxyTools/doxy /usr/bin
 
 -   chmod a+x /usr/bin/doxy
 
