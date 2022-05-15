@@ -10,7 +10,7 @@
 
 # Instalar doxy
 
--   git clone https://github.com/Xdwnff-04x/doxyTools.git
+-   git clone https://github.com/GMagNLL/doxyTools.git
 
 -   cp doxyTools/doxy /usr/bin
 
