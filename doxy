@@ -60,7 +60,6 @@ echo -e $branco"[ 16271627162716271627162716271627162716271627162716271627 ]"
 echo -e "$cyan[ Installe Quantos modulos Quiser... Sem precisar sair do Script. [*]$corPadrao"
 echo -e
 echo -e "$vermelhoClaro[ Aviso]: Se alguns modulos nao instalar, atualize sua soucelist*$corPadrao"$cyan ["3"] $corPadrao
-# copyright 2017 all rights reserved Zwdeff
 echo -e
 # Home
 echo -e
@@ -116,9 +115,7 @@ echo "deb http://http.kali.org/kali kali-rolling main non-free contrib" >> /etc/
 echo "deb-src http://http.kali.org/kali kali-rolling main contrib non-free" >> /etc/apt/sources.list
               apt-key adv --keyserver pool.sks-keyservers.net --recv-keys ED444FF07D8D0BF6
               apt-get update
-              
-# Cheffe Zwdeff King of Xadrez.
-# Concluido
+
 echo -e "\e[01;32m Concluido... sua source list foi Atualizada \e[0m"
                sleep 2
 
